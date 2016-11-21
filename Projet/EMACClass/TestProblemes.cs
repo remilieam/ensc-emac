@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EMACClass
 {
-    class TestProblemes : Test
+    public class TestProblemes : Test
     {
         public TestProblemes(bool difficulteTest, int intervalleTest, List<Object> donneesTest)
         {

@@ -77,6 +77,12 @@
     <Compile Include="TestMaths.Designer.cs">
       <DependentUpon>TestMaths.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestPerception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPerception.Designer.cs">
+      <DependentUpon>TestPerception.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestMaths.resx">
       <DependentUpon>TestMaths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPerception.resx">
+      <DependentUpon>TestPerception.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AppData\app.config" />
     <None Include="AppData\EMACDataSet.xsc">
@@ -141,7 +150,12 @@
     <Content Include="AppImages\19_YS.png" />
     <Content Include="AppImages\20_BS.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\EMACClass\EMACClass.csproj">
+      <Project>{192D4AD1-555C-467F-ABF4-C4D5DA93DFA1}</Project>
+      <Name>EMACClass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

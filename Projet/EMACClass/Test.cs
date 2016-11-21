@@ -5,15 +5,15 @@ using System.Text;
 
 namespace EMACClass
 {
-    abstract class Test
+    public abstract class Test
     {
         // Attributs
         protected string nom;
         protected string consigne;
-        protected List<Object> demonstration;
+        protected List<string> demonstration;
         protected bool difficulte;
-        protected List<string> regles;
-        protected List<Object> ecrans;
+        protected List<string> questions;
+        protected List<string> ecrans;
         protected List<string> reponses;
         protected int score;
         protected int intervalle;
