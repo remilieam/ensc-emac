@@ -55,14 +55,16 @@ namespace EMACApp
                 using (OleDbCommand requete2 = new OleDbCommand())
                 {
                     requete2.Connection = connexionBDD;
-                    requete2.CommandText = "SELECT * FROM Image WHERE Question = 4";
+                    requete2.CommandText = "SELECT * FROM Images WHERE Question = 4";
                     OleDbDataReader reader2 = requete2.ExecuteReader();
 
                     // Si le resultat comporte des lignes
                     if (reader2.HasRows)
                     {
                         reader2.Read();
-                        pictureBox1.ImageLocation = "|DataDirectory|\\" + reader2["ImageQuestion"];
+                        string lien = "H:\\Projet\\EMACApp\\" + reader2["ImageQuestion"];
+                        TestTextBox.Text += lien;
+                        pictureBox1.ImageLocation = "H:\\Projet\\EMACApp\\" + reader2["ImageQuestion"];
                     }
                 }
 

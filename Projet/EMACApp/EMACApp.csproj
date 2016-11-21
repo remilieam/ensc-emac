@@ -126,20 +126,20 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="AppImages\01_BC.png" />
-    <Content Include="AppImages\07 YC.png" />
-    <Content Include="AppImages\08 BC.png" />
-    <Content Include="AppImages\09 YS.png" />
-    <Content Include="AppImages\10 YC.png" />
-    <Content Include="AppImages\11 BS.png" />
-    <Content Include="AppImages\12 YS.png" />
-    <Content Include="AppImages\13 YC.png" />
-    <Content Include="AppImages\14 BC.png" />
-    <Content Include="AppImages\15 BS.png" />
-    <Content Include="AppImages\16 YS.png" />
-    <Content Include="AppImages\17 BC.png" />
-    <Content Include="AppImages\18 YC.png" />
-    <Content Include="AppImages\19 YS.png" />
-    <Content Include="AppImages\20 BS.png" />
+    <Content Include="AppImages\07_YC.png" />
+    <Content Include="AppImages\08_BC.png" />
+    <Content Include="AppImages\09_YS.png" />
+    <Content Include="AppImages\10_YC.png" />
+    <Content Include="AppImages\11_BS.png" />
+    <Content Include="AppImages\12_YS.png" />
+    <Content Include="AppImages\13_YC.png" />
+    <Content Include="AppImages\14_BC.png" />
+    <Content Include="AppImages\15_BS.png" />
+    <Content Include="AppImages\16_YS.png" />
+    <Content Include="AppImages\17_BC.png" />
+    <Content Include="AppImages\18_YC.png" />
+    <Content Include="AppImages\19_YS.png" />
+    <Content Include="AppImages\20_BS.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
