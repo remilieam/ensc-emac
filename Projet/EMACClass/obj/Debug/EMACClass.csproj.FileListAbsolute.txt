@@ -1,0 +1,4 @@
+C:\Users\Lewan\Documents\Projet\EMACClass\bin\Debug\EMACClass.dll
+C:\Users\Lewan\Documents\Projet\EMACClass\bin\Debug\EMACClass.pdb
+C:\Users\Lewan\Documents\Projet\EMACClass\obj\Debug\EMACClass.dll
+C:\Users\Lewan\Documents\Projet\EMACClass\obj\Debug\EMACClass.pdb

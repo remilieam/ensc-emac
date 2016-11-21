@@ -1,0 +1,30 @@
+C:\Users\Lewan\Documents\Projet\EMACApp\bin\Debug\EMACApp.exe.config
+C:\Users\Lewan\Documents\Projet\EMACApp\bin\Debug\EMACApp.exe
+C:\Users\Lewan\Documents\Projet\EMACApp\bin\Debug\EMACApp.pdb
+C:\Users\Lewan\Documents\Projet\EMACApp\obj\x86\Debug\EMACApp.Properties.Resources.resources
+C:\Users\Lewan\Documents\Projet\EMACApp\obj\x86\Debug\EMACApp.TestForm.resources
+C:\Users\Lewan\Documents\Projet\EMACApp\obj\x86\Debug\EMACApp.csproj.GenerateResource.Cache
+C:\Users\Lewan\Documents\Projet\EMACApp\obj\x86\Debug\EMACApp.exe
+C:\Users\Lewan\Documents\Projet\EMACApp\obj\x86\Debug\EMACApp.pdb
+C:\Users\Lewan\Documents\Projet\EMACApp\bin\Debug\AppData\EMAC.mdb
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\bin\Debug\EMACApp.exe.config
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.exe
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.pdb
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\bin\Debug\AppData\EMAC.mdb
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\bin\Debug\EMACApp.exe
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\bin\Debug\EMACApp.pdb
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.HomeForm.resources
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.Properties.Resources.resources
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.TestForm.resources
+D:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.csproj.GenerateResource.Cache
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\bin\Debug\EMACApp.exe.config
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.exe
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.pdb
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\bin\Debug\AppData\EMAC.mdb
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\bin\Debug\EMACApp.exe
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\bin\Debug\EMACApp.pdb
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.HomeForm.resources
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.MenuForm.resources
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.Properties.Resources.resources
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.TestForm.resources
+E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.csproj.GenerateResource.Cache

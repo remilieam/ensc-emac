@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="EMACClass.Test">
+    <Position X="14.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACEAQCAAIAAgAAAACIIIAAQAAAAIAAAAAEAAAAEEA=</HashCode>
+      <FileName>Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EMACClass.TestAttentionConcentration">
+    <Position X="6.75" Y="5.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAIAAgAAAACAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>TestAttentionConcentration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EMACClass.TestCalculMental">
+    <Position X="26.5" Y="5.25" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAIAAgAAAACAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>TestCalculMental.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EMACClass.TestPerceptionMemoire">
+    <Position X="0.5" Y="5.25" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAIAAgAAAACAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>TestPerceptionMemoire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EMACClass.TestProblemes">
+    <Position X="17" Y="5.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAIAAgAAAACAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>TestProblemes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EMACClass.TestProblemesMathematiques">
+    <Position X="19.75" Y="8.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TestProblemesMathematiques.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EMACClass.TestProblemesPhysiques">
+    <Position X="13.25" Y="8.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TestProblemesPhysiques.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
