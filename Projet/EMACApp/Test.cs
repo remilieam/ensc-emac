@@ -44,16 +44,30 @@ namespace EMACApp
                         while (reader.Read())
                         {
                             // Recuperation des valeur + constitution de la ligne
-                            string ligne = "Question : " + reader["Question"] + "\r\nRéponse : " + reader["Reponse"] + "\r\n\r\n";
+                            string ligne = reader["Id"] + "Question : " + reader["Question"] + "\r\nRéponse : " + reader["Reponse"] + "\r\n\r\n";
 
                             // Ajout de la ligne au textbox
                             TestTextBox.Text += ligne;
                         }
                     }
-
-                    // Fermeture de la connexion
-                    connexionBDD.Close();
                 }
+
+                using (OleDbCommand requete2 = new OleDbCommand())
+                {
+                    requete2.Connection = connexionBDD;
+                    requete2.CommandText = "SELECT * FROM Image WHERE Question = 4";
+                    OleDbDataReader reader2 = requete2.ExecuteReader();
+
+                    // Si le resultat comporte des lignes
+                    if (reader2.HasRows)
+                    {
+                        reader2.Read();
+                        pictureBox1.ImageLocation = "|DataDirectory|\\" + reader2["ImageQuestion"];
+                    }
+                }
+
+                // Fermeture de la connexion
+                connexionBDD.Close();
             }
         }
 

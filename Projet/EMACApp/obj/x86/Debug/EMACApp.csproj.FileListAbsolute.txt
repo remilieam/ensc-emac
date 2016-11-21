@@ -42,3 +42,16 @@ C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp
 H:\projet-emac\Projet\EMACApp\bin\Debug\EMACApp.exe.config
 H:\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.exe
 H:\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.pdb
+H:\Projet\EMACApp\bin\Debug\EMACApp.exe.config
+H:\Projet\EMACApp\obj\x86\Debug\EMACApp.exe
+H:\Projet\EMACApp\obj\x86\Debug\EMACApp.pdb
+H:\Projet\EMACApp\bin\Debug\AppData\EMAC.mdb
+H:\Projet\EMACApp\bin\Debug\EMACApp.exe
+H:\Projet\EMACApp\bin\Debug\EMACApp.pdb
+H:\Projet\EMACApp\obj\x86\Debug\EMACApp.HomeForm.resources
+H:\Projet\EMACApp\obj\x86\Debug\EMACApp.MenuForm.resources
+H:\Projet\EMACApp\obj\x86\Debug\EMACApp.Properties.Resources.resources
+H:\Projet\EMACApp\obj\x86\Debug\EMACApp.TestForm.resources
+H:\Projet\EMACApp\obj\x86\Debug\EMACApp.TestMaths_Form.resources
+H:\Projet\EMACApp\obj\x86\Debug\EMACApp.csproj.GenerateResource.Cache
+H:\Projet\EMACApp\obj\x86\Debug\EMACApp.csprojResolveAssemblyReference.cache

@@ -91,6 +91,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
@@ -124,10 +125,23 @@
     <Content Include="AppData\EMAC.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="AppImages\01_BC.png" />
+    <Content Include="AppImages\07 YC.png" />
+    <Content Include="AppImages\08 BC.png" />
+    <Content Include="AppImages\09 YS.png" />
+    <Content Include="AppImages\10 YC.png" />
+    <Content Include="AppImages\11 BS.png" />
+    <Content Include="AppImages\12 YS.png" />
+    <Content Include="AppImages\13 YC.png" />
+    <Content Include="AppImages\14 BC.png" />
+    <Content Include="AppImages\15 BS.png" />
+    <Content Include="AppImages\16 YS.png" />
+    <Content Include="AppImages\17 BC.png" />
+    <Content Include="AppImages\18 YC.png" />
+    <Content Include="AppImages\19 YS.png" />
+    <Content Include="AppImages\20 BS.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AppImages\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
