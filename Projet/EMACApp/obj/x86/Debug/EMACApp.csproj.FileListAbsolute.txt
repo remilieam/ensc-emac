@@ -28,3 +28,14 @@ E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.MenuForm.resou
 E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.Properties.Resources.resources
 E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.TestForm.resources
 E:\2A\Génie logiciel\Projet\Projet\EMACApp\obj\x86\Debug\EMACApp.csproj.GenerateResource.Cache
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\bin\Debug\EMACApp.exe.config
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.exe
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.pdb
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\bin\Debug\AppData\EMAC.mdb
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\bin\Debug\EMACApp.exe
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\bin\Debug\EMACApp.pdb
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.HomeForm.resources
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.MenuForm.resources
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.Properties.Resources.resources
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.TestForm.resources
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.csproj.GenerateResource.Cache

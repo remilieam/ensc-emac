@@ -2,3 +2,7 @@ C:\Users\Lewan\Documents\Projet\EMACClass\bin\Debug\EMACClass.dll
 C:\Users\Lewan\Documents\Projet\EMACClass\bin\Debug\EMACClass.pdb
 C:\Users\Lewan\Documents\Projet\EMACClass\obj\Debug\EMACClass.dll
 C:\Users\Lewan\Documents\Projet\EMACClass\obj\Debug\EMACClass.pdb
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACClass\bin\Debug\EMACClass.dll
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACClass\bin\Debug\EMACClass.pdb
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACClass\obj\Debug\EMACClass.dll
+C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACClass\obj\Debug\EMACClass.pdb

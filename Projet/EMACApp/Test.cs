@@ -56,5 +56,10 @@ namespace EMACApp
                 }
             }
         }
+
+        private void TestTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

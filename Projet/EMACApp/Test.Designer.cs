@@ -34,9 +34,10 @@
             // 
             // TestButton
             // 
-            this.TestButton.Location = new System.Drawing.Point(364, 298);
+            this.TestButton.Location = new System.Drawing.Point(199, 161);
+            this.TestButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TestButton.Name = "TestButton";
-            this.TestButton.Size = new System.Drawing.Size(75, 38);
+            this.TestButton.Size = new System.Drawing.Size(41, 21);
             this.TestButton.TabIndex = 0;
             this.TestButton.Text = "Voir";
             this.TestButton.UseVisualStyleBackColor = true;
@@ -44,19 +45,22 @@
             // 
             // TestTextBox
             // 
-            this.TestTextBox.Location = new System.Drawing.Point(12, 12);
+            this.TestTextBox.Location = new System.Drawing.Point(7, 7);
+            this.TestTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TestTextBox.Multiline = true;
             this.TestTextBox.Name = "TestTextBox";
-            this.TestTextBox.Size = new System.Drawing.Size(781, 267);
+            this.TestTextBox.Size = new System.Drawing.Size(428, 146);
             this.TestTextBox.TabIndex = 1;
+            this.TestTextBox.TextChanged += new System.EventHandler(this.TestTextBox_TextChanged);
             // 
             // TestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 348);
+            this.ClientSize = new System.Drawing.Size(443, 189);
             this.Controls.Add(this.TestTextBox);
             this.Controls.Add(this.TestButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TestForm";
             this.Text = "Test";
             this.ResumeLayout(false);
