@@ -1,3 +1,3 @@
-# hello-world-github
+# Projet EMAC
 
-Ceci est mon premier dépôt GitHub.
+Les codes du projet de Génie Logiciel se trouvent dans le dossier « Projet ».
