@@ -39,3 +39,6 @@ C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp
 C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.Properties.Resources.resources
 C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.TestForm.resources
 C:\Users\ctartare\Downloads\projet-emac-master\projet-emac-master\Projet\EMACApp\obj\x86\Debug\EMACApp.csproj.GenerateResource.Cache
+H:\projet-emac\Projet\EMACApp\bin\Debug\EMACApp.exe.config
+H:\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.exe
+H:\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.pdb
