@@ -1,4 +1,4 @@
-C:\Users\Lewan\Documents\Projet\EMACApp\bin\Debug\EMACApp.exe.config
+﻿C:\Users\Lewan\Documents\Projet\EMACApp\bin\Debug\EMACApp.exe.config
 C:\Users\Lewan\Documents\Projet\EMACApp\bin\Debug\EMACApp.exe
 C:\Users\Lewan\Documents\Projet\EMACApp\bin\Debug\EMACApp.pdb
 C:\Users\Lewan\Documents\Projet\EMACApp\obj\x86\Debug\EMACApp.Properties.Resources.resources
@@ -74,3 +74,16 @@ C:\Users\Lewan\Documents\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp
 H:\GitHub\projet-emac\Projet\EMACApp\bin\Debug\EMACApp.exe.config
 H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.exe
 H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.pdb
+H:\GitHub\projet-emac\Projet\EMACApp\bin\Debug\AppData\EMAC.mdb
+H:\GitHub\projet-emac\Projet\EMACApp\bin\Debug\EMACApp.exe
+H:\GitHub\projet-emac\Projet\EMACApp\bin\Debug\EMACApp.pdb
+H:\GitHub\projet-emac\Projet\EMACApp\bin\Debug\EMACClass.dll
+H:\GitHub\projet-emac\Projet\EMACApp\bin\Debug\EMACClass.pdb
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.csprojResolveAssemblyReference.cache
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.HomeForm.resources
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.MenuForm.resources
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.Properties.Resources.resources
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.TestForm.resources
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.TestMaths_Form.resources
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.TestPerceptionForm.resources
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.csproj.GenerateResource.Cache
