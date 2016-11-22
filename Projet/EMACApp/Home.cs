@@ -36,5 +36,10 @@ namespace EMACApp
             MenuForm menu = new MenuForm();
             menu.Show();
         }
+
+        private void ExplicationHomeLabel_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
