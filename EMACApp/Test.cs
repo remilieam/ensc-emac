@@ -62,9 +62,9 @@ namespace EMACApp
                     if (reader2.HasRows)
                     {
                         reader2.Read();
-                        string lien = "H:\\GitHub\\projet-emac\\Projet\\EMACApp\\" + reader2["ImageQuestion"];
+                        string lien = "..\\..\\..\\EMACApp\\" + reader2["ImageQuestion"];
                         TestTextBox.Text += lien;
-                        pictureBox1.ImageLocation = "H:\\GitHub\\projet-emac\\Projet\\EMACApp\\" + reader2["ImageQuestion"];
+                        pictureBox1.ImageLocation = "..\\..\\..\\EMACApp\\" + reader2["ImageQuestion"];
                     }
                 }
 
