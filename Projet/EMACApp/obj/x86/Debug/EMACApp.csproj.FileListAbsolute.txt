@@ -71,3 +71,6 @@ C:\Users\Lewan\Documents\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp
 C:\Users\Lewan\Documents\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.TestMaths_Form.resources
 C:\Users\Lewan\Documents\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.TestPerceptionForm.resources
 C:\Users\Lewan\Documents\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.csproj.GenerateResource.Cache
+H:\GitHub\projet-emac\Projet\EMACApp\bin\Debug\EMACApp.exe.config
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.exe
+H:\GitHub\projet-emac\Projet\EMACApp\obj\x86\Debug\EMACApp.pdb
