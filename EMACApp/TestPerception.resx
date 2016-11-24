@@ -118,28 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Next_PictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB0AAAAyCAYAAACgadDsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAE5SURBVFhH7ZcxasMwFIZ9jB4hq20MHjz0AB46dOwBMvpG
-        GTrmGBk6dOjYoQfo2KFDhg7J9+AJjKsQGT2JQPTDj0Ks930oJNipXLque2jb9pW+NU0z6tvpIkJEnwhP
-        Ul7/sT7rZfsshVnEgHdz2bzJxEDf56Jlk4iBjgr2SqVJxAK8dfGTjtgE4FUx/aWDjtgE4J2J67p+WUh8
-        tRdz2mkh8bWI41PEF1rE8QkU/9A7+6jZ1+uITULE7Plm3eiITQLFH7rdJkBDbolfuj0+wPLegwFdFcp1
-        avN3BWCQkNXmSVJAAcIja1ah6QkfcwsHKt9Cr0xahKsCqAiLcF0AFaHrVkfiAihIyCknHYkLoB5gPqEE
-        2MEnmddUKAG494lczYUSwBvA8jyaR+iC4J84qdBFxQeV2/wsvKmqM9kY6ZpbsS28AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="Previous_PictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB0AAAAyCAYAAACgadDsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAErSURBVFhH7Za7TQNBFEW3DEpwvB/JgYvYwAElEBBQAB0Q
-        uBQXQOACCAgJHVIAIQGcke4IMR6xI82bBaF3pKuVVu/do/0E07Wk7/stOZHjNE1Xut2OYRh25I18hCB+
-        aSpOhTHNxJRnhTGIHzVqA6U/CkOQvmq8HgoXhcqNVuqgqEjIU95ppQ7KVhduwjdKBWlcWAxlRUJyr5U6
-        KCoVHrRSB0UujHFhGRSVCh+0UgdF/kpjXFgOwmNGkMbmL40gPWUkaW41bgPSLaXrHTcilK57zolQ6uJs
-        fk08juO1VmygdFHM075z3WvFBgpdfBEXm0Chiy/y78SzirPSkFbi/V8Xz1qxgcJFMTlr3A5Kl8RPGrWF
-        4qyYe+F8vdGYPZR/EzcXRpDM5Izw+UvYdZ/91elQgqhHeAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAUDBBAQDxAQEBAQEBAQEBAQEBAQEA0QEBAQEA8NDw8QEBAN

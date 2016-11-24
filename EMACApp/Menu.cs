@@ -21,26 +21,15 @@ namespace EMACApp
             InitializeComponent();
         }
 
-        private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Hide();
-
-            Home_Form home = new Home_Form();
-            home.Show();
-        }
-
-        private void ReturnMenuButtom_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            Home_Form home = new Home_Form();
-            home.Show();
-        }
-
         private void Test1EasyMenuButtom_Click(object sender, EventArgs e)
         {
-            TestPerception_Form testPerception = new TestPerception_Form();
+            TestPerceptionDemo_Form testPerception = new TestPerceptionDemo_Form();
             testPerception.Show();
+        }
+
+        private void Menu_Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

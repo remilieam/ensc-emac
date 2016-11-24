@@ -34,7 +34,11 @@ namespace EMACApp
             this.Hide();
 
             Menu_Form menu = new Menu_Form();
-            menu.Show();
+
+            if (menu.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
         }
 
         private void ExplicationHomeLabel_Click(object sender, EventArgs e)
