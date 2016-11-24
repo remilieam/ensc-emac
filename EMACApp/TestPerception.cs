@@ -60,14 +60,14 @@ namespace EMACApp
 
         private void Previous_PictureBox_Click(object sender, EventArgs e)
         {
-            if (compteur == test.imagesDemo.Count)
+            if (compteur == 0)
             {
-                compteur = 0;
+                compteur = test.imagesDemo.Count;
             }
 
             else
             {
-                compteur++;
+                compteur--;
             }
 
             if (compteur == 0)
@@ -85,8 +85,8 @@ namespace EMACApp
                 PictureDemo_PictureBox.Show();
                 TextDemo_TextBox.Show();
 
-                PictureDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\" + test.imagesDemo[test.imagesDemo.Count - compteur -1];
-                TextDemo_TextBox.Text = test.texteDemo[test.imagesDemo.Count - compteur - 1] + " " + compteur;
+                PictureDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\" + test.imagesDemo[compteur -1];
+                TextDemo_TextBox.Text = test.texteDemo[compteur - 1] + " " + compteur;
             }
         }
     }
