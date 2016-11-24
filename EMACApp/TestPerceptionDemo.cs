@@ -12,17 +12,17 @@ namespace EMACApp
 {
     public partial class TestPerceptionDemo_Form : Form
     {
-        public int compteur = 0;
-        public TestPerceptionMemoire test = new TestPerceptionMemoire(false);
+        private int compteur = 0;
+        private TestPerceptionMemoire test;
 
-        public TestPerceptionDemo_Form()
+        public TestPerceptionDemo_Form(bool difficulte)
         {
             InitializeComponent();
+            test = new TestPerceptionMemoire(difficulte);
         }
 
         private void TestPerceptionForm_Load(object sender, EventArgs e)
         {
-            test.GetDemonstration(1);
             Instruction_TextBox.Text = test.consigne + " " + compteur;
         }
 
@@ -92,7 +92,8 @@ namespace EMACApp
 
         private void Play_Button_Click(object sender, EventArgs e)
         {
-
+            TestPerception_Form jeu = new TestPerception_Form(test);
+            jeu.Show();
         }
     }
 }

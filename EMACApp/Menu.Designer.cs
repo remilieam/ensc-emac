@@ -146,6 +146,7 @@
             this.Test1DifficultMenu_Button.TabIndex = 27;
             this.Test1DifficultMenu_Button.Text = "Difficile";
             this.Test1DifficultMenu_Button.UseVisualStyleBackColor = true;
+            this.Test1DifficultMenu_Button.Click += new System.EventHandler(this.Test1DifficultMenu_Button_Click);
             // 
             // Test1EasyMenu_Button
             // 
@@ -163,7 +164,7 @@
             // 
             this.ReturnMenu_Button.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.ReturnMenu_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnMenu_Button.Location = new System.Drawing.Point(875, 766);
+            this.ReturnMenu_Button.Location = new System.Drawing.Point(822, 733);
             this.ReturnMenu_Button.Margin = new System.Windows.Forms.Padding(4);
             this.ReturnMenu_Button.Name = "ReturnMenu_Button";
             this.ReturnMenu_Button.Size = new System.Drawing.Size(300, 88);
@@ -175,12 +176,12 @@
             // 
             this.TitleMenu_Label.AutoSize = true;
             this.TitleMenu_Label.BackColor = System.Drawing.Color.Transparent;
-            this.TitleMenu_Label.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleMenu_Label.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleMenu_Label.ForeColor = System.Drawing.Color.White;
-            this.TitleMenu_Label.Location = new System.Drawing.Point(697, 20);
+            this.TitleMenu_Label.Location = new System.Drawing.Point(784, 50);
             this.TitleMenu_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TitleMenu_Label.Name = "TitleMenu_Label";
-            this.TitleMenu_Label.Size = new System.Drawing.Size(392, 65);
+            this.TitleMenu_Label.Size = new System.Drawing.Size(424, 65);
             this.TitleMenu_Label.TabIndex = 24;
             this.TitleMenu_Label.Text = "Menu principal";
             this.TitleMenu_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
