@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace EMACApp
 {
-    public partial class HomeForm : Form
+    public partial class Home_Form : Form
     {
-        public HomeForm()
+        public Home_Form()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace EMACApp
         {
             this.Hide();
 
-            MenuForm menu = new MenuForm();
+            Menu_Form menu = new Menu_Form();
             menu.Show();
         }
 

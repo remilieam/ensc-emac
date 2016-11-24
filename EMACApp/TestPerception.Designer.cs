@@ -1,6 +1,6 @@
 ﻿namespace EMACApp
 {
-    partial class TestPerceptionForm
+    partial class TestPerception_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,40 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ImageTest1PictureBox = new System.Windows.Forms.PictureBox();
-            this.ConsigneTest1Label = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageTest1PictureBox)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestPerception_Form));
+            this.NameTest1_Label = new System.Windows.Forms.Label();
+            this.Instruction_TextBox = new System.Windows.Forms.TextBox();
+            this.TextDemo_TextBox = new System.Windows.Forms.TextBox();
+            this.PictureDemo_PictureBox = new System.Windows.Forms.PictureBox();
+            this.Play_Button = new System.Windows.Forms.Button();
+            this.Next_PictureBox = new System.Windows.Forms.PictureBox();
+            this.Previous_PictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureDemo_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Next_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Previous_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // ImageTest1PictureBox
+            // NameTest1_Label
             // 
-            this.ImageTest1PictureBox.Location = new System.Drawing.Point(12, 12);
-            this.ImageTest1PictureBox.Name = "ImageTest1PictureBox";
-            this.ImageTest1PictureBox.Size = new System.Drawing.Size(830, 476);
-            this.ImageTest1PictureBox.TabIndex = 0;
-            this.ImageTest1PictureBox.TabStop = false;
+            this.NameTest1_Label.AutoSize = true;
+            this.NameTest1_Label.BackColor = System.Drawing.Color.Transparent;
+            this.NameTest1_Label.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTest1_Label.ForeColor = System.Drawing.Color.White;
+            this.NameTest1_Label.Location = new System.Drawing.Point(363, 34);
+            this.NameTest1_Label.Name = "NameTest1_Label";
+            this.NameTest1_Label.Size = new System.Drawing.Size(376, 27);
+            this.NameTest1_Label.TabIndex = 0;
+            this.NameTest1_Label.Text = "Perception et mémoire associative";
             // 
-            // ConsigneTest1Label
+            // Instruction_TextBox
             // 
-            this.ConsigneTest1Label.AutoSize = true;
-            this.ConsigneTest1Label.Location = new System.Drawing.Point(297, 111);
-            this.ConsigneTest1Label.Name = "ConsigneTest1Label";
-            this.ConsigneTest1Label.Size = new System.Drawing.Size(264, 25);
-            this.ConsigneTest1Label.TabIndex = 1;
-            this.ConsigneTest1Label.Text = "Retenez les chiffres dans les \r\n";
-            this.ConsigneTest1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Instruction_TextBox.Location = new System.Drawing.Point(67, 86);
+            this.Instruction_TextBox.Multiline = true;
+            this.Instruction_TextBox.Name = "Instruction_TextBox";
+            this.Instruction_TextBox.Size = new System.Drawing.Size(926, 378);
+            this.Instruction_TextBox.TabIndex = 1;
             // 
-            // TestPerceptionForm
+            // TextDemo_TextBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.TextDemo_TextBox.Location = new System.Drawing.Point(67, 86);
+            this.TextDemo_TextBox.Multiline = true;
+            this.TextDemo_TextBox.Name = "TextDemo_TextBox";
+            this.TextDemo_TextBox.Size = new System.Drawing.Size(926, 62);
+            this.TextDemo_TextBox.TabIndex = 2;
+            this.TextDemo_TextBox.Visible = false;
+            // 
+            // PictureDemo_PictureBox
+            // 
+            this.PictureDemo_PictureBox.Location = new System.Drawing.Point(67, 154);
+            this.PictureDemo_PictureBox.Name = "PictureDemo_PictureBox";
+            this.PictureDemo_PictureBox.Size = new System.Drawing.Size(926, 310);
+            this.PictureDemo_PictureBox.TabIndex = 3;
+            this.PictureDemo_PictureBox.TabStop = false;
+            this.PictureDemo_PictureBox.Visible = false;
+            // 
+            // Play_Button
+            // 
+            this.Play_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Play_Button.Location = new System.Drawing.Point(497, 486);
+            this.Play_Button.Name = "Play_Button";
+            this.Play_Button.Size = new System.Drawing.Size(95, 37);
+            this.Play_Button.TabIndex = 4;
+            this.Play_Button.Text = "JOUER";
+            this.Play_Button.UseVisualStyleBackColor = true;
+            // 
+            // Next_PictureBox
+            // 
+            this.Next_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.Next_PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Next_PictureBox.Image")));
+            this.Next_PictureBox.Location = new System.Drawing.Point(1019, 234);
+            this.Next_PictureBox.Name = "Next_PictureBox";
+            this.Next_PictureBox.Size = new System.Drawing.Size(30, 59);
+            this.Next_PictureBox.TabIndex = 5;
+            this.Next_PictureBox.TabStop = false;
+            this.Next_PictureBox.Click += new System.EventHandler(this.Next_PictureBox_Click);
+            // 
+            // Previous_PictureBox
+            // 
+            this.Previous_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.Previous_PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Previous_PictureBox.Image")));
+            this.Previous_PictureBox.Location = new System.Drawing.Point(12, 234);
+            this.Previous_PictureBox.Name = "Previous_PictureBox";
+            this.Previous_PictureBox.Size = new System.Drawing.Size(32, 59);
+            this.Previous_PictureBox.TabIndex = 6;
+            this.Previous_PictureBox.TabStop = false;
+            this.Previous_PictureBox.Click += new System.EventHandler(this.Previous_PictureBox_Click);
+            // 
+            // TestPerception_Form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 500);
-            this.Controls.Add(this.ConsigneTest1Label);
-            this.Controls.Add(this.ImageTest1PictureBox);
-            this.Name = "TestPerceptionForm";
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1061, 558);
+            this.Controls.Add(this.Previous_PictureBox);
+            this.Controls.Add(this.Next_PictureBox);
+            this.Controls.Add(this.Play_Button);
+            this.Controls.Add(this.PictureDemo_PictureBox);
+            this.Controls.Add(this.TextDemo_TextBox);
+            this.Controls.Add(this.Instruction_TextBox);
+            this.Controls.Add(this.NameTest1_Label);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "TestPerception_Form";
             this.Text = "Perception et mémoire associative";
             this.Load += new System.EventHandler(this.TestPerceptionForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ImageTest1PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureDemo_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Next_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Previous_PictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,7 +139,13 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox ImageTest1PictureBox;
-        private System.Windows.Forms.Label ConsigneTest1Label;
+        private System.Windows.Forms.Label NameTest1_Label;
+        private System.Windows.Forms.TextBox Instruction_TextBox;
+        private System.Windows.Forms.TextBox TextDemo_TextBox;
+        private System.Windows.Forms.PictureBox PictureDemo_PictureBox;
+        private System.Windows.Forms.Button Play_Button;
+        private System.Windows.Forms.PictureBox Next_PictureBox;
+        private System.Windows.Forms.PictureBox Previous_PictureBox;
+
     }
 }

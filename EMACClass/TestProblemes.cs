@@ -18,30 +18,5 @@ namespace EMACClass
         {
             throw new NotImplementedException();
         }
-
-        public override void AfficherDemonstration()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override List<object> VerifierReponse(string reponse)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void AfficherErreurs(List<object> erreurs)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void ModifierScore(List<object> erreurs)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override double CalculerResultat()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
