@@ -45,19 +45,19 @@
             // 
             this.NameTest1_Label.AutoSize = true;
             this.NameTest1_Label.BackColor = System.Drawing.Color.Transparent;
-            this.NameTest1_Label.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTest1_Label.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameTest1_Label.ForeColor = System.Drawing.Color.White;
-            this.NameTest1_Label.Location = new System.Drawing.Point(666, 63);
+            this.NameTest1_Label.Location = new System.Drawing.Point(438, 48);
             this.NameTest1_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NameTest1_Label.Name = "NameTest1_Label";
-            this.NameTest1_Label.Size = new System.Drawing.Size(664, 47);
+            this.NameTest1_Label.Size = new System.Drawing.Size(951, 65);
             this.NameTest1_Label.TabIndex = 0;
             this.NameTest1_Label.Text = "Perception et mémoire associative";
             // 
             // Instruction_TextBox
             // 
             this.Instruction_TextBox.Enabled = false;
-            this.Instruction_TextBox.Location = new System.Drawing.Point(123, 159);
+            this.Instruction_TextBox.Location = new System.Drawing.Point(96, 165);
             this.Instruction_TextBox.Margin = new System.Windows.Forms.Padding(6);
             this.Instruction_TextBox.Multiline = true;
             this.Instruction_TextBox.Name = "Instruction_TextBox";
@@ -67,7 +67,7 @@
             // TextDemo_TextBox
             // 
             this.TextDemo_TextBox.Enabled = false;
-            this.TextDemo_TextBox.Location = new System.Drawing.Point(123, 159);
+            this.TextDemo_TextBox.Location = new System.Drawing.Point(96, 165);
             this.TextDemo_TextBox.Margin = new System.Windows.Forms.Padding(6);
             this.TextDemo_TextBox.Multiline = true;
             this.TextDemo_TextBox.Name = "TextDemo_TextBox";
@@ -77,7 +77,7 @@
             // 
             // PictureDemo_PictureBox
             // 
-            this.PictureDemo_PictureBox.Location = new System.Drawing.Point(123, 284);
+            this.PictureDemo_PictureBox.Location = new System.Drawing.Point(96, 290);
             this.PictureDemo_PictureBox.Margin = new System.Windows.Forms.Padding(6);
             this.PictureDemo_PictureBox.Name = "PictureDemo_PictureBox";
             this.PictureDemo_PictureBox.Size = new System.Drawing.Size(1698, 572);
@@ -88,7 +88,7 @@
             // Play_Button
             // 
             this.Play_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Play_Button.Location = new System.Drawing.Point(911, 897);
+            this.Play_Button.Location = new System.Drawing.Point(861, 888);
             this.Play_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Play_Button.Name = "Play_Button";
             this.Play_Button.Size = new System.Drawing.Size(174, 68);
@@ -103,7 +103,7 @@
             this.Next_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Next_PictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Next_PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Next_PictureBox.Image")));
-            this.Next_PictureBox.Location = new System.Drawing.Point(1868, 432);
+            this.Next_PictureBox.Location = new System.Drawing.Point(1826, 432);
             this.Next_PictureBox.Margin = new System.Windows.Forms.Padding(6);
             this.Next_PictureBox.Name = "Next_PictureBox";
             this.Next_PictureBox.Size = new System.Drawing.Size(55, 109);
@@ -117,7 +117,7 @@
             this.Previous_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Previous_PictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Previous_PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Previous_PictureBox.Image")));
-            this.Previous_PictureBox.Location = new System.Drawing.Point(22, 432);
+            this.Previous_PictureBox.Location = new System.Drawing.Point(15, 432);
             this.Previous_PictureBox.Margin = new System.Windows.Forms.Padding(6);
             this.Previous_PictureBox.Name = "Previous_PictureBox";
             this.Previous_PictureBox.Size = new System.Drawing.Size(59, 109);
@@ -129,9 +129,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1910, 1030);
+            this.ClientSize = new System.Drawing.Size(1896, 1016);
             this.Controls.Add(this.Previous_PictureBox);
             this.Controls.Add(this.Next_PictureBox);
             this.Controls.Add(this.Play_Button);
@@ -140,6 +141,7 @@
             this.Controls.Add(this.Instruction_TextBox);
             this.Controls.Add(this.NameTest1_Label);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "TestPerceptionDemo_Form";
             this.Text = "Perception et mémoire associative";
             this.Load += new System.EventHandler(this.TestPerceptionForm_Load);

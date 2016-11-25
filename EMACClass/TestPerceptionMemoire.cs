@@ -60,5 +60,22 @@ namespace EMACClass
 
             this.reponses = chiffres;
         }
+
+        /// <summary>
+        /// Calcule le résultat de l’utilisateur, c’est-à-dire sa proportion de réponses justes.
+        /// </summary>
+        /// <returns>Résultat de l’utilisateur</returns>
+        public override double CalculerResultat()
+        {
+            double nbQuestions = 0;
+
+            for (int i = 0; i < this.reponses.Count; i++)
+            {
+                nbQuestions += this.reponses[i].Length;
+            }
+
+            return this.score / nbQuestions * 100.0;
+        }
+
     }
 }

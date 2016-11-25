@@ -40,10 +40,5 @@ namespace EMACApp
                 this.Show();
             }
         }
-
-        private void ExplicationHomeLabel_Click(object sender, EventArgs e)
-        {
-           
-        }
     }
 }

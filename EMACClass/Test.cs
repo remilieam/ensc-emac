@@ -102,7 +102,7 @@ namespace EMACClass
         /// Calcule le résultat de l’utilisateur, c’est-à-dire sa proportion de réponses justes.
         /// </summary>
         /// <returns>Résultat de l’utilisateur</returns>
-        public double CalculerResultat()
+        public virtual double CalculerResultat()
         {
             return this.score / this.questions.Count * 100.0;
         }
@@ -156,6 +156,7 @@ namespace EMACClass
                 connexionBDD.Close();
             }
         }
+
         /// <summary>
         /// Génère une liste de question en prennant l'id du test et le nombre de questions à récupérer.
         /// </summary>

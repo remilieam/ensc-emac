@@ -34,7 +34,7 @@ namespace EMACApp
         {
             Rule_TextBox.Hide();
             Next_Button.Hide();
-            Picture_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\" + test.imagesQuestion[compteur];
+            Picture_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_1\\" + test.imagesQuestion[compteur];
             Picture_PictureBox.Show();
             DisplayPicture_Timer.Start();
             DisplayPicture_Timer.Tick += new EventHandler(DisplayPictureTimerTick);
