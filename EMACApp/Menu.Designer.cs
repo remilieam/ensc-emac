@@ -101,6 +101,7 @@
             this.Test2DifficultMenu_Button.TabIndex = 32;
             this.Test2DifficultMenu_Button.Text = "Difficile";
             this.Test2DifficultMenu_Button.UseVisualStyleBackColor = true;
+            this.Test2DifficultMenu_Button.Click += new System.EventHandler(this.Test2DifficultMenu_Button_Click);
             // 
             // Test2EasyMenu_Button
             // 
@@ -112,6 +113,7 @@
             this.Test2EasyMenu_Button.TabIndex = 31;
             this.Test2EasyMenu_Button.Text = "Facile";
             this.Test2EasyMenu_Button.UseVisualStyleBackColor = true;
+            this.Test2EasyMenu_Button.Click += new System.EventHandler(this.Test2EasyMenu_Button_Click);
             // 
             // Test5EasyMenu_Button
             // 

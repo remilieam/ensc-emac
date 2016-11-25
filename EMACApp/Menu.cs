@@ -23,13 +23,29 @@ namespace EMACApp
 
         private void Test1EasyMenuButtom_Click(object sender, EventArgs e)
         {
-            TestPerceptionDemo_Form testPerception = new TestPerceptionDemo_Form(false);
+            TestPerceptionMemoire test = new TestPerceptionMemoire(false);
+            TestDemonstration_Form testPerception = new TestDemonstration_Form(test);
             testPerception.Show();
         }
 
         private void Test1DifficultMenu_Button_Click(object sender, EventArgs e)
         {
-            TestPerceptionDemo_Form testPerception = new TestPerceptionDemo_Form(true);
+            TestPerceptionMemoire test = new TestPerceptionMemoire(true);
+            TestDemonstration_Form testPerception = new TestDemonstration_Form(test);
+            testPerception.Show();
+        }
+
+        private void Test2EasyMenu_Button_Click(object sender, EventArgs e)
+        {
+            TestAttentionConcentration test = new TestAttentionConcentration(false);
+            TestDemonstration_Form testPerception = new TestDemonstration_Form(test);
+            testPerception.Show();
+        }
+
+        private void Test2DifficultMenu_Button_Click(object sender, EventArgs e)
+        {
+            TestAttentionConcentration test = new TestAttentionConcentration(true);
+            TestDemonstration_Form testPerception = new TestDemonstration_Form(test);
             testPerception.Show();
         }
 

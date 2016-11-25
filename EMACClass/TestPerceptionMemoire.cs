@@ -30,16 +30,16 @@ namespace EMACClass
             intervalle = (difficulte) ? 2 : 4;
             lettres = new List<string>();
 
-            GetDemonstration(1);
-            GenerateListQuestions(1, 10);
-            SeparationLettresReponses();
+            RecupererDemonstration(1);
+            GenererListeQuestions(1, 10);
+            SeparerLettresReponses();
         }
 
         /// <summary>
         /// Sépare les lettres et les chiffres de toutes les réponses du test. 
         /// Par exemple, si la réponse à une question est A2F4H7, on sépare d’un côté A, F et H et de l’autre 2, 4 et 7.
         /// </summary>
-        private void SeparationLettresReponses()
+        private void SeparerLettresReponses()
         {
             List<string> chiffres = new List<string>();
 

@@ -77,12 +77,6 @@
     <Compile Include="TestAttention.Designer.cs">
       <DependentUpon>TestAttention.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestAttentionDemo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestAttentionDemo.Designer.cs">
-      <DependentUpon>TestAttentionDemo.cs</DependentUpon>
-    </Compile>
     <Compile Include="TestMaths.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +89,11 @@
     <Compile Include="TestPerception.Designer.cs">
       <DependentUpon>TestPerception.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestPerceptionDemo.cs">
+    <Compile Include="TestDemontration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestPerceptionDemo.Designer.cs">
-      <DependentUpon>TestPerceptionDemo.cs</DependentUpon>
+    <Compile Include="TestDemontration.Designer.cs">
+      <DependentUpon>TestDemontration.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -120,14 +114,17 @@
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TestAttention.resx">
+      <DependentUpon>TestAttention.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestMaths.resx">
       <DependentUpon>TestMaths.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestPerception.resx">
       <DependentUpon>TestPerception.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestPerceptionDemo.resx">
-      <DependentUpon>TestPerceptionDemo.cs</DependentUpon>
+    <EmbeddedResource Include="TestDemontration.resx">
+      <DependentUpon>TestDemontration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AppData\app.config" />
     <None Include="AppData\EMACDataSet.xsc">

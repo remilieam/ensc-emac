@@ -1,6 +1,6 @@
 ﻿namespace EMACApp
 {
-    partial class TestPerceptionDemo_Form
+    partial class TestDemonstration_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestPerceptionDemo_Form));
-            this.NameTest1_Label = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestDemonstration_Form));
+            this.NameTest_Label = new System.Windows.Forms.Label();
             this.Instruction_TextBox = new System.Windows.Forms.TextBox();
             this.TextDemo_TextBox = new System.Windows.Forms.TextBox();
             this.PictureDemo_PictureBox = new System.Windows.Forms.PictureBox();
@@ -41,18 +41,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.Previous_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // NameTest1_Label
+            // NameTest_Label
             // 
-            this.NameTest1_Label.AutoSize = true;
-            this.NameTest1_Label.BackColor = System.Drawing.Color.Transparent;
-            this.NameTest1_Label.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameTest1_Label.ForeColor = System.Drawing.Color.White;
-            this.NameTest1_Label.Location = new System.Drawing.Point(438, 48);
-            this.NameTest1_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.NameTest1_Label.Name = "NameTest1_Label";
-            this.NameTest1_Label.Size = new System.Drawing.Size(951, 65);
-            this.NameTest1_Label.TabIndex = 0;
-            this.NameTest1_Label.Text = "Perception et mémoire associative";
+            this.NameTest_Label.AutoSize = true;
+            this.NameTest_Label.BackColor = System.Drawing.Color.Transparent;
+            this.NameTest_Label.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTest_Label.ForeColor = System.Drawing.Color.White;
+            this.NameTest_Label.Location = new System.Drawing.Point(438, 48);
+            this.NameTest_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.NameTest_Label.Name = "NameTest_Label";
+            this.NameTest_Label.Size = new System.Drawing.Size(0, 65);
+            this.NameTest_Label.TabIndex = 0;
             // 
             // Instruction_TextBox
             // 
@@ -125,7 +124,7 @@
             this.Previous_PictureBox.TabStop = false;
             this.Previous_PictureBox.Click += new System.EventHandler(this.Previous_PictureBox_Click);
             // 
-            // TestPerceptionDemo_Form
+            // TestDemonstration_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,11 +138,11 @@
             this.Controls.Add(this.PictureDemo_PictureBox);
             this.Controls.Add(this.TextDemo_TextBox);
             this.Controls.Add(this.Instruction_TextBox);
-            this.Controls.Add(this.NameTest1_Label);
+            this.Controls.Add(this.NameTest_Label);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
-            this.Name = "TestPerceptionDemo_Form";
-            this.Text = "Perception et mémoire associative";
+            this.Name = "TestDemonstration_Form";
+            this.Text = "Consigne et démonstration du test";
             this.Load += new System.EventHandler(this.TestPerceptionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureDemo_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Next_PictureBox)).EndInit();
@@ -155,7 +154,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label NameTest1_Label;
+        private System.Windows.Forms.Label NameTest_Label;
         private System.Windows.Forms.TextBox Instruction_TextBox;
         private System.Windows.Forms.TextBox TextDemo_TextBox;
         private System.Windows.Forms.PictureBox PictureDemo_PictureBox;

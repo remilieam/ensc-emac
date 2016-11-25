@@ -43,7 +43,7 @@ namespace EMACClass
         {
             List<List<string>> erreurs = new List<List<string>>();
 
-            for (int i = 0; i < reponse.Length; i++)
+            for (int i = 0; i < this.reponses[numQuestion].Length; i++)
             {
                 if (this.reponses[numQuestion][i] != reponse[i])
                 {
@@ -111,7 +111,7 @@ namespace EMACClass
         /// Récupère la consigne et la démonstration du test dont on entre l'id
         /// </summary>
         /// <param name="idTest">Id du test (entre 1 et 7)</param>
-        protected void GetDemonstration(int idTest)
+        protected void RecupererDemonstration(int idTest)
         {
             OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
 
@@ -161,8 +161,8 @@ namespace EMACClass
         /// Génère une liste de question en prennant l'id du test et le nombre de questions à récupérer.
         /// </summary>
         /// <param name="idTest">Id du test (entre 1 et 7)</param>
-        /// <param name="nbQuestions">Nombre de questions du test (10 ou 15)</param>
-        protected void GenerateListQuestions(int idTest, int nbQuestions)
+        /// <param name="nbQuestions">Nombre de questions du test (3 ou 10)</param>
+        protected void GenererListeQuestions(int idTest, int nbQuestions)
         {
             OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
 
@@ -174,20 +174,35 @@ namespace EMACClass
                 {
                     requete.Connection = connexionBDD;
 
-                    // Récupération des 10 questions du test
-                    requete.CommandText = "SELECT TOP " + nbQuestions + " * FROM Questions Q INNER JOIN Images I ON I.Question = Q.Id WHERE Q.Test = " + idTest + " ORDER BY RND([Q.Id])";
+                    // Récupération des questions du test
+                    requete.CommandText = "SELECT TOP " + nbQuestions + " * FROM Questions WHERE Test = " + idTest + " ORDER BY RND([Id])";
                     OleDbDataReader reader = requete.ExecuteReader();
 
                     if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
-                            questions.Add(reader["Q.Question"].ToString());
+                            questions.Add(reader["Question"].ToString());
                             reponses.Add(reader["Reponse"].ToString());
-                            imagesQuestion.Add(reader["ImageQuestion"].ToString());
+
+                            using (OleDbCommand requete2 = new OleDbCommand())
+                            {
+                                requete2.Connection = connexionBDD;
+
+                                // Récupération des questions du test
+                                requete2.CommandText = "SELECT * FROM Images WHERE Question = " + reader["Id"];
+                                OleDbDataReader reader2 = requete2.ExecuteReader();
+
+                                if (reader2.HasRows)
+                                {
+                                    while (reader2.Read())
+                                    {
+                                        imagesQuestion.Add(reader2["ImageQuestion"].ToString());
+                                    }
+                                }
+                            }
                         }
                     }
-
                 }
 
                 connexionBDD.Close();

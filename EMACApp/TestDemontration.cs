@@ -10,19 +10,20 @@ using EMACClass;
 
 namespace EMACApp
 {
-    public partial class TestPerceptionDemo_Form : Form
+    public partial class TestDemonstration_Form : Form
     {
         private int compteur = 0;
-        private TestPerceptionMemoire test;
+        private Test test;
 
-        public TestPerceptionDemo_Form(bool difficulte)
+        public TestDemonstration_Form(Test testRecu)
         {
             InitializeComponent();
-            test = new TestPerceptionMemoire(difficulte);
+            test = testRecu;
         }
 
         private void TestPerceptionForm_Load(object sender, EventArgs e)
         {
+            NameTest_Label.Text = test.nom;
             Instruction_TextBox.Text = test.consigne + " " + compteur;
         }
 
@@ -92,8 +93,19 @@ namespace EMACApp
 
         private void Play_Button_Click(object sender, EventArgs e)
         {
-            TestPerception_Form jeu = new TestPerception_Form(test);
-            jeu.Show();
+            if (test is TestPerceptionMemoire)
+            {
+                TestPerception_Form jeu = new TestPerception_Form((TestPerceptionMemoire)test);
+                jeu.Show();
+            }
+
+            if (test is TestAttentionConcentration)
+            {
+                TestAttention_Form jeu = new TestAttention_Form((TestAttentionConcentration)test);
+                jeu.Show();
+            }
+
+            this.Close();
         }
     }
 }

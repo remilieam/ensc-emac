@@ -70,10 +70,15 @@ namespace EMACApp
         // Vérification de la réponse du joueur, mise à jour du score et affichage des erreurs (ou non) dans un pop-up
         private void Submit_Button_Click(object sender, EventArgs e)
         {
+            Letter1_TextBox.Text = (Letter1_TextBox.Text != "") ? Letter1_TextBox.Text : " ";
+            Letter2_TextBox.Text = (Letter2_TextBox.Text != "") ? Letter2_TextBox.Text : " ";
+            Letter3_TextBox.Text = (Letter3_TextBox.Text != "") ? Letter3_TextBox.Text : " ";
+
             string reponseJoueur = Letter1_TextBox.Text + Letter2_TextBox.Text + Letter3_TextBox.Text;
 
             if (test.reponses[compteur].Length == 4)
             {
+                Letter4_TextBox.Text = (Letter4_TextBox.Text != "") ? Letter4_TextBox.Text : " ";
                 reponseJoueur += Letter4_TextBox.Text;
             }
 
@@ -85,6 +90,7 @@ namespace EMACApp
                 {
                     test.ModifierScore(erreursJoueur, compteur);
                     compteur++;
+
                     if (compteur != 10)
                     {
                         this.AfficherRegle();
@@ -105,6 +111,7 @@ namespace EMACApp
                 {
                     test.ModifierScore(erreursJoueur, compteur);
                     compteur++;
+
                     if (compteur != 10)
                     {
                         this.AfficherRegle();
@@ -149,7 +156,7 @@ namespace EMACApp
         // Affichage du résultat à l’issue des 10 questions
         public void AfficherResultat()
         {
-            Rule_TextBox.Text = test.CalculerResultat().ToString();
+            Rule_TextBox.Text = "Vous avez un taux de réussite de " + test.CalculerResultat() + " % !";
             Rule_TextBox.Show();
             End_Button.Show();
 
