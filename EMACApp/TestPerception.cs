@@ -82,13 +82,12 @@ namespace EMACApp
                 reponseJoueur += Letter4_TextBox.Text;
             }
 
-            List<List<string>> erreursJoueur = test.VerifierReponse(reponseJoueur, compteur);
+            List<string> erreursJoueur = test.VerifierReponse(reponseJoueur, compteur);
 
-            if (erreursJoueur.Count == 0)
+            if (erreursJoueur[0].Length == 0)
             {
-                if (MessageBox.Show("OK ! Vous avez tout juste !", "Résultat", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
+                if (MessageBox.Show("Bravo ! Vous avez tout juste !", "Résultat", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
                 {
-                    test.ModifierScore(erreursJoueur, compteur);
                     compteur++;
 
                     if (compteur != 10)
@@ -105,11 +104,10 @@ namespace EMACApp
 
             else
             {
-                string message = test.AfficherErreurs(erreursJoueur, compteur);
+                string message = test.AfficherErreur(erreursJoueur);
 
                 if (MessageBox.Show(message, "Résultat", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
                 {
-                    test.ModifierScore(erreursJoueur, compteur);
                     compteur++;
 
                     if (compteur != 10)

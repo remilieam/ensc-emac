@@ -163,10 +163,6 @@ namespace EMACApp
                 // Cas où on vient de faire la dernière question de la série
                 else
                 {
-                    // Calcul du nombre d’erreurs commises dans la série
-                    List<List<string>> erreursQuestion = test.VerifierReponse(chaineReponse, compteurSerie);
-                    test.ModifierScore(erreursQuestion, compteurSerie);
-
                     // Passage à la série suivante
                     compteurSerie++;
                     compteurQuestion = 0;
@@ -190,10 +186,6 @@ namespace EMACApp
                 // Cas où on vient de faire la dernière question de la dernière série
                 else
                 {
-                    // Calcul du nombre d’erreurs commises dans la dernière série
-                    List<List<string>> erreursQuestion = test.VerifierReponse(chaineReponse, compteurSerie);
-                    test.ModifierScore(erreursQuestion, compteurSerie);
-
                     // Affichage du résultat final
                     this.AfficherResultat();
                 }

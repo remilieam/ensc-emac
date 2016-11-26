@@ -14,9 +14,27 @@ namespace EMACClass
             intervalle = intervalleTest;
         }
 
-        public override void Jouer()
+        public override List<string> VerifierReponse(string reponse, int numQuestion)
         {
-            throw new NotImplementedException();
+            return new List<string>();
+        }
+
+        public override string AfficherErreur(List<string> erreurs)
+        {
+            return "";
+        }
+
+        public override double CalculerResultat()
+        {
+            return 0;
+        }
+
+        protected override void RecupererDemonstration()
+        {
+        }
+
+        protected override void GenererListeQuestions()
+        {
         }
     }
 }

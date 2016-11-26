@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 
@@ -7,8 +9,10 @@ namespace EMACClass
 {
     public class TestPerceptionMemoire : Test
     {
-        // Attribut
+        // Attributs inhérents à la classe
         public List<string> lettres { get; private set; }
+        private int idTest = 1;
+        private int nbQuestions = 10;
 
         /// <summary>
         /// Construit un nouveau test “Perception et mémoire associative”.
@@ -30,9 +34,156 @@ namespace EMACClass
             intervalle = (difficulte) ? 2 : 4;
             lettres = new List<string>();
 
-            RecupererDemonstration(1);
-            GenererListeQuestions(1, 10);
+            RecupererDemonstration();
+            GenererListeQuestions();
             SeparerLettresReponses();
+        }
+
+        /// <summary>
+        /// Compare la entrée par l’utilisateur à la réponse juste.
+        /// </summary>
+        /// <param name="reponse">Chaîne de caractères correspondant à la réponse de l’utilisateur</param>
+        /// <param name="numQuestion">Numéro de la question à vérifier</param>
+        /// <returns>Liste des erreurs [lettre, réponse juste, réponse du joueur]</returns>
+        public override List<string> VerifierReponse(string reponse, int numQuestion)
+        {
+            List<string> erreurs = new List<string>();
+            erreurs.Add("");
+            erreurs.Add("");
+            erreurs.Add("");
+
+            for (int i = 0; i < this.reponses[numQuestion].Length; i++)
+            {
+                if (this.reponses[numQuestion][i] != reponse[i])
+                {
+                    erreurs[0] += this.lettres[numQuestion][i].ToString();
+                    erreurs[1] += this.reponses[numQuestion][i].ToString();
+                    erreurs[2] += reponse[i].ToString();
+                }
+
+                else
+                {
+                    this.score++;
+                }
+            }
+
+            return erreurs;
+        }
+
+        /// <summary>
+        /// Affiche à l’utilisateur le nombre d’erreurs qu’il a commis avec les réponses qu’il aurait dû mettre.
+        /// </summary>
+        /// <param name="erreurs">Liste obtenue grâce à la méthode “VerifierReponse”</param>
+        /// <returns>Chaîne de caractères à afficher au joueur</returns>
+        public override string AfficherErreur(List<string> erreurs)
+        {
+            string message = "Vous avez commis des erreurs. Vous avez répondu :\r\n";
+
+            for (int i = 0; i < erreurs[0].Length; i++)
+            {
+                message += "  –  en " + erreurs[0][i] + ", " + ((erreurs[2][i].ToString() == " ") ? "rien" : erreurs[2][i].ToString()) + " au lieu de " + erreurs[1][i] + "\r\n";
+            }
+
+            return message;
+        }
+
+        /// <summary>
+        /// Calcule le résultat de l’utilisateur, c’est-à-dire sa proportion de réponses justes.
+        /// </summary>
+        /// <returns>Résultat de l’utilisateur</returns>
+        public override double CalculerResultat()
+        {
+            double nbQuestionsTotales = 0;
+
+            for (int i = 0; i < this.reponses.Count; i++)
+            {
+                nbQuestionsTotales += this.reponses[i].Length;
+            }
+
+            return this.score * 100.0 / nbQuestionsTotales;
+        }
+
+        /// <summary>
+        /// Récupère la consigne et la démonstration du test dont on entre l'id
+        /// </summary>
+        protected override void RecupererDemonstration()
+        {
+            OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
+
+            using (connexionBDD)
+            {
+                connexionBDD.Open();
+
+                using (OleDbCommand requete = new OleDbCommand())
+                {
+                    requete.Connection = connexionBDD;
+
+                    // Récupération du test
+                    requete.CommandText = "SELECT * FROM Test WHERE Id = " + this.idTest;
+                    OleDbDataReader reader = requete.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        this.nom = reader["Nom"].ToString();
+                        this.consigne = reader["Consigne"].ToString();
+                    }
+                }
+
+                using (OleDbCommand requete2 = new OleDbCommand())
+                {
+                    requete2.Connection = connexionBDD;
+
+                    // Récupération de la démonstration
+                    requete2.CommandText = "SELECT * FROM Demo WHERE Test = " + this.idTest;
+                    OleDbDataReader reader2 = requete2.ExecuteReader();
+
+                    if (reader2.HasRows)
+                    {
+                        while (reader2.Read())
+                        {
+                            this.imagesDemo.Add(reader2["ImageDemo"].ToString());
+                            this.texteDemo.Add(reader2["TexteDemo"].ToString());
+                        }
+                    }
+                }
+
+                connexionBDD.Close();
+            }
+        }
+
+        /// <summary>
+        /// Génère une liste de question en prennant l'id du test et le nombre de questions à récupérer.
+        /// </summary>
+        protected override void GenererListeQuestions()
+        {
+            OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
+
+            using (connexionBDD)
+            {
+                connexionBDD.Open();
+
+                using (OleDbCommand requete = new OleDbCommand())
+                {
+                    requete.Connection = connexionBDD;
+
+                    // Récupération des questions du test avec l’image associée
+                    requete.CommandText = "SELECT TOP " + this.nbQuestions + " * FROM Questions Q INNER JOIN Images I ON I.Question = Q.Id WHERE Test = " + this.idTest + " ORDER BY RND([Q.Id])";
+                    OleDbDataReader reader = requete.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            this.questions.Add(reader["Q.Question"].ToString());
+                            this.reponses.Add(reader["Reponse"].ToString());
+                            this.imagesQuestion.Add(reader["ImageQuestion"].ToString());
+                        }
+                    }
+                }
+
+                connexionBDD.Close();
+            }
         }
 
         /// <summary>
@@ -60,22 +211,5 @@ namespace EMACClass
 
             this.reponses = chiffres;
         }
-
-        /// <summary>
-        /// Calcule le résultat de l’utilisateur, c’est-à-dire sa proportion de réponses justes.
-        /// </summary>
-        /// <returns>Résultat de l’utilisateur</returns>
-        public override double CalculerResultat()
-        {
-            double nbQuestions = 0;
-
-            for (int i = 0; i < this.reponses.Count; i++)
-            {
-                nbQuestions += this.reponses[i].Length;
-            }
-
-            return this.score / nbQuestions * 100.0;
-        }
-
     }
 }
