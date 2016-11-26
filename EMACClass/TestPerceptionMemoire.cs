@@ -100,7 +100,7 @@ namespace EMACClass
                 nbQuestionsTotales += this.reponses[i].Length;
             }
 
-            return this.score * 100.0 / nbQuestionsTotales;
+            return Math.Round(this.score * 100.0 / nbQuestionsTotales, 2);
         }
 
         /// <summary>

@@ -90,7 +90,7 @@ namespace EMACClass
         /// <returns>Résultat de l’utilisateur</returns>
         public override double CalculerResultat()
         {
-            return this.score / (this.reponses.Count * 5.0) * 100.0;
+            return Math.Round(this.score / (this.reponses.Count * 5.0) * 100.0, 2);
         }
 
         /// <summary>
@@ -159,8 +159,34 @@ namespace EMACClass
 
                     // Récupération des questions du test et des images associées
                     string requeteSql;
-                    if (this.difficulte) { requeteSql = "SELECT TOP " + this.nbQuestions + " * FROM Questions WHERE Test = " + this.idTest + " ORDER BY RND([Id])"; }
-                    else { requeteSql = "SELECT TOP " + this.nbQuestions + " * FROM Questions WHERE Test = " + this.idTest + " ORDER BY RND([Id])"; }
+
+                    if (this.difficulte)
+                    {
+                        requeteSql = "SELECT TOP " + this.nbQuestions + " * FROM Questions WHERE Test = " + this.idTest + " ORDER BY RND([Id])";
+                    }
+
+                    else
+                    {
+                        string type = "";
+
+                        using (OleDbCommand requete3 = new OleDbCommand())
+                        {
+                            requete3.Connection = connexionBDD;
+
+                            // Récupération des questions du test
+                            requete3.CommandText = "SELECT TOP 1 Type FROM Questions WHERE Test = " + this.idTest + " ORDER BY RND([Id])";
+                            OleDbDataReader reader3 = requete3.ExecuteReader();
+
+                            if (reader3.HasRows)
+                            {
+                                reader3.Read();
+                                type = reader3["Type"].ToString();
+                            }
+                        }
+
+                        requeteSql = "SELECT TOP " + this.nbQuestions + " * FROM Questions WHERE Test = " + this.idTest + " AND Type = '" + type + "' ORDER BY RND([Id])";
+                    }
+
                     requete.CommandText = requeteSql;
                     OleDbDataReader reader = requete.ExecuteReader();
 

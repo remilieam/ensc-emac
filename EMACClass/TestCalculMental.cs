@@ -12,14 +12,7 @@ namespace EMACClass
         // Attributs inhérents à la classe
         private int idTest = 3;
         private int nbQuestions = 10;
-
-        public TestCalculMental(bool difficulteTest, int intervalleTest, List<Object> donneesTest)
-        {
-            nom = "Calcul mental";
-            difficulte = difficulteTest;
-            score = 0;
-            intervalle = intervalleTest;
-        }
+        private string operation = "";
         
         /// <summary>
         /// Construit un nouveau test “Attention et concentration”.
