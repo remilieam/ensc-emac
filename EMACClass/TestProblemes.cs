@@ -7,11 +7,17 @@ namespace EMACClass
 {
     public class TestProblemes : Test
     {
+        protected int compteur;
         public TestProblemes(bool difficulteTest, int intervalleTest, List<Object> donneesTest)
         {
             difficulte = difficulteTest;
             score = 0;
             intervalle = intervalleTest;
+        }
+
+        public TestProblemes(bool difficulteTest)
+        {
+            difficulte = difficulteTest;
         }
 
         public override List<string> VerifierReponse(string reponse, int numQuestion)
