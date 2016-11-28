@@ -11,8 +11,8 @@ namespace EMACClass
     {
         // Attributs inhérents à la classe
         public List<List<string>> imagesSeries { get; private set; }
-        private int idTest = 2;
-        private int nbQuestions = 3;
+        private readonly int idTest = 2;
+        private readonly int nbQuestions = 3;
 
         /// <summary>
         /// Construit un nouveau test “Attention et concentration”.

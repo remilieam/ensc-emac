@@ -11,8 +11,8 @@ namespace EMACClass
     {
         // Attributs inhérents à la classe
         public List<string> lettres { get; private set; }
-        private int idTest = 1;
-        private int nbQuestions = 10;
+        private readonly int idTest = 1;
+        private readonly int nbQuestions = 10;
 
         /// <summary>
         /// Construit un nouveau test “Perception et mémoire associative”.
