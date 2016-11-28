@@ -38,15 +38,29 @@ namespace EMACApp
         private void Test2EasyMenu_Button_Click(object sender, EventArgs e)
         {
             TestAttentionConcentration test = new TestAttentionConcentration(false);
-            TestDemonstration_Form testPerception = new TestDemonstration_Form(test);
-            testPerception.Show();
+            TestDemonstration_Form testAttention = new TestDemonstration_Form(test);
+            testAttention.Show();
         }
 
         private void Test2DifficultMenu_Button_Click(object sender, EventArgs e)
         {
             TestAttentionConcentration test = new TestAttentionConcentration(true);
-            TestDemonstration_Form testPerception = new TestDemonstration_Form(test);
-            testPerception.Show();
+            TestDemonstration_Form testAttention = new TestDemonstration_Form(test);
+            testAttention.Show();
+        }
+
+        private void Test3EasyMenu_Button_Click(object sender, EventArgs e)
+        {
+            TestCalculMental test = new TestCalculMental(false);
+            TestDemonstration_Form testCalcul = new TestDemonstration_Form(test);
+            testCalcul.Show();
+        }
+
+        private void Test3DifficultMenu_Button_Click(object sender, EventArgs e)
+        {
+            TestCalculMental test = new TestCalculMental(true);
+            TestDemonstration_Form testCalcul = new TestDemonstration_Form(test);
+            testCalcul.Show();
         }
 
         private void Menu_Form_FormClosed(object sender, FormClosedEventArgs e)

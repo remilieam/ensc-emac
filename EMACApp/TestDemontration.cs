@@ -105,6 +105,12 @@ namespace EMACApp
                 jeu.Show();
             }
 
+            if (test is TestCalculMental)
+            {
+                TestCalcul_Form jeu = new TestCalcul_Form((TestCalculMental)test);
+                jeu.Show();
+            }
+
             this.Close();
         }
     }

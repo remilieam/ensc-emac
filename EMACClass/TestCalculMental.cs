@@ -10,8 +10,8 @@ namespace EMACClass
     public class TestCalculMental : Test
     {
         // Attributs inhérents à la classe
-        private int idTest = 3;
-        private int nbQuestions = 10;
+        private readonly int idTest = 3;
+        private readonly int nbQuestions = 10;
         private string operation = "";
         
         /// <summary>
@@ -31,10 +31,9 @@ namespace EMACClass
             imagesQuestion = new List<string>();
             reponses = new List<string>();
             score = 0;
-            intervalle = (difficulte) ? 3 : 0;
+            intervalle = (difficulte) ? 5 : 0;
 
             RecupererDemonstration();
-            GenererListeQuestions();
         }
 
         /// <summary>
@@ -151,7 +150,7 @@ namespace EMACClass
                     requete.Connection = connexionBDD;
 
                     // Récupération des questions du test
-                    requete.CommandText = "SELECT TOP " + this.nbQuestions + " * FROM Questions WHERE Test = " + this.idTest + " ORDER BY RND([Id])";
+                    requete.CommandText = "SELECT TOP " + this.nbQuestions + " * FROM Questions WHERE Test = " + this.idTest + " AND Type = '" + this.operation + "' ORDER BY RND([Id])";
                     OleDbDataReader reader = requete.ExecuteReader();
 
                     if (reader.HasRows)
@@ -166,6 +165,16 @@ namespace EMACClass
 
                 connexionBDD.Close();
             }
+        }
+
+        /// <summary>
+        /// Pour générer la liste de questions après que l’utilisateur ait choisi l’opération sur laquelle il désire se tester.
+        /// </summary>
+        /// <param name="signe">Chaîne de caractères contenant l’opération choisi par l’utilisateur</param>
+        public void GenererQuestions(string signe)
+        {
+            this.operation = signe;
+            this.GenererListeQuestions();
         }
     }
 }
