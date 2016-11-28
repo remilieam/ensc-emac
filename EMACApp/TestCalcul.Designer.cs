@@ -59,7 +59,6 @@
             this.ProgressTest3_TextBox.Size = new System.Drawing.Size(712, 29);
             this.ProgressTest3_TextBox.TabIndex = 31;
             this.ProgressTest3_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ProgressTest3_TextBox.UseWaitCursor = true;
             this.ProgressTest3_TextBox.Visible = false;
             // 
             // NameTest3_Label
@@ -74,7 +73,6 @@
             this.NameTest3_Label.Size = new System.Drawing.Size(228, 37);
             this.NameTest3_Label.TabIndex = 30;
             this.NameTest3_Label.Text = "Calcul mental";
-            this.NameTest3_Label.UseWaitCursor = true;
             // 
             // Area_PictureBox
             // 
@@ -84,7 +82,6 @@
             this.Area_PictureBox.Size = new System.Drawing.Size(712, 345);
             this.Area_PictureBox.TabIndex = 32;
             this.Area_PictureBox.TabStop = false;
-            this.Area_PictureBox.UseWaitCursor = true;
             this.Area_PictureBox.Visible = false;
             // 
             // Confirm_Button
@@ -97,7 +94,6 @@
             this.Confirm_Button.TabIndex = 33;
             this.Confirm_Button.Text = "VALIDER";
             this.Confirm_Button.UseVisualStyleBackColor = true;
-            this.Confirm_Button.UseWaitCursor = true;
             this.Confirm_Button.Visible = false;
             this.Confirm_Button.Click += new System.EventHandler(this.Confirm_Button_Click);
             // 
@@ -112,7 +108,6 @@
             this.Operation_TextBlox.Size = new System.Drawing.Size(267, 29);
             this.Operation_TextBlox.TabIndex = 34;
             this.Operation_TextBlox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Operation_TextBlox.UseWaitCursor = true;
             this.Operation_TextBlox.Visible = false;
             // 
             // Answer_TextBox
@@ -124,7 +119,6 @@
             this.Answer_TextBox.Name = "Answer_TextBox";
             this.Answer_TextBox.Size = new System.Drawing.Size(123, 29);
             this.Answer_TextBox.TabIndex = 35;
-            this.Answer_TextBox.UseWaitCursor = true;
             this.Answer_TextBox.Visible = false;
             // 
             // Equal_Label
@@ -139,7 +133,6 @@
             this.Equal_Label.Size = new System.Drawing.Size(21, 22);
             this.Equal_Label.TabIndex = 36;
             this.Equal_Label.Text = "=";
-            this.Equal_Label.UseWaitCursor = true;
             this.Equal_Label.Visible = false;
             // 
             // Addition_Button
@@ -152,7 +145,6 @@
             this.Addition_Button.TabIndex = 37;
             this.Addition_Button.Text = "+";
             this.Addition_Button.UseVisualStyleBackColor = true;
-            this.Addition_Button.UseWaitCursor = true;
             this.Addition_Button.Click += new System.EventHandler(this.Addition_Button_Click);
             // 
             // Division_Button
@@ -165,7 +157,6 @@
             this.Division_Button.TabIndex = 38;
             this.Division_Button.Text = "÷";
             this.Division_Button.UseVisualStyleBackColor = true;
-            this.Division_Button.UseWaitCursor = true;
             this.Division_Button.Click += new System.EventHandler(this.Division_Button_Click);
             // 
             // Multiplication_Button
@@ -178,7 +169,6 @@
             this.Multiplication_Button.TabIndex = 39;
             this.Multiplication_Button.Text = "×";
             this.Multiplication_Button.UseVisualStyleBackColor = true;
-            this.Multiplication_Button.UseWaitCursor = true;
             this.Multiplication_Button.Click += new System.EventHandler(this.Multiplication_Button_Click);
             // 
             // Subtraction_Button
@@ -191,7 +181,6 @@
             this.Subtraction_Button.TabIndex = 40;
             this.Subtraction_Button.Text = "–";
             this.Subtraction_Button.UseVisualStyleBackColor = true;
-            this.Subtraction_Button.UseWaitCursor = true;
             this.Subtraction_Button.Click += new System.EventHandler(this.Subtraction_Button_Click);
             // 
             // Choice_TextBox
@@ -208,7 +197,6 @@
             this.Choice_TextBox.Text = "Cliquez sur le bouton comportant le signe de l’opération\r\nsur laquelle vous voule" +
     "z vous tester.";
             this.Choice_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Choice_TextBox.UseWaitCursor = true;
             // 
             // End_Button
             // 
@@ -220,7 +208,6 @@
             this.End_Button.TabIndex = 43;
             this.End_Button.Text = "TERMINER";
             this.End_Button.UseVisualStyleBackColor = true;
-            this.End_Button.UseWaitCursor = true;
             this.End_Button.Visible = false;
             this.End_Button.Click += new System.EventHandler(this.End_Button_Click);
             // 
@@ -235,13 +222,13 @@
             this.Result_TextBox.Size = new System.Drawing.Size(712, 29);
             this.Result_TextBox.TabIndex = 42;
             this.Result_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Result_TextBox.UseWaitCursor = true;
             this.Result_TextBox.Visible = false;
             // 
             // TestCalcul_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1034, 542);
@@ -262,7 +249,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TestCalcul_Form";
             this.Text = "Calcul mental";
-            this.UseWaitCursor = true;
             ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
