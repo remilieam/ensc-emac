@@ -135,6 +135,7 @@
             this.PbMaths_pictureBox.Location = new System.Drawing.Point(566, 143);
             this.PbMaths_pictureBox.Name = "PbMaths_pictureBox";
             this.PbMaths_pictureBox.Size = new System.Drawing.Size(164, 115);
+            this.PbMaths_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbMaths_pictureBox.TabIndex = 5;
             this.PbMaths_pictureBox.TabStop = false;
             this.PbMaths_pictureBox.Click += new System.EventHandler(this.PbMaths_pictureBox_Click);
