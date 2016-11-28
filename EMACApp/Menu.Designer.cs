@@ -79,6 +79,7 @@
             this.Test4DifficultMenu_Button.TabIndex = 34;
             this.Test4DifficultMenu_Button.Text = "Difficile";
             this.Test4DifficultMenu_Button.UseVisualStyleBackColor = true;
+            this.Test4DifficultMenu_Button.Click += new System.EventHandler(this.Test4DifficultMenu_Button_Click);
             // 
             // Test3DifficultMenu_Button
             // 
@@ -137,6 +138,7 @@
             this.Test4EasyMenu_Button.TabIndex = 29;
             this.Test4EasyMenu_Button.Text = "Facile";
             this.Test4EasyMenu_Button.UseVisualStyleBackColor = true;
+            this.Test4EasyMenu_Button.Click += new System.EventHandler(this.Test4EasyMenu_Button_Click);
             // 
             // Test3EasyMenu_Button
             // 
@@ -278,7 +280,7 @@
             this.Test1_Panel.Controls.Add(this.Test1EasyMenu_Button);
             this.Test1_Panel.Controls.Add(this.Test1DifficultMenu_Button);
             this.Test1_Panel.Location = new System.Drawing.Point(21, 103);
-            this.Test1_Panel.Margin = new System.Windows.Forms.Padding(2);
+            this.Test1_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Test1_Panel.Name = "Test1_Panel";
             this.Test1_Panel.Size = new System.Drawing.Size(193, 289);
             this.Test1_Panel.TabIndex = 41;
@@ -290,7 +292,7 @@
             this.Test2_Panel.Controls.Add(this.Test2EasyMenu_Button);
             this.Test2_Panel.Controls.Add(this.Test2Menu_Label);
             this.Test2_Panel.Location = new System.Drawing.Point(223, 103);
-            this.Test2_Panel.Margin = new System.Windows.Forms.Padding(2);
+            this.Test2_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Test2_Panel.Name = "Test2_Panel";
             this.Test2_Panel.Size = new System.Drawing.Size(186, 289);
             this.Test2_Panel.TabIndex = 42;
@@ -302,7 +304,7 @@
             this.Test3_Panel.Controls.Add(this.Test3EasyMenu_Button);
             this.Test3_Panel.Controls.Add(this.Test3Menu_Label);
             this.Test3_Panel.Location = new System.Drawing.Point(423, 103);
-            this.Test3_Panel.Margin = new System.Windows.Forms.Padding(2);
+            this.Test3_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Test3_Panel.Name = "Test3_Panel";
             this.Test3_Panel.Size = new System.Drawing.Size(186, 289);
             this.Test3_Panel.TabIndex = 43;
@@ -314,7 +316,7 @@
             this.Test4_Panel.Controls.Add(this.Test4DifficultMenu_Button);
             this.Test4_Panel.Controls.Add(this.Test4EasyMenu_Button);
             this.Test4_Panel.Location = new System.Drawing.Point(625, 103);
-            this.Test4_Panel.Margin = new System.Windows.Forms.Padding(2);
+            this.Test4_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Test4_Panel.Name = "Test4_Panel";
             this.Test4_Panel.Size = new System.Drawing.Size(186, 289);
             this.Test4_Panel.TabIndex = 43;
@@ -326,7 +328,7 @@
             this.panel4.Controls.Add(this.Test5DifficultMenu_Button);
             this.panel4.Controls.Add(this.Test5EasyMenu_Button);
             this.panel4.Location = new System.Drawing.Point(829, 103);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(186, 289);
             this.panel4.TabIndex = 43;
@@ -350,6 +352,7 @@
             this.Name = "Menu_Form";
             this.Text = "Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_Form_FormClosed);
+            this.Load += new System.EventHandler(this.Menu_Form_Load);
             this.Test1_Panel.ResumeLayout(false);
             this.Test1_Panel.PerformLayout();
             this.Test2_Panel.ResumeLayout(false);

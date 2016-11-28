@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestMaths_Form));
             this.ConsigneMaths_TextBox = new System.Windows.Forms.TextBox();
-            this.Begin_Button = new System.Windows.Forms.Button();
             this.Answer_GroupBox = new System.Windows.Forms.GroupBox();
             this.Choice4_RadioButton = new System.Windows.Forms.RadioButton();
             this.Choice3_RadioButton = new System.Windows.Forms.RadioButton();
@@ -37,7 +37,9 @@
             this.Choice1_RadioButton = new System.Windows.Forms.RadioButton();
             this.Valider_Button = new System.Windows.Forms.Button();
             this.Next_Button = new System.Windows.Forms.Button();
+            this.PbMaths_pictureBox = new System.Windows.Forms.PictureBox();
             this.Answer_GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMaths_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // ConsigneMaths_TextBox
@@ -45,19 +47,9 @@
             this.ConsigneMaths_TextBox.Location = new System.Drawing.Point(17, 12);
             this.ConsigneMaths_TextBox.Multiline = true;
             this.ConsigneMaths_TextBox.Name = "ConsigneMaths_TextBox";
-            this.ConsigneMaths_TextBox.Size = new System.Drawing.Size(538, 117);
+            this.ConsigneMaths_TextBox.Size = new System.Drawing.Size(618, 125);
             this.ConsigneMaths_TextBox.TabIndex = 0;
             this.ConsigneMaths_TextBox.TextChanged += new System.EventHandler(this.ConsigneMaths_TxtBox_TextChanged);
-            // 
-            // Begin_Button
-            // 
-            this.Begin_Button.Location = new System.Drawing.Point(475, 286);
-            this.Begin_Button.Name = "Begin_Button";
-            this.Begin_Button.Size = new System.Drawing.Size(75, 23);
-            this.Begin_Button.TabIndex = 1;
-            this.Begin_Button.Text = "Commencer";
-            this.Begin_Button.UseVisualStyleBackColor = true;
-            this.Begin_Button.Click += new System.EventHandler(this.Begin_Btn_Click);
             // 
             // Answer_GroupBox
             // 
@@ -138,21 +130,33 @@
             this.Next_Button.UseVisualStyleBackColor = true;
             this.Next_Button.Click += new System.EventHandler(this.Next_Btn_Click);
             // 
+            // PbMaths_pictureBox
+            // 
+            this.PbMaths_pictureBox.Location = new System.Drawing.Point(566, 143);
+            this.PbMaths_pictureBox.Name = "PbMaths_pictureBox";
+            this.PbMaths_pictureBox.Size = new System.Drawing.Size(164, 115);
+            this.PbMaths_pictureBox.TabIndex = 5;
+            this.PbMaths_pictureBox.TabStop = false;
+            this.PbMaths_pictureBox.Click += new System.EventHandler(this.PbMaths_pictureBox_Click);
+            // 
             // TestMaths_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 321);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1034, 542);
+            this.Controls.Add(this.PbMaths_pictureBox);
             this.Controls.Add(this.Next_Button);
             this.Controls.Add(this.Valider_Button);
             this.Controls.Add(this.Answer_GroupBox);
-            this.Controls.Add(this.Begin_Button);
             this.Controls.Add(this.ConsigneMaths_TextBox);
             this.Name = "TestMaths_Form";
             this.Text = "TestMaths";
             this.Load += new System.EventHandler(this.TestMaths_Form_Load);
             this.Answer_GroupBox.ResumeLayout(false);
             this.Answer_GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbMaths_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +165,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox ConsigneMaths_TextBox;
-        private System.Windows.Forms.Button Begin_Button;
         private System.Windows.Forms.GroupBox Answer_GroupBox;
         private System.Windows.Forms.RadioButton Choice4_RadioButton;
         private System.Windows.Forms.RadioButton Choice3_RadioButton;
@@ -169,5 +172,6 @@
         private System.Windows.Forms.RadioButton Choice1_RadioButton;
         private System.Windows.Forms.Button Valider_Button;
         private System.Windows.Forms.Button Next_Button;
+        private System.Windows.Forms.PictureBox PbMaths_pictureBox;
     }
 }

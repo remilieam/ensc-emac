@@ -24,19 +24,11 @@ namespace EMACClass
           */
         public TestProblemesMathematiques(bool difficulteTest) : base(difficulteTest)
         {
-            nom = "";
+            nom = "Problèmes Mathématiques";
             consigne = "";
             imagesDemo = new List<string>();
             texteDemo = new List<string>();
             difficulte = difficulteTest;
-            if (difficulte == false)
-            {
-                idTest = 4;
-            }
-            else
-            {
-                idTest = 5;
-            }
             questions = new List<string>();
             imagesQuestion = new List<string>();
             reponses = new List<string>();
