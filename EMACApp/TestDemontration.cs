@@ -105,6 +105,12 @@ namespace EMACApp
                 jeu.Show();
             }
 
+            if (test is TestProblemesMathematiques)
+            {
+                TestMaths_Form jeu = new TestMaths_Form((TestProblemesMathematiques)test);
+                jeu.Show();
+            }
+
             this.Close();
         }
     }

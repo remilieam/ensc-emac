@@ -53,5 +53,24 @@ namespace EMACApp
         {
             this.DialogResult = DialogResult.OK;
         }
+
+        private void Menu_Form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Test4EasyMenu_Button_Click(object sender, EventArgs e)
+        {
+            TestProblemesMathematiques test = new TestProblemesMathematiques(false);
+            TestDemonstration_Form testMaths = new TestDemonstration_Form(test);
+            testMaths.Show();
+        }
+
+        private void Test4DifficultMenu_Button_Click(object sender, EventArgs e)
+        {
+            TestProblemesMathematiques test = new TestProblemesMathematiques(true);
+            TestDemonstration_Form testMaths = new TestDemonstration_Form(test);
+            testMaths.Show();
+        }
     }
 }

@@ -14,10 +14,21 @@ namespace EMACApp
     public partial class TestMaths_Form : Form
     {
         List<string> question = new List<string>();
+        List<string> ImageQuestion = new List<string>();
         private int compteur;
+        public TestProblemesMathematiques test;
+        private int nbQuestions = 10;
 
 
         private const string BDD = "|DataDirectory|\\AppData\\EMAC.mdb";
+
+
+        public TestMaths_Form(TestProblemesMathematiques testRecu)
+        {
+            InitializeComponent();
+            test = testRecu;
+        }
+
         public TestMaths_Form()
         {
             InitializeComponent();
@@ -29,72 +40,13 @@ namespace EMACApp
             Valider_Button.Hide();
 
             Next_Button.Hide();
-            
+
         }
         OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
 
         private void TestMaths_Form_Load(object sender, EventArgs e)
         {
-            // OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
-            using (connexionBDD)
-            {
-                // Ouverture de la connexion
-                connexionBDD.Open();
-
-                // Creation d'une requete
-                using (OleDbCommand requete = new OleDbCommand())
-                {
-                    requete.Connection = connexionBDD;
-                    // TODO faire un If afin de récupérer le niveau et de différer la consigne
-                    requete.CommandText = "SELECT * FROM Test WHERE Id=6";
-                    OleDbDataReader reader = requete.ExecuteReader();
-
-                    // Si le resultat comporte des lignes
-                    if (reader.HasRows)
-                    {
-                        // reader.Read() passe a la ligne suivante et renvoit false a la fin du DataReader
-                        while (reader.Read())
-                        {
-                            // Recuperation des valeur + constitution de la ligne
-                            string ligne = "Consigne :\r\n " + reader["Consigne"];
-
-                            // Ajout de la ligne au textbox
-                            ConsigneMaths_TextBox.Text += ligne;
-                        }
-                        connexionBDD.Close();
-                    }
-                }
-            }
-        }
-
-
-
-
-        private void ConsigneMaths_TxtBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Begin_Btn_Click(object sender, EventArgs e)
-        {
-            Answer_GroupBox.Show();
-            Choice1_RadioButton.Show();
-            Choice1_RadioButton.Checked = false;
-            Choice2_RadioButton.Show();
-            Choice2_RadioButton.Checked = false;
-            Choice3_RadioButton.Show();
-            Choice3_RadioButton.Checked = false;
-            Choice4_RadioButton.Show();
-            Choice4_RadioButton.Checked = false;
-            Valider_Button.Show();
-            Next_Button.Show();
-            Begin_Button.Hide();
-            Next_Button.Enabled = false;
-
-
-
-
-
+            PbMaths_pictureBox.Hide();
             OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
 
             // Creation d'une requete
@@ -105,37 +57,64 @@ namespace EMACApp
                 using (OleDbCommand requete2 = new OleDbCommand())
                 {
                     requete2.Connection = connexionBDD;
-                    requete2.CommandText = "SELECT * FROM Questions WHERE Test=5 ";
-                    OleDbDataReader reader2 = requete2.ExecuteReader();
-
-                    // Si le resultat comporte des lignes
-                    //    if(reader2.HasRows)
-                    while (reader2.Read()) 
+                    if (test.difficulte == true)
                     {
-                        //reader2.Read();
-                        
-                        // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
-                        question.Add((string)reader2["Question"]);
-                        ConsigneMaths_TextBox.Text =(string) question[0];
-                        compteur = 1;
+                        requete2.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question=q.Id WHERE Test=4 and type='Difficile'";
+                        OleDbDataReader reader2 = requete2.ExecuteReader();
 
+                        // Si le resultat comporte des lignes
+                        //    if(reader2.HasRows)
+                        while (reader2.Read())
+                        {
+                            //reader2.Read();
+
+                            // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
+                            question.Add((string)reader2["Question"]);
+
+                            ImageQuestion.Add((string)reader2["ImageQuestion"]);
+
+                            ConsigneMaths_TextBox.Text = question[0];
+                            PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + ImageQuestion[0];
+
+                            compteur = 1;
+                        }
+                    }
+
+                    else
+                    {
+                        requete2.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question=q.Id WHERE Test=4 and type='Facile'";
+                        OleDbDataReader reader2 = requete2.ExecuteReader();
+
+                        // Si le resultat comporte des lignes
+                        //    if(reader2.HasRows)
+                        while (reader2.Read())
+                        {
+                            //reader2.Read();
+
+                            // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
+                            question.Add((string)reader2["Question"]);
+
+                            ImageQuestion.Add((string)reader2["ImageQuestion"]);
+
+                            ConsigneMaths_TextBox.Text = question[0];
+                            PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + ImageQuestion[0];
+
+                            compteur = 1;
+                        }
                     }
                 }
             }
         }
 
+        private void ConsigneMaths_TxtBox_TextChanged(object sender, EventArgs e)
+        {
 
-
-
-
-
-
-
+        }
 
 
         private void Next_Btn_Click(object sender, EventArgs e)
         {
-            if (compteur < question.Count)
+            if (compteur < 11)
             {
                 Next_Button.Enabled = false;
                 Valider_Button.Enabled = true;
@@ -147,19 +126,20 @@ namespace EMACApp
                 MessageBox.Show("Vous avez fini!");
             }
         }
-      
+
         private void Valider_Btn_Click(object sender, EventArgs e)
-        {   string indice_reponse="0";
+        {
+            string indice_reponse = "0";
             //On recupère la valeur du radioButton sélectionné
             if (Choice1_RadioButton.Checked)
             {
                 indice_reponse = "1";
             }
 
-        
+
             if (Choice2_RadioButton.Checked)
             {
-                indice_reponse = "2" ;
+                indice_reponse = "2";
             }
 
             if (Choice3_RadioButton.Checked)
@@ -170,14 +150,12 @@ namespace EMACApp
             {
                 indice_reponse = "4";
             }
-        
 
             // on recupère la bonne réponse dans la BDD
 
-        OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
+            OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
             using (connexionBDD)
             {
-
                 connexionBDD.Open();
                 using (OleDbCommand requete3 = new OleDbCommand())
                 { //Affiner la requête selon le niveau de difficulté
@@ -189,29 +167,25 @@ namespace EMACApp
                     if (reader3.HasRows)
                     {
                         reader3.Read();
-                        
-                        
-                       if (indice_reponse == (string)reader3["Reponse"])
-                       {
+
+                        if (indice_reponse == (string)reader3["Reponse"])
+                        {
                             MessageBox.Show("Bonne réponse ! Bien joué !");
                             Next_Button.Enabled = true;
                             Valider_Button.Enabled = false;
                         }
-                       else
+                        else
                         {
-                          MessageBox.Show("Erreur. La bonne réponse est  :"+ reader3["Reponse"]);
+                            MessageBox.Show("Erreur. La bonne réponse est  :" + reader3["Reponse"]);
                             Next_Button.Enabled = true;
                             Valider_Button.Enabled = false;
                         }
-
-
-
                     }
-                    
+
                 }
             }
         }
-        
+
         private void Choice3_radioBtn_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -221,7 +195,12 @@ namespace EMACApp
         {
 
         }
+
+        private void PbMaths_pictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}
 
 

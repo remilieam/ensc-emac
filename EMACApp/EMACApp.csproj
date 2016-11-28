@@ -292,6 +292,7 @@
     <Content Include="AppImages\Test_2\24_FC_3.png" />
     <Content Include="AppImages\Test_2\24_FC_4.png" />
     <Content Include="AppImages\Test_2\24_FC_5.png" />
+    <Content Include="AppImages\Test_4\04_PbMaths.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EMACClass\EMACClass.csproj">
