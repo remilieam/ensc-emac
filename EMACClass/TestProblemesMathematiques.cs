@@ -40,6 +40,61 @@ namespace EMACClass
             GenererListeQuestions();
 
         }
+
+
+        protected override void GenererListeQuestions()
+        {
+            OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
+
+            // Creation d'une requete
+            using (connexionBDD)
+            {
+
+                connexionBDD.Open();
+                using (OleDbCommand requete2 = new OleDbCommand())
+                {
+                    requete2.Connection = connexionBDD;
+                    if (difficulte == true)
+                    {
+                        requete2.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question=q.Id WHERE Test=4 and type='Difficile'";
+                        OleDbDataReader reader2 = requete2.ExecuteReader();
+
+                        // Si le resultat comporte des lignes
+                        //    if(reader2.HasRows)
+                        while (reader2.Read())
+                        {
+                            //reader2.Read();
+
+                            // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
+                            questions.Add((string)reader2["Q.Question"]);
+                            imagesQuestion.Add(reader2["ImageQuestion"].ToString());
+                            reponses.Add(reader2["Reponse"].ToString());
+                        }
+                    }
+
+                    else
+                    {
+                        requete2.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question=q.Id WHERE Test=4 and type='Facile'";
+                        OleDbDataReader reader2 = requete2.ExecuteReader();
+
+                        // Si le resultat comporte des lignes
+                        //    if(reader2.HasRows)
+                        while (reader2.Read())
+                        {
+                            //reader2.Read();
+
+                            // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
+                            questions.Add((string)reader2["Q.Question"]);
+                            imagesQuestion.Add(reader2["ImageQuestion"].ToString());
+
+                            reponses.Add(reader2["Reponse"].ToString());
+                        }
+                    }
+                }
+                connexionBDD.Close();
+            }
+
+        }
         /// <summary>
         /// Récupère la consigne et la démonstration du test dont on entre l'id
         /// </summary>
@@ -90,35 +145,13 @@ namespace EMACClass
         }
 
 
-        public override List<string> VerifierReponse(string reponse, int numQuestion)
+        public override double CalculerResultat()
         {
-            List<string> erreurs = new List<string>();
-            erreurs.Add("");
-
-            for (int i = 0; i < this.reponses[numQuestion].Length; i++)
-            {
-                if (this.reponses[numQuestion][i] != reponse[i])
-                {
-                    erreurs.Add(this.reponses[numQuestion].ToString());
-                    erreurs.Add(reponse.ToString());
-                }
-
-                else
-                {
-                    this.score++;
-                }
-            }
-
-            return erreurs;
+            return Math.Round(this.score * 100.0 / 10);
         }
-        public override string AfficherErreur(List<string> erreur)
-        {
-            if (erreur[1] == "0")
-            {
-                return "Vous n’avez cliqué sur aucun bouton.\r\nPour information, il fallait appuyer sur bouton " + erreur[0] + ".";
-            }
 
-            return "Vous avez cliqué sur le bouton " + erreur[1] + " au lieu du bouton " + erreur[0] + ".";
-        }
+
+
+
     }
 }

@@ -8,6 +8,7 @@ namespace EMACClass
     public class TestProblemes : Test
     {
         protected int compteur;
+        protected int nbquestion = 10;
         public TestProblemes(bool difficulteTest, int intervalleTest, List<Object> donneesTest)
         {
             difficulte = difficulteTest;
@@ -18,6 +19,7 @@ namespace EMACClass
         public TestProblemes(bool difficulteTest)
         {
             difficulte = difficulteTest;
+            
         }
 
         public override List<string> VerifierReponse(string reponse, int numQuestion)
