@@ -83,7 +83,7 @@ namespace EMACApp
                 }
                 else
                 {
-                    PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur+1];
+                    PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur-1];
                 }
                 Choice1_RadioButton.Checked = false;
                 Choice2_RadioButton.Checked = false;
