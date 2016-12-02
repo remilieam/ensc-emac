@@ -72,18 +72,19 @@ namespace EMACApp
 
         private void Next_Btn_Click(object sender, EventArgs e)
         {
-            if (compteur < 11)
+            if (compteur < 10)
             {
                 Next_Button.Enabled = false;
                 Valider_Button.Enabled = true;
                 ConsigneMaths_TextBox.Text = test.questions[compteur];
-                if (test.imagesQuestion[compteur-1] == "")
+                if (test.imagesQuestion[compteur] == "")
                 {
                     PbMaths_pictureBox.Hide();
                 }
                 else
                 {
-                    PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur-1];
+                    PbMaths_pictureBox.Show();
+                    PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur];
                 }
                 Choice1_RadioButton.Checked = false;
                 Choice2_RadioButton.Checked = false;
@@ -96,7 +97,7 @@ namespace EMACApp
                 
                 double resultat =test.CalculerResultat() ;
                 MessageBox.Show("Vous avez fini la série! ");
-                ConsigneMaths_TextBox.Text = "Votre super résultat est de :" + resultat;
+                ConsigneMaths_TextBox.Text = "Votre super résultat est de : " + resultat + " % ";
             }
         }
 

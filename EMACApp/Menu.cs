@@ -86,5 +86,21 @@ namespace EMACApp
             TestDemonstration_Form testMaths = new TestDemonstration_Form(test);
             testMaths.Show();
         }
+
+        private void Test5EasyMenu_Button_Click(object sender, EventArgs e)
+        {
+            TestProblemesPhysiques test = new TestProblemesPhysiques(false);
+            TestDemonstration_Form testPhysique = new TestDemonstration_Form(test);
+            testPhysique.Show();
+
+        }
+
+        private void Test5DifficultMenu_Button_Click(object sender, EventArgs e)
+        {
+            TestProblemesPhysiques test = new TestProblemesPhysiques(true);
+            TestDemonstration_Form testPhysique = new TestDemonstration_Form(test);
+            testPhysique.Show();
+
+        }
     }
 }

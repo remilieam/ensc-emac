@@ -133,7 +133,7 @@
             this.Next_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Next_Button.Location = new System.Drawing.Point(287, 423);
             this.Next_Button.Name = "Next_Button";
-            this.Next_Button.Size = new System.Drawing.Size(136, 39);
+            this.Next_Button.Size = new System.Drawing.Size(220, 39);
             this.Next_Button.TabIndex = 4;
             this.Next_Button.Text = "Question suivante";
             this.Next_Button.UseVisualStyleBackColor = true;
