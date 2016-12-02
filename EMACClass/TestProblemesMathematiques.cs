@@ -145,6 +145,31 @@ namespace EMACClass
         }
 
 
+        /// <summary>
+        /// Compare la réponse entrée par l’utilisateur à la réponse juste.
+        /// </summary>
+        /// <param name="reponse">Chaîne de caractères correspondant à la réponse de l’utilisateur</param>
+        /// <param name="numQuestion">Numéro de la question à vérifier</param>
+        /// <returns>Liste avec des erreurs ([réponse juste, réponse du joueur])</returns>
+        public List<string> VerifierBouton(string reponse, int numQuestion)
+        {
+            List<string> erreurs = new List<string>();
+
+            if (this.reponses[numQuestion].ToString() != reponse)
+            {
+                erreurs.Add(this.reponses[numQuestion].ToString());
+                erreurs.Add(reponse.ToString());
+            }
+
+            else
+            {
+                this.score++;
+            }
+
+            return erreurs;
+        }
+
+
         public override double CalculerResultat()
         {
             return Math.Round(this.score * 100.0 / 10);

@@ -16,7 +16,9 @@ namespace EMACApp
         
         private int compteur;
         public TestProblemesMathematiques test;
-         
+        public int score;
+       
+
 
 
         private const string BDD = "|DataDirectory|\\AppData\\EMAC.mdb";
@@ -75,13 +77,13 @@ namespace EMACApp
                 Next_Button.Enabled = false;
                 Valider_Button.Enabled = true;
                 ConsigneMaths_TextBox.Text = test.questions[compteur];
-                if (test.imagesQuestion[compteur] == "")
+                if (test.imagesQuestion[compteur-1] == "")
                 {
                     PbMaths_pictureBox.Hide();
                 }
                 else
                 {
-                    PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur];
+                    PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur+1];
                 }
                 Choice1_RadioButton.Checked = false;
                 Choice2_RadioButton.Checked = false;
@@ -92,7 +94,7 @@ namespace EMACApp
             else
             {
                 
-                double resultat = test.CalculerResultat();
+                double resultat =test.CalculerResultat() ;
                 MessageBox.Show("Vous avez fini la série! ");
                 ConsigneMaths_TextBox.Text = "Votre super résultat est de :" + resultat;
             }
@@ -100,7 +102,7 @@ namespace EMACApp
 
         private void Valider_Btn_Click(object sender, EventArgs e)
         {
-            int score = test.score;
+            
             string indice_reponse = "0";
             //On recupère la valeur du radioButton sélectionné
             if (Choice1_RadioButton.Checked)
@@ -123,18 +125,21 @@ namespace EMACApp
                 indice_reponse = "4";
             }
 
-                        if (indice_reponse == test.reponses[compteur-1])
-                        {
+
+            test.VerifierBouton(indice_reponse, compteur - 1);
+
+            if (indice_reponse == test.reponses[compteur-1])
+              {
                             MessageBox.Show("Bonne réponse ! Bien joué !");
                             Next_Button.Enabled = true;
                             Valider_Button.Enabled = false;
-                              score++;
+                              
                
               
-                        }
+              }
                         else
                         {
-                            MessageBox.Show("Erreur. La bonne réponse est  :" + test.reponses[compteur] );
+                            MessageBox.Show("Erreur. La bonne réponse est  :" + test.reponses[compteur-1] );
                             Next_Button.Enabled = true;
                             Valider_Button.Enabled = false;
                         }
