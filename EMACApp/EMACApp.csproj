@@ -301,7 +301,21 @@
     <Content Include="AppImages\Test_2\24_FC_3.png" />
     <Content Include="AppImages\Test_2\24_FC_4.png" />
     <Content Include="AppImages\Test_2\24_FC_5.png" />
-    <Content Include="AppImages\Test_4\04_PbMaths.png" />
+    <Content Include="AppImages\Test_4\PbMaths_04.png" />
+    <Content Include="AppImages\Test_4\PbMaths_07.png" />
+    <Content Include="AppImages\Test_4\PbMaths_19.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_01.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_02.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_03.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_04.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_05.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_11.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_12.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_14.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_21.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_22.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_23.png" />
+    <Content Include="AppImages\Test_5\PbPhysique_24.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EMACClass\EMACClass.csproj">
