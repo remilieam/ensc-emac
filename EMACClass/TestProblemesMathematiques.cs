@@ -35,7 +35,6 @@ namespace EMACClass
             score = 0;
             compteur = 0;
 
-
             RecupererDemonstration();
             GenererListeQuestions();
 
@@ -180,3 +179,4 @@ namespace EMACClass
 
     }
 }
+  
