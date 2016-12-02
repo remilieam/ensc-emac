@@ -44,10 +44,10 @@
             // 
             // ConsigneMaths_TextBox
             // 
-            this.ConsigneMaths_TextBox.Location = new System.Drawing.Point(17, 12);
+            this.ConsigneMaths_TextBox.Location = new System.Drawing.Point(2, 12);
             this.ConsigneMaths_TextBox.Multiline = true;
             this.ConsigneMaths_TextBox.Name = "ConsigneMaths_TextBox";
-            this.ConsigneMaths_TextBox.Size = new System.Drawing.Size(618, 125);
+            this.ConsigneMaths_TextBox.Size = new System.Drawing.Size(620, 193);
             this.ConsigneMaths_TextBox.TabIndex = 0;
             this.ConsigneMaths_TextBox.TextChanged += new System.EventHandler(this.ConsigneMaths_TxtBox_TextChanged);
             // 
@@ -57,9 +57,9 @@
             this.Answer_GroupBox.Controls.Add(this.Choice3_RadioButton);
             this.Answer_GroupBox.Controls.Add(this.Choice2_RadioButton);
             this.Answer_GroupBox.Controls.Add(this.Choice1_RadioButton);
-            this.Answer_GroupBox.Location = new System.Drawing.Point(32, 143);
+            this.Answer_GroupBox.Location = new System.Drawing.Point(18, 211);
             this.Answer_GroupBox.Name = "Answer_GroupBox";
-            this.Answer_GroupBox.Size = new System.Drawing.Size(502, 137);
+            this.Answer_GroupBox.Size = new System.Drawing.Size(1004, 160);
             this.Answer_GroupBox.TabIndex = 2;
             this.Answer_GroupBox.TabStop = false;
             this.Answer_GroupBox.Text = "Veuillez cocher votre réponse";
@@ -68,7 +68,7 @@
             // Choice4_RadioButton
             // 
             this.Choice4_RadioButton.AutoSize = true;
-            this.Choice4_RadioButton.Location = new System.Drawing.Point(369, 56);
+            this.Choice4_RadioButton.Location = new System.Drawing.Point(599, 74);
             this.Choice4_RadioButton.Name = "Choice4_RadioButton";
             this.Choice4_RadioButton.Size = new System.Drawing.Size(63, 17);
             this.Choice4_RadioButton.TabIndex = 4;
@@ -79,7 +79,7 @@
             // Choice3_RadioButton
             // 
             this.Choice3_RadioButton.AutoSize = true;
-            this.Choice3_RadioButton.Location = new System.Drawing.Point(245, 56);
+            this.Choice3_RadioButton.Location = new System.Drawing.Point(409, 74);
             this.Choice3_RadioButton.Name = "Choice3_RadioButton";
             this.Choice3_RadioButton.Size = new System.Drawing.Size(60, 17);
             this.Choice3_RadioButton.TabIndex = 3;
@@ -91,7 +91,7 @@
             // Choice2_RadioButton
             // 
             this.Choice2_RadioButton.AutoSize = true;
-            this.Choice2_RadioButton.Location = new System.Drawing.Point(145, 56);
+            this.Choice2_RadioButton.Location = new System.Drawing.Point(232, 74);
             this.Choice2_RadioButton.Name = "Choice2_RadioButton";
             this.Choice2_RadioButton.Size = new System.Drawing.Size(60, 17);
             this.Choice2_RadioButton.TabIndex = 2;
@@ -102,7 +102,7 @@
             // Choice1_RadioButton
             // 
             this.Choice1_RadioButton.AutoSize = true;
-            this.Choice1_RadioButton.Location = new System.Drawing.Point(28, 56);
+            this.Choice1_RadioButton.Location = new System.Drawing.Point(87, 74);
             this.Choice1_RadioButton.Name = "Choice1_RadioButton";
             this.Choice1_RadioButton.Size = new System.Drawing.Size(60, 17);
             this.Choice1_RadioButton.TabIndex = 1;
@@ -112,9 +112,9 @@
             // 
             // Valider_Button
             // 
-            this.Valider_Button.Location = new System.Drawing.Point(32, 286);
+            this.Valider_Button.Location = new System.Drawing.Point(130, 423);
             this.Valider_Button.Name = "Valider_Button";
-            this.Valider_Button.Size = new System.Drawing.Size(75, 23);
+            this.Valider_Button.Size = new System.Drawing.Size(136, 39);
             this.Valider_Button.TabIndex = 3;
             this.Valider_Button.Text = "Valider";
             this.Valider_Button.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@
             // 
             // Next_Button
             // 
-            this.Next_Button.Location = new System.Drawing.Point(125, 286);
+            this.Next_Button.Location = new System.Drawing.Point(287, 423);
             this.Next_Button.Name = "Next_Button";
-            this.Next_Button.Size = new System.Drawing.Size(136, 23);
+            this.Next_Button.Size = new System.Drawing.Size(136, 39);
             this.Next_Button.TabIndex = 4;
             this.Next_Button.Text = "Question suivante";
             this.Next_Button.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@
             // 
             // PbMaths_pictureBox
             // 
-            this.PbMaths_pictureBox.Location = new System.Drawing.Point(566, 143);
+            this.PbMaths_pictureBox.Location = new System.Drawing.Point(618, 12);
             this.PbMaths_pictureBox.Name = "PbMaths_pictureBox";
-            this.PbMaths_pictureBox.Size = new System.Drawing.Size(164, 115);
+            this.PbMaths_pictureBox.Size = new System.Drawing.Size(292, 193);
             this.PbMaths_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbMaths_pictureBox.TabIndex = 5;
             this.PbMaths_pictureBox.TabStop = false;

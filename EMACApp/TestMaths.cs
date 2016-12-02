@@ -13,12 +13,10 @@ namespace EMACApp
 {
     public partial class TestMaths_Form : Form
     {
-        List<string> question = new List<string>();
-        List<string> ImageQuestion = new List<string>();
-        List<string> reponseQuestions = new List<string>();
+        
         private int compteur;
         public TestProblemesMathematiques test;
-        private int nbQuestions = 10;
+         
 
 
         private const string BDD = "|DataDirectory|\\AppData\\EMAC.mdb";
@@ -29,82 +27,36 @@ namespace EMACApp
             InitializeComponent();
             test = testRecu;
 
-            OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
-
-            // Creation d'une requete
-            using (connexionBDD)
-            {
-
-                connexionBDD.Open();
-                using (OleDbCommand requete2 = new OleDbCommand())
-                {
-                    requete2.Connection = connexionBDD;
-                    if (test.difficulte == true)
-                    {
-                        requete2.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question=q.Id WHERE Test=4 and type='Difficile'";
-                        OleDbDataReader reader2 = requete2.ExecuteReader();
-
-                        // Si le resultat comporte des lignes
-                        //    if(reader2.HasRows)
-                        while (reader2.Read())
-                        {
-                            //reader2.Read();
-
-                            // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
-                            question.Add((string)reader2["Q.Question"]);
-                            ImageQuestion.Add(reader2["ImageQuestion"].ToString());
-                            reponseQuestions.Add(reader2["Reponse"].ToString());
-                        }
-                    }
-
-                    else
-                    {
-                        requete2.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question=q.Id WHERE Test=4 and type='Facile'";
-                        OleDbDataReader reader2 = requete2.ExecuteReader();
-
-                        // Si le resultat comporte des lignes
-                        //    if(reader2.HasRows)
-                        while (reader2.Read())
-                        {
-                            //reader2.Read();
-
-                            // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
-                            question.Add((string)reader2["Question"]);
-                            ImageQuestion.Add(reader2["ImageQuestion"].ToString());
-
-                            reponseQuestions.Add(reader2["Reponse"].ToString());
-                        }
-                    }
-                }
-                connexionBDD.Close();
-            }
-
+           
         }
 
         public TestMaths_Form()
         {
             InitializeComponent();
             Answer_GroupBox.Hide();
-            Choice1_RadioButton.Hide();
-            Choice2_RadioButton.Hide();
-            Choice3_RadioButton.Hide();
-            Choice4_RadioButton.Hide();
+            Choice1_RadioButton.Enabled = false;
+            Choice2_RadioButton.Enabled = false;
+            Choice3_RadioButton.Enabled = false;
+            Choice4_RadioButton.Enabled = false;
+            
+          
             Valider_Button.Hide();
-
+            ConsigneMaths_TextBox.Enabled = false;
             Next_Button.Hide();
 
         }
 
         private void TestMaths_Form_Load(object sender, EventArgs e)
         {
-            ConsigneMaths_TextBox.Text = question[0] + ImageQuestion.Count + " " + question.Count;
-            if (ImageQuestion[0] == "")
+            Next_Button.Enabled = false;
+            ConsigneMaths_TextBox.Text = test.questions[0] + test.imagesQuestion.Count + " " + test.questions.Count;
+            if (test.imagesQuestion[0] == "")
             {
                 PbMaths_pictureBox.Hide();
             }
             else
             {
-                PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + ImageQuestion[0];
+                PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[0];
             }
 
             compteur = 1;
@@ -122,14 +74,14 @@ namespace EMACApp
             {
                 Next_Button.Enabled = false;
                 Valider_Button.Enabled = true;
-                ConsigneMaths_TextBox.Text = question[compteur];
-                if (ImageQuestion[compteur] == "")
+                ConsigneMaths_TextBox.Text = test.questions[compteur];
+                if (test.imagesQuestion[compteur] == "")
                 {
                     PbMaths_pictureBox.Hide();
                 }
                 else
                 {
-                    PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + ImageQuestion[compteur];
+                    PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur];
                 }
                 Choice1_RadioButton.Checked = false;
                 Choice2_RadioButton.Checked = false;
@@ -139,12 +91,16 @@ namespace EMACApp
             }
             else
             {
-                MessageBox.Show("Vous avez fini!");
+                
+                double resultat = test.CalculerResultat();
+                MessageBox.Show("Vous avez fini la série! ");
+                ConsigneMaths_TextBox.Text = "Votre super résultat est de :" + resultat;
             }
         }
 
         private void Valider_Btn_Click(object sender, EventArgs e)
         {
+            int score = test.score;
             string indice_reponse = "0";
             //On recupère la valeur du radioButton sélectionné
             if (Choice1_RadioButton.Checked)
@@ -167,18 +123,22 @@ namespace EMACApp
                 indice_reponse = "4";
             }
 
-                        if (indice_reponse == reponseQuestions[compteur])
+                        if (indice_reponse == test.reponses[compteur-1])
                         {
                             MessageBox.Show("Bonne réponse ! Bien joué !");
                             Next_Button.Enabled = true;
                             Valider_Button.Enabled = false;
+                              score++;
+               
+              
                         }
                         else
                         {
-                            MessageBox.Show("Erreur. La bonne réponse est  :" + reponseQuestions[compteur]);
+                            MessageBox.Show("Erreur. La bonne réponse est  :" + test.reponses[compteur] );
                             Next_Button.Enabled = true;
                             Valider_Button.Enabled = false;
                         }
+           
         }
 
         private void Choice3_radioBtn_CheckedChanged(object sender, EventArgs e)
