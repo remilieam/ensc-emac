@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestPhysique_Form));
             this.Question_TextBox = new System.Windows.Forms.TextBox();
             this.Answer_groupeBox = new System.Windows.Forms.GroupBox();
-            this.Choice2_RadioButton = new System.Windows.Forms.RadioButton();
             this.Choice4_RadioButton = new System.Windows.Forms.RadioButton();
             this.Choice3_RadioButton = new System.Windows.Forms.RadioButton();
             this.Choice1_RadioButton = new System.Windows.Forms.RadioButton();
+            this.Choice2_RadioButton = new System.Windows.Forms.RadioButton();
             this.Next_Button = new System.Windows.Forms.Button();
             this.Valider_Button = new System.Windows.Forms.Button();
             this.PbPhysique_pictureBox = new System.Windows.Forms.PictureBox();
@@ -47,7 +48,7 @@
             this.Question_TextBox.Location = new System.Drawing.Point(25, 12);
             this.Question_TextBox.Multiline = true;
             this.Question_TextBox.Name = "Question_TextBox";
-            this.Question_TextBox.Size = new System.Drawing.Size(681, 133);
+            this.Question_TextBox.Size = new System.Drawing.Size(486, 133);
             this.Question_TextBox.TabIndex = 0;
             // 
             // Answer_groupeBox
@@ -56,30 +57,19 @@
             this.Answer_groupeBox.Controls.Add(this.Choice3_RadioButton);
             this.Answer_groupeBox.Controls.Add(this.Choice1_RadioButton);
             this.Answer_groupeBox.Controls.Add(this.Choice2_RadioButton);
-            this.Answer_groupeBox.Location = new System.Drawing.Point(53, 167);
+            this.Answer_groupeBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Answer_groupeBox.Location = new System.Drawing.Point(25, 161);
             this.Answer_groupeBox.Name = "Answer_groupeBox";
-            this.Answer_groupeBox.Size = new System.Drawing.Size(702, 131);
+            this.Answer_groupeBox.Size = new System.Drawing.Size(486, 131);
             this.Answer_groupeBox.TabIndex = 1;
             this.Answer_groupeBox.TabStop = false;
             this.Answer_groupeBox.Text = "Veuillez sélectionner votre réponse";
-            // 
-            // Choice2_RadioButton
-            // 
-            this.Choice2_RadioButton.AutoSize = true;
-            this.Choice2_RadioButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Choice2_RadioButton.Location = new System.Drawing.Point(232, 52);
-            this.Choice2_RadioButton.Name = "Choice2_RadioButton";
-            this.Choice2_RadioButton.Size = new System.Drawing.Size(92, 26);
-            this.Choice2_RadioButton.TabIndex = 3;
-            this.Choice2_RadioButton.TabStop = true;
-            this.Choice2_RadioButton.Text = "Choix 2";
-            this.Choice2_RadioButton.UseVisualStyleBackColor = true;
             // 
             // Choice4_RadioButton
             // 
             this.Choice4_RadioButton.AutoSize = true;
             this.Choice4_RadioButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Choice4_RadioButton.Location = new System.Drawing.Point(556, 52);
+            this.Choice4_RadioButton.Location = new System.Drawing.Point(357, 52);
             this.Choice4_RadioButton.Name = "Choice4_RadioButton";
             this.Choice4_RadioButton.Size = new System.Drawing.Size(97, 26);
             this.Choice4_RadioButton.TabIndex = 7;
@@ -91,7 +81,7 @@
             // 
             this.Choice3_RadioButton.AutoSize = true;
             this.Choice3_RadioButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Choice3_RadioButton.Location = new System.Drawing.Point(397, 52);
+            this.Choice3_RadioButton.Location = new System.Drawing.Point(236, 52);
             this.Choice3_RadioButton.Name = "Choice3_RadioButton";
             this.Choice3_RadioButton.Size = new System.Drawing.Size(92, 26);
             this.Choice3_RadioButton.TabIndex = 6;
@@ -103,13 +93,25 @@
             // 
             this.Choice1_RadioButton.AutoSize = true;
             this.Choice1_RadioButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Choice1_RadioButton.Location = new System.Drawing.Point(47, 52);
+            this.Choice1_RadioButton.Location = new System.Drawing.Point(6, 52);
             this.Choice1_RadioButton.Name = "Choice1_RadioButton";
             this.Choice1_RadioButton.Size = new System.Drawing.Size(92, 26);
             this.Choice1_RadioButton.TabIndex = 5;
             this.Choice1_RadioButton.TabStop = true;
             this.Choice1_RadioButton.Text = "Choix 1";
             this.Choice1_RadioButton.UseVisualStyleBackColor = true;
+            // 
+            // Choice2_RadioButton
+            // 
+            this.Choice2_RadioButton.AutoSize = true;
+            this.Choice2_RadioButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Choice2_RadioButton.Location = new System.Drawing.Point(119, 52);
+            this.Choice2_RadioButton.Name = "Choice2_RadioButton";
+            this.Choice2_RadioButton.Size = new System.Drawing.Size(92, 26);
+            this.Choice2_RadioButton.TabIndex = 3;
+            this.Choice2_RadioButton.TabStop = true;
+            this.Choice2_RadioButton.Text = "Choix 2";
+            this.Choice2_RadioButton.UseVisualStyleBackColor = true;
             // 
             // Next_Button
             // 
@@ -135,9 +137,9 @@
             // 
             // PbPhysique_pictureBox
             // 
-            this.PbPhysique_pictureBox.Location = new System.Drawing.Point(437, 12);
+            this.PbPhysique_pictureBox.Location = new System.Drawing.Point(517, 12);
             this.PbPhysique_pictureBox.Name = "PbPhysique_pictureBox";
-            this.PbPhysique_pictureBox.Size = new System.Drawing.Size(404, 133);
+            this.PbPhysique_pictureBox.Size = new System.Drawing.Size(324, 133);
             this.PbPhysique_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbPhysique_pictureBox.TabIndex = 7;
             this.PbPhysique_pictureBox.TabStop = false;
@@ -146,6 +148,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(853, 409);
             this.Controls.Add(this.PbPhysique_pictureBox);
             this.Controls.Add(this.Valider_Button);

@@ -101,6 +101,12 @@
     <Compile Include="TestDemontration.Designer.cs">
       <DependentUpon>TestDemontration.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestPhysique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPhysique.Designer.cs">
+      <DependentUpon>TestPhysique.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestDemontration.resx">
       <DependentUpon>TestDemontration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPhysique.resx">
+      <DependentUpon>TestPhysique.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AppData\app.config" />
     <None Include="AppData\EMACDataSet.xsc">

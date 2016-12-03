@@ -117,6 +117,12 @@ namespace EMACApp
                 jeu.Show();
             }
 
+            if (test is TestProblemesPhysiques)
+            {
+                TestPhysique_Form jeu = new TestPhysique_Form((TestProblemesPhysiques)test);
+                jeu.Show();
+            }
+
             this.Close();
         }
     }
