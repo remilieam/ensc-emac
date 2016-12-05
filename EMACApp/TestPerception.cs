@@ -27,6 +27,7 @@ namespace EMACApp
         {
             Rule_TextBox.Text = test.questions[compteur];
             DisplayPicture_Timer.Interval = test.intervalle * 1000;
+            ProgressTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
         }
 
         // Affichage de l’image pendant 2 ou 4 secondes
@@ -127,6 +128,7 @@ namespace EMACApp
         // Affichage de la règle
         private void AfficherRegle()
         {
+            ProgressTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
             Rule_TextBox.Text = test.questions[compteur];
             Rule_TextBox.Show();
             Next_Button.Show();
