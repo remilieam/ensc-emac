@@ -45,7 +45,11 @@
             this.DisplayQuestion_Timer = new System.Windows.Forms.Timer(this.components);
             this.End_Button = new System.Windows.Forms.Button();
             this.Result_TextBox = new System.Windows.Forms.TextBox();
+            this.CountTime_Timer = new System.Windows.Forms.Timer(this.components);
+            this.Timer_Panel = new System.Windows.Forms.Panel();
+            this.CountDisplay_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).BeginInit();
+            this.Timer_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ProgressTest3_TextBox
@@ -88,7 +92,7 @@
             // 
             this.Confirm_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Confirm_Button.Location = new System.Drawing.Point(390, 418);
-            this.Confirm_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Confirm_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Confirm_Button.Name = "Confirm_Button";
             this.Confirm_Button.Size = new System.Drawing.Size(254, 68);
             this.Confirm_Button.TabIndex = 33;
@@ -139,7 +143,7 @@
             // 
             this.Addition_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Addition_Button.Location = new System.Drawing.Point(259, 323);
-            this.Addition_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Addition_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Addition_Button.Name = "Addition_Button";
             this.Addition_Button.Size = new System.Drawing.Size(68, 68);
             this.Addition_Button.TabIndex = 37;
@@ -151,7 +155,7 @@
             // 
             this.Division_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Division_Button.Location = new System.Drawing.Point(716, 323);
-            this.Division_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Division_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Division_Button.Name = "Division_Button";
             this.Division_Button.Size = new System.Drawing.Size(68, 68);
             this.Division_Button.TabIndex = 38;
@@ -163,7 +167,7 @@
             // 
             this.Multiplication_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Multiplication_Button.Location = new System.Drawing.Point(560, 323);
-            this.Multiplication_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Multiplication_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Multiplication_Button.Name = "Multiplication_Button";
             this.Multiplication_Button.Size = new System.Drawing.Size(68, 68);
             this.Multiplication_Button.TabIndex = 39;
@@ -175,7 +179,7 @@
             // 
             this.Subtraction_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Subtraction_Button.Location = new System.Drawing.Point(407, 323);
-            this.Subtraction_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Subtraction_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Subtraction_Button.Name = "Subtraction_Button";
             this.Subtraction_Button.Size = new System.Drawing.Size(68, 68);
             this.Subtraction_Button.TabIndex = 40;
@@ -202,7 +206,7 @@
             // 
             this.End_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.End_Button.Location = new System.Drawing.Point(390, 418);
-            this.End_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.End_Button.Margin = new System.Windows.Forms.Padding(6);
             this.End_Button.Name = "End_Button";
             this.End_Button.Size = new System.Drawing.Size(254, 68);
             this.End_Button.TabIndex = 43;
@@ -224,6 +228,34 @@
             this.Result_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Result_TextBox.Visible = false;
             // 
+            // CountTime_Timer
+            // 
+            this.CountTime_Timer.Interval = 1000;
+            // 
+            // Timer_Panel
+            // 
+            this.Timer_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Timer_Panel.BackgroundImage")));
+            this.Timer_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Timer_Panel.Controls.Add(this.CountDisplay_Label);
+            this.Timer_Panel.Location = new System.Drawing.Point(161, 163);
+            this.Timer_Panel.Name = "Timer_Panel";
+            this.Timer_Panel.Size = new System.Drawing.Size(74, 77);
+            this.Timer_Panel.TabIndex = 44;
+            this.Timer_Panel.Visible = false;
+            // 
+            // CountDisplay_Label
+            // 
+            this.CountDisplay_Label.AutoSize = true;
+            this.CountDisplay_Label.BackColor = System.Drawing.Color.White;
+            this.CountDisplay_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountDisplay_Label.ForeColor = System.Drawing.Color.Red;
+            this.CountDisplay_Label.Location = new System.Drawing.Point(28, 34);
+            this.CountDisplay_Label.Name = "CountDisplay_Label";
+            this.CountDisplay_Label.Size = new System.Drawing.Size(21, 22);
+            this.CountDisplay_Label.TabIndex = 33;
+            this.CountDisplay_Label.Text = "5";
+            this.CountDisplay_Label.Visible = false;
+            // 
             // TestCalcul_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +264,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 552);
+            this.Controls.Add(this.Timer_Panel);
             this.Controls.Add(this.Equal_Label);
             this.Controls.Add(this.End_Button);
             this.Controls.Add(this.Result_TextBox);
@@ -252,6 +285,8 @@
             this.Name = "TestCalcul_Form";
             this.Text = "Calcul mental";
             ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).EndInit();
+            this.Timer_Panel.ResumeLayout(false);
+            this.Timer_Panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +309,8 @@
         private System.Windows.Forms.Timer DisplayQuestion_Timer;
         private System.Windows.Forms.Button End_Button;
         private System.Windows.Forms.TextBox Result_TextBox;
+        private System.Windows.Forms.Timer CountTime_Timer;
+        private System.Windows.Forms.Panel Timer_Panel;
+        private System.Windows.Forms.Label CountDisplay_Label;
     }
 }
