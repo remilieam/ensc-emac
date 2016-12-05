@@ -42,8 +42,12 @@
             this.Object_PictureBox = new System.Windows.Forms.PictureBox();
             this.Rule_TextBox = new System.Windows.Forms.TextBox();
             this.Next_Button = new System.Windows.Forms.Button();
+            this.CountDisplay_Label = new System.Windows.Forms.Label();
+            this.Timer_Panel = new System.Windows.Forms.Panel();
+            this.CountTime_Timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Object_PictureBox)).BeginInit();
+            this.Timer_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // NameTest2_Label
@@ -87,7 +91,7 @@
             // 
             this.End_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.End_Button.Location = new System.Drawing.Point(402, 374);
-            this.End_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.End_Button.Margin = new System.Windows.Forms.Padding(6);
             this.End_Button.Name = "End_Button";
             this.End_Button.Size = new System.Drawing.Size(254, 65);
             this.End_Button.TabIndex = 28;
@@ -114,7 +118,7 @@
             // 
             this.Button3_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button3_Button.Location = new System.Drawing.Point(553, 374);
-            this.Button3_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Button3_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Button3_Button.Name = "Button3_Button";
             this.Button3_Button.Size = new System.Drawing.Size(254, 65);
             this.Button3_Button.TabIndex = 27;
@@ -127,7 +131,7 @@
             // 
             this.Button2_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2_Button.Location = new System.Drawing.Point(553, 272);
-            this.Button2_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Button2_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Button2_Button.Name = "Button2_Button";
             this.Button2_Button.Size = new System.Drawing.Size(254, 65);
             this.Button2_Button.TabIndex = 26;
@@ -140,7 +144,7 @@
             // 
             this.Button1_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1_Button.Location = new System.Drawing.Point(553, 159);
-            this.Button1_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Button1_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Button1_Button.Name = "Button1_Button";
             this.Button1_Button.Size = new System.Drawing.Size(254, 65);
             this.Button1_Button.TabIndex = 24;
@@ -152,10 +156,10 @@
             // Object_PictureBox
             // 
             this.Object_PictureBox.BackColor = System.Drawing.Color.White;
-            this.Object_PictureBox.Location = new System.Drawing.Point(192, 159);
+            this.Object_PictureBox.Location = new System.Drawing.Point(241, 159);
             this.Object_PictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Object_PictureBox.Name = "Object_PictureBox";
-            this.Object_PictureBox.Size = new System.Drawing.Size(300, 280);
+            this.Object_PictureBox.Size = new System.Drawing.Size(251, 280);
             this.Object_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Object_PictureBox.TabIndex = 21;
             this.Object_PictureBox.TabStop = false;
@@ -180,13 +184,41 @@
             // 
             this.Next_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Next_Button.Location = new System.Drawing.Point(402, 377);
-            this.Next_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Next_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Next_Button.Name = "Next_Button";
             this.Next_Button.Size = new System.Drawing.Size(254, 65);
             this.Next_Button.TabIndex = 25;
             this.Next_Button.Text = "SUIVANT";
             this.Next_Button.UseVisualStyleBackColor = true;
             this.Next_Button.Click += new System.EventHandler(this.Next_Button_Click);
+            // 
+            // CountDisplay_Label
+            // 
+            this.CountDisplay_Label.AutoSize = true;
+            this.CountDisplay_Label.BackColor = System.Drawing.Color.White;
+            this.CountDisplay_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountDisplay_Label.ForeColor = System.Drawing.Color.Red;
+            this.CountDisplay_Label.Location = new System.Drawing.Point(28, 34);
+            this.CountDisplay_Label.Name = "CountDisplay_Label";
+            this.CountDisplay_Label.Size = new System.Drawing.Size(21, 22);
+            this.CountDisplay_Label.TabIndex = 33;
+            this.CountDisplay_Label.Text = "5";
+            this.CountDisplay_Label.Visible = false;
+            // 
+            // Timer_Panel
+            // 
+            this.Timer_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Timer_Panel.BackgroundImage")));
+            this.Timer_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Timer_Panel.Controls.Add(this.CountDisplay_Label);
+            this.Timer_Panel.Location = new System.Drawing.Point(162, 143);
+            this.Timer_Panel.Name = "Timer_Panel";
+            this.Timer_Panel.Size = new System.Drawing.Size(74, 77);
+            this.Timer_Panel.TabIndex = 36;
+            this.Timer_Panel.Visible = false;
+            // 
+            // CountTime_Timer
+            // 
+            this.CountTime_Timer.Interval = 1000;
             // 
             // TestAttention_Form
             // 
@@ -196,6 +228,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 552);
+            this.Controls.Add(this.Timer_Panel);
             this.Controls.Add(this.Object_PictureBox);
             this.Controls.Add(this.End_Button);
             this.Controls.Add(this.Result_TextBox);
@@ -210,12 +243,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "TestAttention_Form";
             this.Text = "Attention et concentration";
             this.Load += new System.EventHandler(this.TestAttention_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Object_PictureBox)).EndInit();
+            this.Timer_Panel.ResumeLayout(false);
+            this.Timer_Panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +270,8 @@
         private System.Windows.Forms.PictureBox Object_PictureBox;
         private System.Windows.Forms.TextBox Rule_TextBox;
         private System.Windows.Forms.Button Next_Button;
+        private System.Windows.Forms.Label CountDisplay_Label;
+        private System.Windows.Forms.Panel Timer_Panel;
+        private System.Windows.Forms.Timer CountTime_Timer;
     }
 }
