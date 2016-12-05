@@ -14,6 +14,7 @@ namespace EMACApp
     {
         private TestPerceptionMemoire test; // Contient le test en cours
         private int compteur = 0; // Pour compter à quelle question on en est
+        private int decompte; // Pour faire le décompte pour l’affichage des questions
 
         // Constructeur du test de perception (enchaînement des questions)
         public TestPerception_Form(TestPerceptionMemoire testRecu)
@@ -27,23 +28,41 @@ namespace EMACApp
         {
             Rule_TextBox.Text = test.questions[compteur];
             DisplayPicture_Timer.Interval = test.intervalle * 1000;
+            ProgressTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
+            CountTime_Timer.Tick += new EventHandler(CountTimeTimerTick);
+            DisplayPicture_Timer.Tick += new EventHandler(DisplayPictureTimerTick);
         }
 
-        // Affichage de l’image pendant 2 ou 4 secondes
+        // Affichage de l’image pendant 2 ou 4 secondes avec décompte
         private void Next_Button_Click(object sender, EventArgs e)
         {
             Rule_TextBox.Hide();
             Next_Button.Hide();
             Picture_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_1\\" + test.imagesQuestion[compteur];
             Picture_PictureBox.Show();
+
+            decompte = test.intervalle;
+            Timer_Panel.Show();
+            CountDisplay_Label.Show();
+            CountDisplay_Label.Text = decompte.ToString();
+            CountTime_Timer.Start();
             DisplayPicture_Timer.Start();
-            DisplayPicture_Timer.Tick += new EventHandler(DisplayPictureTimerTick);
+        }
+
+        // Décompte
+        public void CountTimeTimerTick(object sender, EventArgs e)
+        {
+            decompte--;
+            CountDisplay_Label.Text = decompte.ToString();
         }
 
         // Affichage du formulaire pour répondre à la question
         public void DisplayPictureTimerTick(object sender, EventArgs e)
         {
+            CountTime_Timer.Stop();
             DisplayPicture_Timer.Stop();
+            Timer_Panel.Hide();
+            CountDisplay_Label.Hide();
 
             Letter1_Label.Text = test.lettres[compteur][0] + " :";
             Letter2_Label.Text = test.lettres[compteur][1] + " :";
@@ -127,6 +146,7 @@ namespace EMACApp
         // Affichage de la règle
         private void AfficherRegle()
         {
+            ProgressTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
             Rule_TextBox.Text = test.questions[compteur];
             Rule_TextBox.Show();
             Next_Button.Show();
