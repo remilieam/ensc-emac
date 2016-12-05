@@ -36,7 +36,6 @@ namespace EMACClass
 
             RecupererDemonstration();
             GenererListeQuestions();
-            SeparerImages();
         }
 
         public override List<string> VerifierReponse(string reponse, int numQuestion)
@@ -162,29 +161,15 @@ namespace EMACClass
 
                     if (this.difficulte)
                     {
-                        requeteSql = "SELECT TOP " + this.nbQuestions + " * FROM Questions WHERE Test = " + this.idTest + " ORDER BY RND([Id])";
+                        requeteSql = "SELECT * FROM Questions WHERE Test = " + this.idTest;
                     }
 
                     else
                     {
-                        string type = "";
-
-                        using (OleDbCommand requete3 = new OleDbCommand())
-                        {
-                            requete3.Connection = connexionBDD;
-
-                            // Récupération des questions du test
-                            requete3.CommandText = "SELECT TOP 1 Type FROM Questions WHERE Test = " + this.idTest + " ORDER BY RND([Id])";
-                            OleDbDataReader reader3 = requete3.ExecuteReader();
-
-                            if (reader3.HasRows)
-                            {
-                                reader3.Read();
-                                type = reader3["Type"].ToString();
-                            }
-                        }
-
-                        requeteSql = "SELECT TOP " + this.nbQuestions + " * FROM Questions WHERE Test = " + this.idTest + " AND Type = '" + type + "' ORDER BY RND([Id])";
+                        List<string> types = new List<string> { "PC", "CP", "CF", "FC", "PF", "FP" };
+                        Random alea = new Random();
+                        int num = alea.Next(0, types.Count);
+                        requeteSql = "SELECT * FROM Questions WHERE Test = " + this.idTest + " AND Type = '" + types[num] + "'";
                     }
 
                     requete.CommandText = requeteSql;
@@ -196,6 +181,7 @@ namespace EMACClass
                         {
                             this.questions.Add(reader["Question"].ToString());
                             this.reponses.Add(reader["Reponse"].ToString());
+                            List<string> imagesSerie = new List<string>();
 
                             using (OleDbCommand requete2 = new OleDbCommand())
                             {
@@ -209,37 +195,43 @@ namespace EMACClass
                                 {
                                     while (reader2.Read())
                                     {
-                                        this.imagesQuestion.Add(reader2["ImageQuestion"].ToString());
+                                        imagesSerie.Add(reader2["ImageQuestion"].ToString());
                                     }
                                 }
                             }
+
+                            this.imagesSeries.Add(imagesSerie);
                         }
                     }
                 }
 
                 connexionBDD.Close();
             }
-        }
 
-        /// <summary>
-        /// Sépare les images pour chaque série en les regroupant par paquet de 5.
-        /// </summary>
-        private void SeparerImages()
-        {
-            int nbImages = 0;
+            // Nouvelles listes contenant les questions, les images et les réponses
+            List<string> newQuestions = new List<string>();
+            List<string> newReponses = new List<string>();
+            List<List<string>> newImages = new List<List<string>>();
+            int nombre = this.nbQuestions;
+            Random rnd = new Random();
 
-            for (int i = 0; i < this.questions.Count; i++)
+            // Remplissage des nouvelles listes aléatoirement
+            for (int i = 0; i < nombre; i++)
             {
-                List<string> imagesSerie = new List<string>();
+                int indice = rnd.Next(0, this.questions.Count);
+                newQuestions.Add(this.questions[indice]);
+                newReponses.Add(this.reponses[indice]);
+                newImages.Add(this.imagesSeries[indice]);
 
-                for (int j = 0; j < 5; j++)
-                {
-                    imagesSerie.Add(imagesQuestion[nbImages]);
-                    nbImages++;
-                }
-
-                imagesSeries.Add(imagesSerie);
+                this.questions.RemoveAt(indice);
+                this.reponses.RemoveAt(indice);
+                this.imagesSeries.RemoveAt(indice);
             }
+
+            // Modifications des listes de la classe
+            this.questions = newQuestions;
+            this.reponses = newReponses;
+            this.imagesSeries = newImages;
         }
     }
 }

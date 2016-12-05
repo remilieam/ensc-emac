@@ -25,7 +25,7 @@ namespace EMACClass
             nom = "";
             consigne = "";
             imagesDemo = new List<string>();
-            texteDemo=new List<string>();
+            texteDemo = new List<string>();
             difficulte = difficulteTest;
             questions = new List<string>();
             imagesQuestion = new List<string>();
@@ -168,7 +168,7 @@ namespace EMACClass
                     requete.Connection = connexionBDD;
 
                     // Récupération des questions du test avec l’image associée
-                    requete.CommandText = "SELECT TOP " + this.nbQuestions + " * FROM Questions Q INNER JOIN Images I ON I.Question = Q.Id WHERE Test = " + this.idTest + " ORDER BY RND([Q.Id])";
+                    requete.CommandText = "SELECT * FROM Questions Q INNER JOIN Images I ON I.Question = Q.Id WHERE Test = " + this.idTest;
                     OleDbDataReader reader = requete.ExecuteReader();
 
                     if (reader.HasRows)
@@ -184,6 +184,31 @@ namespace EMACClass
 
                 connexionBDD.Close();
             }
+
+            // Nouvelles listes contenant les questions, les images et les réponses
+            List<string> newQuestions = new List<string>();
+            List<string> newReponses = new List<string>();
+            List<string> newImages = new List<string>();
+            int nombre = this.nbQuestions;
+            Random rnd = new Random();
+
+            // Remplissage des nouvelles listes aléatoirement
+            for (int i = 0; i < nombre; i++)
+            {
+                int indice = rnd.Next(0, this.questions.Count);
+                newQuestions.Add(this.questions[indice]);
+                newReponses.Add(this.reponses[indice]);
+                newImages.Add(this.imagesQuestion[indice]);
+
+                this.questions.RemoveAt(indice);
+                this.reponses.RemoveAt(indice);
+                this.imagesQuestion.RemoveAt(indice);
+            }
+
+            // Modifications des listes de la classe
+            this.questions = newQuestions;
+            this.reponses = newReponses;
+            this.imagesQuestion = newImages;
         }
 
         /// <summary>
