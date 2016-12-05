@@ -150,7 +150,7 @@ namespace EMACClass
                     requete.Connection = connexionBDD;
 
                     // Récupération des questions du test
-                    requete.CommandText = "SELECT TOP " + this.nbQuestions + " * FROM Questions WHERE Test = " + this.idTest + " AND Type = '" + this.operation + "' ORDER BY RND([Id])";
+                    requete.CommandText = "SELECT * FROM Questions WHERE Test = " + this.idTest + " AND Type = '" + this.operation + "'";
                     OleDbDataReader reader = requete.ExecuteReader();
 
                     if (reader.HasRows)
@@ -165,6 +165,27 @@ namespace EMACClass
 
                 connexionBDD.Close();
             }
+
+            // Nouvelles istes contenant les questions et les réponses
+            List<string> newQuestions = new List<string>();
+            List<string> newReponses = new List<string>();
+            int nombre = this.nbQuestions;
+            Random rnd = new Random();
+
+            // Remplissage des nouvelles listes aléatoirement
+            for (int i = 0; i < nombre; i++)
+            {
+                int indice = rnd.Next(0, this.questions.Count);
+                newQuestions.Add(this.questions[indice]);
+                newReponses.Add(this.reponses[indice]);
+
+                this.questions.RemoveAt(indice);
+                this.reponses.RemoveAt(indice);
+            }
+
+            // Modifications des listes de la classe
+            this.questions = newQuestions;
+            this.reponses = newReponses;
         }
 
         /// <summary>
