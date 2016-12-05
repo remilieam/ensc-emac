@@ -76,6 +76,7 @@
             this.PictureDemo_PictureBox.Location = new System.Drawing.Point(52, 157);
             this.PictureDemo_PictureBox.Name = "PictureDemo_PictureBox";
             this.PictureDemo_PictureBox.Size = new System.Drawing.Size(926, 310);
+            this.PictureDemo_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureDemo_PictureBox.TabIndex = 3;
             this.PictureDemo_PictureBox.TabStop = false;
             this.PictureDemo_PictureBox.Visible = false;
@@ -134,7 +135,7 @@
             this.Controls.Add(this.NameTest_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "TestDemonstration_Form";
             this.Text = "Consigne et démonstration du test";

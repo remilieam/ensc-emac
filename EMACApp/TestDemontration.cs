@@ -52,10 +52,10 @@ namespace EMACApp
             {
                 Instruction_TextBox.Hide();
                 PictureDemo_PictureBox.Show();
-                TextDemo_TextBox.Show();
+                //TextDemo_TextBox.Show();
 
-                PictureDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\" + test.imagesDemo[compteur-1];
-                TextDemo_TextBox.Text = test.texteDemo[compteur-1] + " " + compteur;
+                PictureDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur-1];
+                TextDemo_TextBox.Text = test.texteDemo[compteur - 1] + " " + compteur ;
             }
         }
 
@@ -84,10 +84,10 @@ namespace EMACApp
             {
                 Instruction_TextBox.Hide();
                 PictureDemo_PictureBox.Show();
-                TextDemo_TextBox.Show();
+                //TextDemo_TextBox.Show();
 
-                PictureDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\" + test.imagesDemo[compteur -1];
-                TextDemo_TextBox.Text = test.texteDemo[compteur - 1] + " " + compteur;
+                PictureDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur - 1];
+                TextDemo_TextBox.Text = test.texteDemo[compteur-1] + " " + compteur;
             }
         }
 

@@ -11,7 +11,7 @@ namespace EMACClass
         private bool difficulteTest;
 
         // Attributs inhérents à la classe
-        private int idTest;
+        private int idTest=4;
         private int nbQuestions = 10;
 
 

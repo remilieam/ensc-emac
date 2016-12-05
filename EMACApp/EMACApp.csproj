@@ -170,6 +170,12 @@
     <Content Include="AppData\EMAC.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="AppImages\DemoMaths\DemoMaths_01.PNG" />
+    <Content Include="AppImages\DemoMaths\DemoMaths_02.PNG" />
+    <Content Include="AppImages\DemoMaths\DemoMaths_03.PNG" />
+    <Content Include="AppImages\DemoPhysique\DemoPhysique_01.PNG" />
+    <Content Include="AppImages\DemoPhysique\DemoPhysique_02.PNG" />
+    <Content Include="AppImages\DemoPhysique\DemoPhysique_03.PNG" />
     <Content Include="AppImages\Test_1\01_BC.png" />
     <Content Include="AppImages\Test_1\02_YS.png" />
     <Content Include="AppImages\Test_1\03_YC.png" />
