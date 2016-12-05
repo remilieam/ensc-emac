@@ -63,9 +63,19 @@ namespace EMACClass
                             questions.Add((string)reader2["Q.Question"]);
                             imagesQuestion.Add(reader2["ImageQuestion"].ToString());
                             // Génération aléatoire des questions
-                            Random rnd = new Random();
-                            questions.Sort((x, y) => rnd.Next(-1, 2));
                             reponses.Add(reader2["Reponse"].ToString());
+                            Random rnd = new Random();
+                            //questions.Sort((x, y) => rnd.Next(-1, 2));
+                         
+                            //reponses.Sort((x, y) => rnd.Next(-1, 2));
+                            //imagesQuestion.Sort((x, y) => rnd.Next(-1, 2));
+                            //for (int i = 0; i < questions.Count; i++)
+                            //{
+                               // questions[i] = questions[rnd.Next(0, questions.Count)];
+                               // reponses[i] = reponses[rnd.Next(0, questions.Count)];
+                               // imagesQuestion[i] = imagesQuestion[rnd.Next(0, questions.Count)];
+                            //}
+                           
                         }
                     }
                 }
