@@ -54,10 +54,9 @@
             this.NameTest1_Label.BackColor = System.Drawing.Color.Transparent;
             this.NameTest1_Label.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameTest1_Label.ForeColor = System.Drawing.Color.White;
-            this.NameTest1_Label.Location = new System.Drawing.Point(469, 52);
-            this.NameTest1_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.NameTest1_Label.Location = new System.Drawing.Point(256, 28);
             this.NameTest1_Label.Name = "NameTest1_Label";
-            this.NameTest1_Label.Size = new System.Drawing.Size(951, 65);
+            this.NameTest1_Label.Size = new System.Drawing.Size(547, 37);
             this.NameTest1_Label.TabIndex = 1;
             this.NameTest1_Label.Text = "Perception et mémoire associative";
             // 
@@ -65,10 +64,10 @@
             // 
             this.Picture_PictureBox.BackColor = System.Drawing.Color.White;
             this.Picture_PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Picture_PictureBox.Location = new System.Drawing.Point(259, 170);
-            this.Picture_PictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Picture_PictureBox.Location = new System.Drawing.Point(141, 92);
+            this.Picture_PictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Picture_PictureBox.Name = "Picture_PictureBox";
-            this.Picture_PictureBox.Size = new System.Drawing.Size(1373, 792);
+            this.Picture_PictureBox.Size = new System.Drawing.Size(749, 429);
             this.Picture_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture_PictureBox.TabIndex = 2;
             this.Picture_PictureBox.TabStop = false;
@@ -80,10 +79,10 @@
             this.Letter1_Label.BackColor = System.Drawing.Color.Transparent;
             this.Letter1_Label.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Letter1_Label.ForeColor = System.Drawing.Color.Black;
-            this.Letter1_Label.Location = new System.Drawing.Point(713, 301);
-            this.Letter1_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Letter1_Label.Location = new System.Drawing.Point(389, 163);
+            this.Letter1_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Letter1_Label.Name = "Letter1_Label";
-            this.Letter1_Label.Size = new System.Drawing.Size(104, 39);
+            this.Letter1_Label.Size = new System.Drawing.Size(61, 22);
             this.Letter1_Label.TabIndex = 4;
             this.Letter1_Label.Text = "label1";
             this.Letter1_Label.Visible = false;
@@ -94,10 +93,10 @@
             this.Letter2_Label.BackColor = System.Drawing.Color.Transparent;
             this.Letter2_Label.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Letter2_Label.ForeColor = System.Drawing.Color.White;
-            this.Letter2_Label.Location = new System.Drawing.Point(713, 421);
-            this.Letter2_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Letter2_Label.Location = new System.Drawing.Point(389, 228);
+            this.Letter2_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Letter2_Label.Name = "Letter2_Label";
-            this.Letter2_Label.Size = new System.Drawing.Size(104, 39);
+            this.Letter2_Label.Size = new System.Drawing.Size(61, 22);
             this.Letter2_Label.TabIndex = 5;
             this.Letter2_Label.Text = "label1";
             this.Letter2_Label.Visible = false;
@@ -108,10 +107,10 @@
             this.Letter3_Label.BackColor = System.Drawing.Color.Transparent;
             this.Letter3_Label.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Letter3_Label.ForeColor = System.Drawing.Color.White;
-            this.Letter3_Label.Location = new System.Drawing.Point(713, 541);
-            this.Letter3_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Letter3_Label.Location = new System.Drawing.Point(389, 293);
+            this.Letter3_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Letter3_Label.Name = "Letter3_Label";
-            this.Letter3_Label.Size = new System.Drawing.Size(104, 39);
+            this.Letter3_Label.Size = new System.Drawing.Size(61, 22);
             this.Letter3_Label.TabIndex = 6;
             this.Letter3_Label.Text = "label1";
             this.Letter3_Label.Visible = false;
@@ -122,10 +121,10 @@
             this.Letter4_Label.BackColor = System.Drawing.Color.Transparent;
             this.Letter4_Label.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Letter4_Label.ForeColor = System.Drawing.Color.White;
-            this.Letter4_Label.Location = new System.Drawing.Point(713, 661);
-            this.Letter4_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Letter4_Label.Location = new System.Drawing.Point(389, 358);
+            this.Letter4_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Letter4_Label.Name = "Letter4_Label";
-            this.Letter4_Label.Size = new System.Drawing.Size(104, 39);
+            this.Letter4_Label.Size = new System.Drawing.Size(61, 22);
             this.Letter4_Label.TabIndex = 7;
             this.Letter4_Label.Text = "label1";
             this.Letter4_Label.Visible = false;
@@ -133,50 +132,49 @@
             // Letter1_TextBox
             // 
             this.Letter1_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Letter1_TextBox.Location = new System.Drawing.Point(1038, 297);
-            this.Letter1_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Letter1_TextBox.Location = new System.Drawing.Point(566, 161);
+            this.Letter1_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Letter1_TextBox.Name = "Letter1_TextBox";
-            this.Letter1_TextBox.Size = new System.Drawing.Size(118, 45);
+            this.Letter1_TextBox.Size = new System.Drawing.Size(66, 29);
             this.Letter1_TextBox.TabIndex = 8;
             this.Letter1_TextBox.Visible = false;
             // 
             // Letter2_TextBox
             // 
             this.Letter2_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Letter2_TextBox.Location = new System.Drawing.Point(1038, 417);
-            this.Letter2_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Letter2_TextBox.Location = new System.Drawing.Point(566, 226);
+            this.Letter2_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Letter2_TextBox.Name = "Letter2_TextBox";
-            this.Letter2_TextBox.Size = new System.Drawing.Size(118, 45);
+            this.Letter2_TextBox.Size = new System.Drawing.Size(66, 29);
             this.Letter2_TextBox.TabIndex = 9;
             this.Letter2_TextBox.Visible = false;
             // 
             // Letter3_TextBox
             // 
             this.Letter3_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Letter3_TextBox.Location = new System.Drawing.Point(1038, 537);
-            this.Letter3_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Letter3_TextBox.Location = new System.Drawing.Point(566, 291);
+            this.Letter3_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Letter3_TextBox.Name = "Letter3_TextBox";
-            this.Letter3_TextBox.Size = new System.Drawing.Size(118, 45);
+            this.Letter3_TextBox.Size = new System.Drawing.Size(66, 29);
             this.Letter3_TextBox.TabIndex = 10;
             this.Letter3_TextBox.Visible = false;
             // 
             // Letter4_TextBox
             // 
             this.Letter4_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Letter4_TextBox.Location = new System.Drawing.Point(1038, 657);
-            this.Letter4_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Letter4_TextBox.Location = new System.Drawing.Point(566, 356);
+            this.Letter4_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Letter4_TextBox.Name = "Letter4_TextBox";
-            this.Letter4_TextBox.Size = new System.Drawing.Size(118, 45);
+            this.Letter4_TextBox.Size = new System.Drawing.Size(66, 29);
             this.Letter4_TextBox.TabIndex = 11;
             this.Letter4_TextBox.Visible = false;
             // 
             // Next_Button
             // 
             this.Next_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Next_Button.Location = new System.Drawing.Point(840, 829);
-            this.Next_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Next_Button.Location = new System.Drawing.Point(458, 449);
             this.Next_Button.Name = "Next_Button";
-            this.Next_Button.Size = new System.Drawing.Size(215, 68);
+            this.Next_Button.Size = new System.Drawing.Size(117, 37);
             this.Next_Button.TabIndex = 12;
             this.Next_Button.Text = "SUIVANT";
             this.Next_Button.UseVisualStyleBackColor = true;
@@ -185,10 +183,9 @@
             // Submit_Button
             // 
             this.Submit_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit_Button.Location = new System.Drawing.Point(840, 829);
-            this.Submit_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Submit_Button.Location = new System.Drawing.Point(458, 449);
             this.Submit_Button.Name = "Submit_Button";
-            this.Submit_Button.Size = new System.Drawing.Size(215, 68);
+            this.Submit_Button.Size = new System.Drawing.Size(117, 37);
             this.Submit_Button.TabIndex = 13;
             this.Submit_Button.Text = "VALIDER";
             this.Submit_Button.UseVisualStyleBackColor = true;
@@ -201,20 +198,19 @@
             this.Rule_TextBox.Enabled = false;
             this.Rule_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rule_TextBox.ForeColor = System.Drawing.Color.Black;
-            this.Rule_TextBox.Location = new System.Drawing.Point(466, 476);
-            this.Rule_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Rule_TextBox.Location = new System.Drawing.Point(254, 258);
+            this.Rule_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Rule_TextBox.Name = "Rule_TextBox";
-            this.Rule_TextBox.Size = new System.Drawing.Size(978, 45);
+            this.Rule_TextBox.Size = new System.Drawing.Size(535, 29);
             this.Rule_TextBox.TabIndex = 14;
             this.Rule_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // End_Button
             // 
             this.End_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.End_Button.Location = new System.Drawing.Point(818, 829);
-            this.End_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.End_Button.Location = new System.Drawing.Point(446, 449);
             this.End_Button.Name = "End_Button";
-            this.End_Button.Size = new System.Drawing.Size(255, 68);
+            this.End_Button.Size = new System.Drawing.Size(139, 37);
             this.End_Button.TabIndex = 15;
             this.End_Button.Text = "TERMINER";
             this.End_Button.UseVisualStyleBackColor = true;
@@ -223,12 +219,12 @@
             // 
             // TestPerception_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1896, 1001);
+            this.ClientSize = new System.Drawing.Size(1044, 552);
             this.Controls.Add(this.End_Button);
             this.Controls.Add(this.Rule_TextBox);
             this.Controls.Add(this.Submit_Button);
@@ -245,7 +241,8 @@
             this.Controls.Add(this.NameTest1_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "TestPerception_Form";
             this.Text = "Perception et mémoire associative";
             this.Load += new System.EventHandler(this.TestPerception_Form_Load);

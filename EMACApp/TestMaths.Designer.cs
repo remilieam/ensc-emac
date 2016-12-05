@@ -46,11 +46,10 @@
             // 
             this.ConsigneMaths_TextBox.Enabled = false;
             this.ConsigneMaths_TextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConsigneMaths_TextBox.Location = new System.Drawing.Point(4, 22);
-            this.ConsigneMaths_TextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ConsigneMaths_TextBox.Location = new System.Drawing.Point(2, 12);
             this.ConsigneMaths_TextBox.Multiline = true;
             this.ConsigneMaths_TextBox.Name = "ConsigneMaths_TextBox";
-            this.ConsigneMaths_TextBox.Size = new System.Drawing.Size(1133, 353);
+            this.ConsigneMaths_TextBox.Size = new System.Drawing.Size(620, 193);
             this.ConsigneMaths_TextBox.TabIndex = 0;
             this.ConsigneMaths_TextBox.TextChanged += new System.EventHandler(this.ConsigneMaths_TxtBox_TextChanged);
             // 
@@ -61,11 +60,9 @@
             this.Answer_GroupBox.Controls.Add(this.Choice2_RadioButton);
             this.Answer_GroupBox.Controls.Add(this.Choice1_RadioButton);
             this.Answer_GroupBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Answer_GroupBox.Location = new System.Drawing.Point(4, 484);
-            this.Answer_GroupBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Answer_GroupBox.Location = new System.Drawing.Point(2, 262);
             this.Answer_GroupBox.Name = "Answer_GroupBox";
-            this.Answer_GroupBox.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.Answer_GroupBox.Size = new System.Drawing.Size(1841, 295);
+            this.Answer_GroupBox.Size = new System.Drawing.Size(1004, 160);
             this.Answer_GroupBox.TabIndex = 2;
             this.Answer_GroupBox.TabStop = false;
             this.Answer_GroupBox.Text = "Veuillez cocher votre réponse";
@@ -75,10 +72,9 @@
             // 
             this.Choice4_RadioButton.AutoSize = true;
             this.Choice4_RadioButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Choice4_RadioButton.Location = new System.Drawing.Point(607, 137);
-            this.Choice4_RadioButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Choice4_RadioButton.Location = new System.Drawing.Point(331, 74);
             this.Choice4_RadioButton.Name = "Choice4_RadioButton";
-            this.Choice4_RadioButton.Size = new System.Drawing.Size(164, 43);
+            this.Choice4_RadioButton.Size = new System.Drawing.Size(97, 26);
             this.Choice4_RadioButton.TabIndex = 4;
             this.Choice4_RadioButton.TabStop = true;
             this.Choice4_RadioButton.Text = " Choix 4";
@@ -88,10 +84,9 @@
             // 
             this.Choice3_RadioButton.AutoSize = true;
             this.Choice3_RadioButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Choice3_RadioButton.Location = new System.Drawing.Point(407, 137);
-            this.Choice3_RadioButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Choice3_RadioButton.Location = new System.Drawing.Point(222, 74);
             this.Choice3_RadioButton.Name = "Choice3_RadioButton";
-            this.Choice3_RadioButton.Size = new System.Drawing.Size(155, 43);
+            this.Choice3_RadioButton.Size = new System.Drawing.Size(92, 26);
             this.Choice3_RadioButton.TabIndex = 3;
             this.Choice3_RadioButton.TabStop = true;
             this.Choice3_RadioButton.Text = "Choix 3";
@@ -102,10 +97,9 @@
             // 
             this.Choice2_RadioButton.AutoSize = true;
             this.Choice2_RadioButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Choice2_RadioButton.Location = new System.Drawing.Point(209, 137);
-            this.Choice2_RadioButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Choice2_RadioButton.Location = new System.Drawing.Point(114, 74);
             this.Choice2_RadioButton.Name = "Choice2_RadioButton";
-            this.Choice2_RadioButton.Size = new System.Drawing.Size(155, 43);
+            this.Choice2_RadioButton.Size = new System.Drawing.Size(92, 26);
             this.Choice2_RadioButton.TabIndex = 2;
             this.Choice2_RadioButton.TabStop = true;
             this.Choice2_RadioButton.Text = "Choix 2";
@@ -115,10 +109,9 @@
             // 
             this.Choice1_RadioButton.AutoSize = true;
             this.Choice1_RadioButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Choice1_RadioButton.Location = new System.Drawing.Point(11, 137);
-            this.Choice1_RadioButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Choice1_RadioButton.Location = new System.Drawing.Point(6, 74);
             this.Choice1_RadioButton.Name = "Choice1_RadioButton";
-            this.Choice1_RadioButton.Size = new System.Drawing.Size(155, 43);
+            this.Choice1_RadioButton.Size = new System.Drawing.Size(92, 26);
             this.Choice1_RadioButton.TabIndex = 1;
             this.Choice1_RadioButton.TabStop = true;
             this.Choice1_RadioButton.Text = "Choix 1";
@@ -127,10 +120,9 @@
             // Valider_Button
             // 
             this.Valider_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Valider_Button.Location = new System.Drawing.Point(235, 827);
-            this.Valider_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Valider_Button.Location = new System.Drawing.Point(128, 448);
             this.Valider_Button.Name = "Valider_Button";
-            this.Valider_Button.Size = new System.Drawing.Size(249, 72);
+            this.Valider_Button.Size = new System.Drawing.Size(136, 39);
             this.Valider_Button.TabIndex = 3;
             this.Valider_Button.Text = "Valider";
             this.Valider_Button.UseVisualStyleBackColor = true;
@@ -139,10 +131,9 @@
             // Next_Button
             // 
             this.Next_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Next_Button.Location = new System.Drawing.Point(528, 827);
-            this.Next_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Next_Button.Location = new System.Drawing.Point(288, 448);
             this.Next_Button.Name = "Next_Button";
-            this.Next_Button.Size = new System.Drawing.Size(403, 72);
+            this.Next_Button.Size = new System.Drawing.Size(220, 39);
             this.Next_Button.TabIndex = 4;
             this.Next_Button.Text = "Question suivante";
             this.Next_Button.UseVisualStyleBackColor = true;
@@ -150,10 +141,9 @@
             // 
             // PbMaths_pictureBox
             // 
-            this.PbMaths_pictureBox.Location = new System.Drawing.Point(1133, 22);
-            this.PbMaths_pictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.PbMaths_pictureBox.Location = new System.Drawing.Point(618, 12);
             this.PbMaths_pictureBox.Name = "PbMaths_pictureBox";
-            this.PbMaths_pictureBox.Size = new System.Drawing.Size(741, 356);
+            this.PbMaths_pictureBox.Size = new System.Drawing.Size(404, 193);
             this.PbMaths_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbMaths_pictureBox.TabIndex = 5;
             this.PbMaths_pictureBox.TabStop = false;
@@ -161,18 +151,18 @@
             // 
             // TestMaths_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1896, 1001);
+            this.ClientSize = new System.Drawing.Size(1034, 542);
             this.Controls.Add(this.PbMaths_pictureBox);
             this.Controls.Add(this.Next_Button);
             this.Controls.Add(this.Valider_Button);
             this.Controls.Add(this.Answer_GroupBox);
             this.Controls.Add(this.ConsigneMaths_TextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.MinimizeBox = false;
             this.Name = "TestMaths_Form";
             this.Text = "TestMaths";
             this.Load += new System.EventHandler(this.TestMaths_Form_Load);

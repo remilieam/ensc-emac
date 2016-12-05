@@ -150,13 +150,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1034, 541);
+            this.ClientSize = new System.Drawing.Size(1034, 542);
             this.Controls.Add(this.PbPhysique_pictureBox);
             this.Controls.Add(this.Valider_Button);
             this.Controls.Add(this.Next_Button);
             this.Controls.Add(this.Answer_groupeBox);
             this.Controls.Add(this.Question_TextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "TestPhysique_Form";
             this.Text = "TestPhysique";
             this.Load += new System.EventHandler(this.TestPhysique_Load);
