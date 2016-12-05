@@ -117,7 +117,7 @@ namespace EMACApp
             }
 
 
-            test.VerifierBouton(indice_reponse, compteur - 1);
+            test.VerifierReponse(indice_reponse, compteur - 1);
 
             if (indice_reponse == test.reponses[compteur - 1])
             {
@@ -130,7 +130,7 @@ namespace EMACApp
             }
             else
             {
-                MessageBox.Show("Erreur. La bonne réponse est  :" + test.reponses[compteur - 1]);
+                MessageBox.Show("Erreur. La bonne réponse est  : " + test.reponses[compteur - 1]);
                 Next_Button.Enabled = true;
                 Valider_Button.Enabled = false;
             }

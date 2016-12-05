@@ -162,7 +162,7 @@
             this.Controls.Add(this.Answer_GroupBox);
             this.Controls.Add(this.ConsigneMaths_TextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "TestMaths_Form";
             this.Text = "TestMaths";
             this.Load += new System.EventHandler(this.TestMaths_Form_Load);
