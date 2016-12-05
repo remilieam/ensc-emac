@@ -14,6 +14,7 @@ namespace EMACApp
     {
         private TestCalculMental test; // Contient le test en cours
         private int compteurQuestion = 0; // Contient le numéro de la question en cours (10 questions au total)
+        private int decompte; // Pour faire le décompte pour l’affichage des questions
 
         // Constructeur du test de calcul (enchaînement des questions)
         public TestCalcul_Form(TestCalculMental testRecu)
@@ -25,6 +26,7 @@ namespace EMACApp
             {
                 DisplayQuestion_Timer.Interval = this.test.intervalle * 1000;
                 DisplayQuestion_Timer.Tick += new EventHandler(DisplayQuestionTimer_Tick);
+                CountTime_Timer.Tick += new EventHandler(CountTimeTimerTick);
             }
         }
 
@@ -87,13 +89,29 @@ namespace EMACApp
             // Démarrage du chronomètre en mode difficile
             if (test.difficulte)
             {
+                decompte = test.intervalle;
+                Timer_Panel.Show();
+                CountDisplay_Label.Show();
+                CountDisplay_Label.Text = decompte.ToString();
+                CountTime_Timer.Start();
                 DisplayQuestion_Timer.Start();
             }
+        }
+
+        // Décompte
+        public void CountTimeTimerTick(object sender, EventArgs e)
+        {
+            decompte--;
+            CountDisplay_Label.Text = decompte.ToString();
         }
 
         // Événement si le chronomètre atteint 5 secondes
         private void DisplayQuestionTimer_Tick(object sender, EventArgs e)
         {
+            CountTime_Timer.Stop();
+            Timer_Panel.Hide();
+            CountDisplay_Label.Hide();
+
             DisplayQuestion_Timer.Stop();
             this.Show_Answer("0");
         }
@@ -103,6 +121,10 @@ namespace EMACApp
         {
             if (test.difficulte)
             {
+                CountTime_Timer.Stop();
+                Timer_Panel.Hide();
+                CountDisplay_Label.Hide();
+
                 DisplayQuestion_Timer.Stop();
             }
 
@@ -126,7 +148,7 @@ namespace EMACApp
             {
                 string message = this.test.AfficherErreur(erreurJoueur);
 
-                if (MessageBox.Show(message + DisplayQuestion_Timer.ToString(), "Résultat", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
+                if (MessageBox.Show(message, "Résultat", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
                 {
                     this.Next_Question();
                 }

@@ -15,6 +15,7 @@ namespace EMACApp
         private TestAttentionConcentration test; // Contient le test en cours
         private int compteurSerie = 0; // Contient le numéro de la série en cours (3 séries au total)
         private int compteurQuestion = 0; // Contient le numéro de la question en cours (5 questions par série)
+        private int decompte; // Pour faire le décompte pour l’affichage des questions
 
         // Constructeur du test d’attention (enchaînement des questions)
         public TestAttention_Form(TestAttentionConcentration testRecu)
@@ -26,12 +27,13 @@ namespace EMACApp
         // Affichage de la première règle et définition du chronomètre si le joueur a choisi le mode difficile
         private void TestAttention_Form_Load(object sender, EventArgs e)
         {
-            ProgressTest2_TextBox.Text = "Série : " + (this.compteurSerie + 1) + "        Question : " + (this.compteurQuestion + 1);
+            ProgressTest2_TextBox.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
 
             if (test.difficulte)
             {
-                Rule_TextBox.Text = "Consigne de la série " + this.compteurSerie + " :\r\n\r\n" + this.test.questions[this.compteurSerie];
+                Rule_TextBox.Text = "Consigne de la série " + (this.compteurSerie + 1) + " :\r\n\r\n" + this.test.questions[this.compteurSerie];
                 DisplayQuestion_Timer.Interval = this.test.intervalle * 1000;
+                CountTime_Timer.Tick += new EventHandler(CountTimeTimerTick);
                 DisplayQuestion_Timer.Tick += new EventHandler(DisplayQuestionTimerTick);
             }
 
@@ -53,7 +55,7 @@ namespace EMACApp
         // Affichage de la consigne à suivre dans la série ou les 3 séries
         private void AfficherConsigne()
         {
-            ProgressTest2_TextBox.Text = "Série : " + (this.compteurSerie + 1) + "            Question : " + (this.compteurQuestion + 1);
+            ProgressTest2_TextBox.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
 
             if (test.difficulte)
             {
@@ -67,7 +69,7 @@ namespace EMACApp
         // Affichage de l’image et des boutons
         private void AfficherQuestion()
         {
-            ProgressTest2_TextBox.Text = "Série : " + (this.compteurSerie + 1) + "        Question : " + (this.compteurQuestion + 1);
+            ProgressTest2_TextBox.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
 
             Object_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_2\\" + this.test.imagesSeries[this.compteurSerie][this.compteurQuestion];
             Object_PictureBox.Show();
@@ -82,13 +84,29 @@ namespace EMACApp
 
             if (test.difficulte)
             {
+                decompte = test.intervalle;
+                Timer_Panel.Show();
+                CountDisplay_Label.Show();
+                CountDisplay_Label.Text = decompte.ToString();
+                CountTime_Timer.Start();
                 DisplayQuestion_Timer.Start();
             }
+        }
+
+        // Décompte
+        public void CountTimeTimerTick(object sender, EventArgs e)
+        {
+            decompte--;
+            CountDisplay_Label.Text = decompte.ToString();
         }
 
         // Affichage de la réponse dans le cas où on n’a pas répondu à temps
         public void DisplayQuestionTimerTick(object sender, EventArgs e)
         {
+            CountTime_Timer.Stop();
+            Timer_Panel.Hide();
+            CountDisplay_Label.Hide();
+
             DisplayQuestion_Timer.Stop();
             this.AfficherReponse("0");
         }
@@ -96,21 +114,42 @@ namespace EMACApp
         // Affichage de la réponse dans le cas où on a appuyé sur le bouton 1
         private void Button1_Button_Click(object sender, EventArgs e)
         {
-            if (test.difficulte) { DisplayQuestion_Timer.Stop(); }
+            if (test.difficulte)
+            {
+                DisplayQuestion_Timer.Stop();
+                CountTime_Timer.Stop();
+                Timer_Panel.Hide();
+                CountDisplay_Label.Hide();
+            }
+
             this.AfficherReponse("1");
         }
 
         // Affichage de la réponse dans le cas où on a appuyé sur le bouton 2
         private void Button2_Button_Click(object sender, EventArgs e)
         {
-            if (test.difficulte) { DisplayQuestion_Timer.Stop(); }
+            if (test.difficulte)
+            {
+                DisplayQuestion_Timer.Stop();
+                CountTime_Timer.Stop();
+                Timer_Panel.Hide();
+                CountDisplay_Label.Hide();
+            }
+
             this.AfficherReponse("2");
         }
 
         // Affichage de la réponse dans le cas où on a appuyé sur le bouton 3
         private void Button3_Button_Click(object sender, EventArgs e)
         {
-            if (test.difficulte) { DisplayQuestion_Timer.Stop(); }
+            if (test.difficulte)
+            {
+                DisplayQuestion_Timer.Stop();
+                CountTime_Timer.Stop();
+                Timer_Panel.Hide();
+                CountDisplay_Label.Hide();
+            }
+
             this.AfficherReponse("3");
         }
 
