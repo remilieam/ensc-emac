@@ -46,7 +46,11 @@
             this.Rule_TextBox = new System.Windows.Forms.TextBox();
             this.End_Button = new System.Windows.Forms.Button();
             this.ProgressTest1_TextBox = new System.Windows.Forms.TextBox();
+            this.CountTime_Timer = new System.Windows.Forms.Timer(this.components);
+            this.CountDisplay_Label = new System.Windows.Forms.Label();
+            this.Timer_Panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_PictureBox)).BeginInit();
+            this.Timer_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // NameTest1_Label
@@ -230,6 +234,34 @@
             this.ProgressTest1_TextBox.TabIndex = 32;
             this.ProgressTest1_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // CountTime_Timer
+            // 
+            this.CountTime_Timer.Interval = 1000;
+            // 
+            // CountDisplay_Label
+            // 
+            this.CountDisplay_Label.AutoSize = true;
+            this.CountDisplay_Label.BackColor = System.Drawing.Color.White;
+            this.CountDisplay_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountDisplay_Label.ForeColor = System.Drawing.Color.Red;
+            this.CountDisplay_Label.Location = new System.Drawing.Point(28, 34);
+            this.CountDisplay_Label.Name = "CountDisplay_Label";
+            this.CountDisplay_Label.Size = new System.Drawing.Size(21, 22);
+            this.CountDisplay_Label.TabIndex = 33;
+            this.CountDisplay_Label.Text = "5";
+            this.CountDisplay_Label.Visible = false;
+            // 
+            // Timer_Panel
+            // 
+            this.Timer_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Timer_Panel.BackgroundImage")));
+            this.Timer_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Timer_Panel.Controls.Add(this.CountDisplay_Label);
+            this.Timer_Panel.Location = new System.Drawing.Point(141, 148);
+            this.Timer_Panel.Name = "Timer_Panel";
+            this.Timer_Panel.Size = new System.Drawing.Size(74, 77);
+            this.Timer_Panel.TabIndex = 35;
+            this.Timer_Panel.Visible = false;
+            // 
             // TestPerception_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +270,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 552);
+            this.Controls.Add(this.Timer_Panel);
             this.Controls.Add(this.ProgressTest1_TextBox);
             this.Controls.Add(this.End_Button);
             this.Controls.Add(this.Rule_TextBox);
@@ -261,6 +294,8 @@
             this.Text = "Perception et mémoire associative";
             this.Load += new System.EventHandler(this.TestPerception_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_PictureBox)).EndInit();
+            this.Timer_Panel.ResumeLayout(false);
+            this.Timer_Panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +319,8 @@
         private System.Windows.Forms.TextBox Rule_TextBox;
         private System.Windows.Forms.Button End_Button;
         private System.Windows.Forms.TextBox ProgressTest1_TextBox;
+        private System.Windows.Forms.Timer CountTime_Timer;
+        private System.Windows.Forms.Label CountDisplay_Label;
+        private System.Windows.Forms.Panel Timer_Panel;
     }
 }
