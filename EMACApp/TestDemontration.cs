@@ -24,7 +24,7 @@ namespace EMACApp
         private void TestPerceptionForm_Load(object sender, EventArgs e)
         {
             NameTest_Label.Text = test.nom;
-            Instruction_TextBox.Text = test.consigne + " " + compteur;
+            Instruction_TextBox.Text = test.consigne + " " ;
         }
 
         private void Next_PictureBox_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace EMACApp
                 PictureDemo_PictureBox.Hide();
                 TextDemo_TextBox.Hide();
 
-                Instruction_TextBox.Text = test.consigne + " " + compteur;
+                Instruction_TextBox.Text = test.consigne + " " ;
             }
 
             else
@@ -55,7 +55,7 @@ namespace EMACApp
                 //TextDemo_TextBox.Show();
 
                 PictureDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur-1];
-                TextDemo_TextBox.Text = test.texteDemo[compteur - 1] + " " + compteur ;
+                TextDemo_TextBox.Text = test.texteDemo[compteur - 1] + " "  ;
             }
         }
 
@@ -124,6 +124,11 @@ namespace EMACApp
             }
 
             this.Close();
+        }
+
+        private void Instruction_TextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

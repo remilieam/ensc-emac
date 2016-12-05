@@ -8,7 +8,7 @@ namespace EMACClass
 {
     public class TestProblemesPhysiques : TestProblemes
     {
-        private int idTest;
+        private int idTest=5;
         public TestProblemesPhysiques(bool difficulteTest, int intervalleTest, List<Object> donneesTest)
             : base(difficulteTest, intervalleTest, donneesTest)
         {

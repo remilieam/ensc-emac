@@ -4,6 +4,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 
+
 namespace EMACClass
 {
     public class TestProblemesMathematiques : TestProblemes
@@ -85,7 +86,8 @@ namespace EMACClass
                             // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
                             questions.Add((string)reader2["Q.Question"]);
                             imagesQuestion.Add(reader2["ImageQuestion"].ToString());
-
+                             Random rnd = new Random();
+                             questions.Sort((x, y) => rnd.Next(-1, 2));
                             reponses.Add(reader2["Reponse"].ToString());
                         }
                     }

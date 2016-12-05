@@ -55,16 +55,18 @@
             // Instruction_TextBox
             // 
             this.Instruction_TextBox.Enabled = false;
+            this.Instruction_TextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Instruction_TextBox.Location = new System.Drawing.Point(52, 89);
             this.Instruction_TextBox.Multiline = true;
             this.Instruction_TextBox.Name = "Instruction_TextBox";
             this.Instruction_TextBox.Size = new System.Drawing.Size(926, 378);
             this.Instruction_TextBox.TabIndex = 1;
+            this.Instruction_TextBox.TextChanged += new System.EventHandler(this.Instruction_TextBox_TextChanged);
             // 
             // TextDemo_TextBox
             // 
             this.TextDemo_TextBox.Enabled = false;
-            this.TextDemo_TextBox.Location = new System.Drawing.Point(52, 89);
+            this.TextDemo_TextBox.Location = new System.Drawing.Point(52, 51);
             this.TextDemo_TextBox.Multiline = true;
             this.TextDemo_TextBox.Name = "TextDemo_TextBox";
             this.TextDemo_TextBox.Size = new System.Drawing.Size(926, 62);
@@ -73,9 +75,10 @@
             // 
             // PictureDemo_PictureBox
             // 
-            this.PictureDemo_PictureBox.Location = new System.Drawing.Point(52, 157);
+            this.PictureDemo_PictureBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PictureDemo_PictureBox.Location = new System.Drawing.Point(52, 89);
             this.PictureDemo_PictureBox.Name = "PictureDemo_PictureBox";
-            this.PictureDemo_PictureBox.Size = new System.Drawing.Size(926, 310);
+            this.PictureDemo_PictureBox.Size = new System.Drawing.Size(926, 378);
             this.PictureDemo_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureDemo_PictureBox.TabIndex = 3;
             this.PictureDemo_PictureBox.TabStop = false;
