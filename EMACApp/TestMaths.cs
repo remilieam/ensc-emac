@@ -35,21 +35,23 @@ namespace EMACApp
         public TestMaths_Form()
         {
             InitializeComponent();
-            Answer_GroupBox.Hide();
-            Choice1_RadioButton.Enabled = false;
-            Choice2_RadioButton.Enabled = false;
-            Choice3_RadioButton.Enabled = false;
-            Choice4_RadioButton.Enabled = false;
+           
             
           
-            Valider_Button.Hide();
+            
             ConsigneMaths_TextBox.Enabled = false;
-            Next_Button.Hide();
+          
 
         }
 
         private void TestMaths_Form_Load(object sender, EventArgs e)
         {
+            Choice1_RadioButton.Checked= false;
+            Choice2_RadioButton.Checked = false;
+            Choice3_RadioButton.Checked = false;
+            Choice4_RadioButton.Checked = false;
+         
+            ReturnMenu_Button.Hide();
             Next_Button.Enabled = false;
             ConsigneMaths_TextBox.Text = test.questions[0] + test.imagesQuestion.Count + " " + test.questions.Count;
             if (test.imagesQuestion[0] == "")
@@ -95,6 +97,11 @@ namespace EMACApp
             else
             {
                 
+                PbMaths_pictureBox.Hide();
+                Valider_Button.Hide();
+                Next_Button.Hide();
+                Answer_GroupBox.Hide();
+                ReturnMenu_Button.Show();
                 double resultat =test.CalculerResultat() ;
                 MessageBox.Show("Vous avez fini la série! ");
                 ConsigneMaths_TextBox.Text = "Votre super résultat est de : " + resultat + " % ";

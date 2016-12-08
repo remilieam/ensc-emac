@@ -38,6 +38,7 @@
             this.Valider_Button = new System.Windows.Forms.Button();
             this.Next_Button = new System.Windows.Forms.Button();
             this.PbMaths_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ReturnMenu_Button = new System.Windows.Forms.Button();
             this.Answer_GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMaths_pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -149,6 +150,18 @@
             this.PbMaths_pictureBox.TabStop = false;
             this.PbMaths_pictureBox.Click += new System.EventHandler(this.PbMaths_pictureBox_Click);
             // 
+            // ReturnMenu_Button
+            // 
+            this.ReturnMenu_Button.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.ReturnMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnMenu_Button.Location = new System.Drawing.Point(528, 448);
+            this.ReturnMenu_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.ReturnMenu_Button.Name = "ReturnMenu_Button";
+            this.ReturnMenu_Button.Size = new System.Drawing.Size(131, 48);
+            this.ReturnMenu_Button.TabIndex = 26;
+            this.ReturnMenu_Button.Text = "RETOUR";
+            this.ReturnMenu_Button.UseVisualStyleBackColor = true;
+            // 
             // TestMaths_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +169,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1034, 542);
+            this.Controls.Add(this.ReturnMenu_Button);
             this.Controls.Add(this.PbMaths_pictureBox);
             this.Controls.Add(this.Next_Button);
             this.Controls.Add(this.Valider_Button);
@@ -185,5 +199,6 @@
         private System.Windows.Forms.Button Valider_Button;
         private System.Windows.Forms.Button Next_Button;
         private System.Windows.Forms.PictureBox PbMaths_pictureBox;
+        private System.Windows.Forms.Button ReturnMenu_Button;
     }
 }
