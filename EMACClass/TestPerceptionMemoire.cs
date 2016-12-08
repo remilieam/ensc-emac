@@ -15,6 +15,17 @@ namespace EMACClass
         private readonly int nbQuestions = 10;
 
         /// <summary>
+        /// Constructeur pour les tests unitaires
+        /// </summary>
+        /// <param name="reponsesTest">Liste des réponses</param>
+        /// <param name="lettresTest">Liste des lettres des réponses</param>
+        public TestPerceptionMemoire(List<string> reponsesTest, List<string> lettresTest)
+        {
+            reponses = reponsesTest;
+            lettres = lettresTest;
+        }
+
+        /// <summary>
         /// Construit un nouveau test “Perception et mémoire associative”.
         /// Initialise le score à 0.
         /// Prend en argument la difficulté du test (false = facile, true = difficile)

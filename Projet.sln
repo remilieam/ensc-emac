@@ -5,7 +5,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMACClass", "EMACClass\EMAC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMACApp", "EMACApp\EMACApp.csproj", "{717335DB-B738-4452-A469-3739250CB78F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMACTest", "EMACTest\EMACTest.csproj", "{9A70586E-55AE-4A13-AFF6-911DA567BE8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10D1FC85-A51F-4663-92E2-891464CD9FA0}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Projet.vsmdi = Projet.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Projet.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -35,6 +47,16 @@ Global
 		{717335DB-B738-4452-A469-3739250CB78F}.Release|Mixed Platforms.Build.0 = Release|x86
 		{717335DB-B738-4452-A469-3739250CB78F}.Release|x86.ActiveCfg = Release|x86
 		{717335DB-B738-4452-A469-3739250CB78F}.Release|x86.Build.0 = Release|x86
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9A70586E-55AE-4A13-AFF6-911DA567BE8E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
