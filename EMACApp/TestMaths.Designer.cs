@@ -38,6 +38,7 @@
             this.Valider_Button = new System.Windows.Forms.Button();
             this.Next_Button = new System.Windows.Forms.Button();
             this.PbMaths_pictureBox = new System.Windows.Forms.PictureBox();
+            this.End_Button = new System.Windows.Forms.Button();
             this.Answer_GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMaths_pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -149,6 +150,19 @@
             this.PbMaths_pictureBox.TabStop = false;
             this.PbMaths_pictureBox.Click += new System.EventHandler(this.PbMaths_pictureBox_Click);
             // 
+            // End_Button
+            // 
+            this.End_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.End_Button.Location = new System.Drawing.Point(355, 204);
+            this.End_Button.Margin = new System.Windows.Forms.Padding(6);
+            this.End_Button.Name = "End_Button";
+            this.End_Button.Size = new System.Drawing.Size(254, 68);
+            this.End_Button.TabIndex = 44;
+            this.End_Button.Text = "TERMINER";
+            this.End_Button.UseVisualStyleBackColor = true;
+            this.End_Button.Visible = false;
+            this.End_Button.Click += new System.EventHandler(this.End_Button_Click);
+            // 
             // TestMaths_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +170,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1034, 542);
+            this.Controls.Add(this.End_Button);
             this.Controls.Add(this.PbMaths_pictureBox);
             this.Controls.Add(this.Next_Button);
             this.Controls.Add(this.Valider_Button);
@@ -185,5 +200,6 @@
         private System.Windows.Forms.Button Valider_Button;
         private System.Windows.Forms.Button Next_Button;
         private System.Windows.Forms.PictureBox PbMaths_pictureBox;
+        private System.Windows.Forms.Button End_Button;
     }
 }

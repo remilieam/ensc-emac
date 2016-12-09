@@ -35,23 +35,21 @@ namespace EMACApp
         public TestMaths_Form()
         {
             InitializeComponent();
-            Answer_GroupBox.Hide();
-            Choice1_RadioButton.Enabled = false;
-            Choice2_RadioButton.Enabled = false;
-            Choice3_RadioButton.Enabled = false;
-            Choice4_RadioButton.Enabled = false;
-            
           
-            Valider_Button.Hide();
-            ConsigneMaths_TextBox.Enabled = false;
-            Next_Button.Hide();
-
+          
         }
 
         private void TestMaths_Form_Load(object sender, EventArgs e)
         {
+            Choice1_RadioButton.Checked = false;
+            Choice2_RadioButton.Checked = false;
+            Choice3_RadioButton.Checked = false;
+            Choice4_RadioButton.Checked = false;
+            ConsigneMaths_TextBox.Enabled = false;
             Next_Button.Enabled = false;
-            ConsigneMaths_TextBox.Text = test.questions[0] + test.imagesQuestion.Count + " " + test.questions.Count;
+            End_Button.Hide();
+        
+            ConsigneMaths_TextBox.Text = " Question n°" + (compteur+1) + "  :  "+test.questions[0]  ;
             if (test.imagesQuestion[0] == "")
             {
                 PbMaths_pictureBox.Hide();
@@ -76,7 +74,8 @@ namespace EMACApp
             {
                 Next_Button.Enabled = false;
                 Valider_Button.Enabled = true;
-                ConsigneMaths_TextBox.Text = test.questions[compteur];
+               
+                ConsigneMaths_TextBox.Text = " Question n°" + (compteur+1) + "\n\n \r"+test.questions[compteur];
                 if (test.imagesQuestion[compteur] == "")
                 {
                     PbMaths_pictureBox.Hide();
@@ -94,7 +93,10 @@ namespace EMACApp
             }
             else
             {
-                
+                Answer_GroupBox.Hide();
+                Valider_Button.Hide();
+                Next_Button.Hide();
+                End_Button.Show();
                 double resultat =test.CalculerResultat() ;
                 MessageBox.Show("Vous avez fini la série! ");
                 ConsigneMaths_TextBox.Text = "Votre super résultat est de : " + resultat + " % ";
@@ -160,6 +162,11 @@ namespace EMACApp
         private void PbMaths_pictureBox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void End_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
