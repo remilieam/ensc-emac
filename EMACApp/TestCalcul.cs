@@ -190,5 +190,10 @@ namespace EMACApp
         {
             this.Close();
         }
+
+        private void TestCalcul_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,23 +32,21 @@ namespace EMACApp
 
         public TestPhysique_Form()
         {
-            Choice1_RadioButton.Enabled = false;
-            Choice2_RadioButton.Enabled = false;
-            Choice3_RadioButton.Enabled = false;
-            Choice4_RadioButton.Enabled = false;
-
-
-            
-            Question_TextBox.Enabled = false;
-            Next_Button.Hide();
-            Next_Button.Enabled = false;
+   
+          
         }
 
         private void TestPhysique_Load(object sender, EventArgs e)
         {
+            Choice1_RadioButton.Checked = false;
+            Choice2_RadioButton.Checked = false;
+            Choice3_RadioButton.Checked = false;
+            Choice4_RadioButton.Checked = false;
+            End_Button.Hide();
+            Question_TextBox.Enabled = false;
             Next_Button.Enabled = false;
 
-            Question_TextBox.Text = test.questions[0] + test.imagesQuestion.Count + " " + test.questions.Count;
+            Question_TextBox.Text = "Question n°" + (compteur + 1) + "\n\n \r" + test.questions[compteur];
             if (test.imagesQuestion[0] == "")
             {
                 PbPhysique_pictureBox.Hide();
@@ -67,7 +65,7 @@ namespace EMACApp
             {
                 Next_Button.Enabled = false;
                 Valider_Button.Enabled = true;
-               Question_TextBox.Text = test.questions[compteur];
+               Question_TextBox.Text = "Question n° : " +(compteur+1)+test.questions[compteur];
                 if (test.imagesQuestion[compteur] == "")
                 {
                     PbPhysique_pictureBox.Hide();
@@ -85,7 +83,10 @@ namespace EMACApp
             }
             else
             {
-
+                Answer_groupeBox.Hide();
+                Valider_Button.Hide();
+                Next_Button.Hide();
+                End_Button.Show();
                 double resultat = test.CalculerResultat();
                 MessageBox.Show("Vous avez fini la série! ");
                 Question_TextBox.Text = "Votre super résultat est de : " + resultat + " % ";
@@ -134,6 +135,11 @@ namespace EMACApp
                 Next_Button.Enabled = true;
                 Valider_Button.Enabled = false;
             }
+        }
+
+        private void End_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -284,6 +284,7 @@
             this.MaximizeBox = false;
             this.Name = "TestCalcul_Form";
             this.Text = "Calcul mental";
+            this.Load += new System.EventHandler(this.TestCalcul_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).EndInit();
             this.Timer_Panel.ResumeLayout(false);
             this.Timer_Panel.PerformLayout();
