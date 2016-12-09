@@ -49,6 +49,7 @@
             this.CountTime_Timer = new System.Windows.Forms.Timer(this.components);
             this.CountDisplay_Label = new System.Windows.Forms.Label();
             this.Timer_Panel = new System.Windows.Forms.Panel();
+            this.DisplayPopUp_Timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_PictureBox)).BeginInit();
             this.Timer_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -253,6 +254,7 @@
             // 
             // Timer_Panel
             // 
+            this.Timer_Panel.BackColor = System.Drawing.Color.White;
             this.Timer_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Timer_Panel.BackgroundImage")));
             this.Timer_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Timer_Panel.Controls.Add(this.CountDisplay_Label);
@@ -261,6 +263,10 @@
             this.Timer_Panel.Size = new System.Drawing.Size(74, 77);
             this.Timer_Panel.TabIndex = 35;
             this.Timer_Panel.Visible = false;
+            // 
+            // DisplayPopUp_Timer
+            // 
+            this.DisplayPopUp_Timer.Interval = 3000;
             // 
             // TestPerception_Form
             // 
@@ -322,5 +328,6 @@
         private System.Windows.Forms.Timer CountTime_Timer;
         private System.Windows.Forms.Label CountDisplay_Label;
         private System.Windows.Forms.Panel Timer_Panel;
+        private System.Windows.Forms.Timer DisplayPopUp_Timer;
     }
 }
