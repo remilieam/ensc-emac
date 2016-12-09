@@ -64,7 +64,18 @@ namespace EMACClass
                             imagesQuestion.Add(reader2["ImageQuestion"].ToString());
                             // Génération aléatoire des questions
                             reponses.Add(reader2["Reponse"].ToString());
-                            
+                            Random rnd = new Random();
+                            //questions.Sort((x, y) => rnd.Next(-1, 2));
+                         
+                            //reponses.Sort((x, y) => rnd.Next(-1, 2));
+                            //imagesQuestion.Sort((x, y) => rnd.Next(-1, 2));
+                            //for (int i = 0; i < questions.Count; i++)
+                            //{
+                               // questions[i] = questions[rnd.Next(0, questions.Count)];
+                               // reponses[i] = reponses[rnd.Next(0, questions.Count)];
+                               // imagesQuestion[i] = imagesQuestion[rnd.Next(0, questions.Count)];
+                            //}
+                           
                         }
                     }
                 }
@@ -72,29 +83,6 @@ namespace EMACClass
                 connexionBDD.Close();
             }
 
-            // Nouvelles istes contenant les questions et les réponses
-            List<string> newQuestions = new List<string>();
-            List<string> newReponses = new List<string>();
-            List<string> newImages = new List<string>();
-            int nombre = 10;
-            Random rnd = new Random();
-
-            // Remplissage des nouvelles listes aléatoirement
-            for (int i = 0; i < nombre; i++)
-            {
-                int indice = rnd.Next(0, this.questions.Count);
-                newQuestions.Add(this.questions[indice]);
-                newReponses.Add(this.reponses[indice]);
-                newImages.Add(this.imagesQuestion[indice]);
-                this.questions.RemoveAt(indice);
-                this.reponses.RemoveAt(indice);
-                this.imagesQuestion.RemoveAt(indice);
-            }
-
-            // Modifications des listes de la classe
-            this.questions = newQuestions;
-            this.reponses = newReponses;
-            this.imagesQuestion = newImages;
         }
 
         protected override void RecupererDemonstration()
@@ -141,7 +129,6 @@ namespace EMACClass
 
                 connexionBDD.Close();
             }
-
         }
 
         public override List<string> VerifierReponse(string reponse, int numQuestion)
