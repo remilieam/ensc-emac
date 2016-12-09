@@ -62,7 +62,7 @@
             // 
             this.Test5DifficultMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test5DifficultMenu_Button.Location = new System.Drawing.Point(47, 210);
-            this.Test5DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test5DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test5DifficultMenu_Button.Name = "Test5DifficultMenu_Button";
             this.Test5DifficultMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test5DifficultMenu_Button.TabIndex = 35;
@@ -74,7 +74,7 @@
             // 
             this.Test4DifficultMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test4DifficultMenu_Button.Location = new System.Drawing.Point(45, 210);
-            this.Test4DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test4DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test4DifficultMenu_Button.Name = "Test4DifficultMenu_Button";
             this.Test4DifficultMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test4DifficultMenu_Button.TabIndex = 34;
@@ -86,7 +86,7 @@
             // 
             this.Test3DifficultMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test3DifficultMenu_Button.Location = new System.Drawing.Point(46, 210);
-            this.Test3DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test3DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test3DifficultMenu_Button.Name = "Test3DifficultMenu_Button";
             this.Test3DifficultMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test3DifficultMenu_Button.TabIndex = 33;
@@ -98,7 +98,7 @@
             // 
             this.Test2DifficultMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test2DifficultMenu_Button.Location = new System.Drawing.Point(45, 210);
-            this.Test2DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test2DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test2DifficultMenu_Button.Name = "Test2DifficultMenu_Button";
             this.Test2DifficultMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test2DifficultMenu_Button.TabIndex = 32;
@@ -110,7 +110,7 @@
             // 
             this.Test2EasyMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test2EasyMenu_Button.Location = new System.Drawing.Point(45, 124);
-            this.Test2EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test2EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test2EasyMenu_Button.Name = "Test2EasyMenu_Button";
             this.Test2EasyMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test2EasyMenu_Button.TabIndex = 31;
@@ -122,7 +122,7 @@
             // 
             this.Test5EasyMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test5EasyMenu_Button.Location = new System.Drawing.Point(47, 124);
-            this.Test5EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test5EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test5EasyMenu_Button.Name = "Test5EasyMenu_Button";
             this.Test5EasyMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test5EasyMenu_Button.TabIndex = 30;
@@ -134,7 +134,7 @@
             // 
             this.Test4EasyMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test4EasyMenu_Button.Location = new System.Drawing.Point(45, 124);
-            this.Test4EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test4EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test4EasyMenu_Button.Name = "Test4EasyMenu_Button";
             this.Test4EasyMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test4EasyMenu_Button.TabIndex = 29;
@@ -146,7 +146,7 @@
             // 
             this.Test3EasyMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test3EasyMenu_Button.Location = new System.Drawing.Point(46, 124);
-            this.Test3EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test3EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test3EasyMenu_Button.Name = "Test3EasyMenu_Button";
             this.Test3EasyMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test3EasyMenu_Button.TabIndex = 28;
@@ -158,7 +158,7 @@
             // 
             this.Test1DifficultMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test1DifficultMenu_Button.Location = new System.Drawing.Point(45, 210);
-            this.Test1DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test1DifficultMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test1DifficultMenu_Button.Name = "Test1DifficultMenu_Button";
             this.Test1DifficultMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test1DifficultMenu_Button.TabIndex = 27;
@@ -170,7 +170,7 @@
             // 
             this.Test1EasyMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Test1EasyMenu_Button.Location = new System.Drawing.Point(45, 124);
-            this.Test1EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test1EasyMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Test1EasyMenu_Button.Name = "Test1EasyMenu_Button";
             this.Test1EasyMenu_Button.Size = new System.Drawing.Size(94, 34);
             this.Test1EasyMenu_Button.TabIndex = 26;
@@ -183,7 +183,7 @@
             this.ReturnMenu_Button.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.ReturnMenu_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReturnMenu_Button.Location = new System.Drawing.Point(457, 453);
-            this.ReturnMenu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReturnMenu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.ReturnMenu_Button.Name = "ReturnMenu_Button";
             this.ReturnMenu_Button.Size = new System.Drawing.Size(131, 48);
             this.ReturnMenu_Button.TabIndex = 25;
@@ -282,7 +282,7 @@
             this.Test1_Panel.Controls.Add(this.Test1EasyMenu_Button);
             this.Test1_Panel.Controls.Add(this.Test1DifficultMenu_Button);
             this.Test1_Panel.Location = new System.Drawing.Point(21, 103);
-            this.Test1_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test1_Panel.Margin = new System.Windows.Forms.Padding(2);
             this.Test1_Panel.Name = "Test1_Panel";
             this.Test1_Panel.Size = new System.Drawing.Size(193, 289);
             this.Test1_Panel.TabIndex = 41;
@@ -294,7 +294,7 @@
             this.Test2_Panel.Controls.Add(this.Test2EasyMenu_Button);
             this.Test2_Panel.Controls.Add(this.Test2Menu_Label);
             this.Test2_Panel.Location = new System.Drawing.Point(223, 103);
-            this.Test2_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test2_Panel.Margin = new System.Windows.Forms.Padding(2);
             this.Test2_Panel.Name = "Test2_Panel";
             this.Test2_Panel.Size = new System.Drawing.Size(186, 289);
             this.Test2_Panel.TabIndex = 42;
@@ -306,7 +306,7 @@
             this.Test3_Panel.Controls.Add(this.Test3EasyMenu_Button);
             this.Test3_Panel.Controls.Add(this.Test3Menu_Label);
             this.Test3_Panel.Location = new System.Drawing.Point(423, 103);
-            this.Test3_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test3_Panel.Margin = new System.Windows.Forms.Padding(2);
             this.Test3_Panel.Name = "Test3_Panel";
             this.Test3_Panel.Size = new System.Drawing.Size(186, 289);
             this.Test3_Panel.TabIndex = 43;
@@ -318,7 +318,7 @@
             this.Test4_Panel.Controls.Add(this.Test4DifficultMenu_Button);
             this.Test4_Panel.Controls.Add(this.Test4EasyMenu_Button);
             this.Test4_Panel.Location = new System.Drawing.Point(625, 103);
-            this.Test4_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Test4_Panel.Margin = new System.Windows.Forms.Padding(2);
             this.Test4_Panel.Name = "Test4_Panel";
             this.Test4_Panel.Size = new System.Drawing.Size(186, 289);
             this.Test4_Panel.TabIndex = 43;
@@ -330,7 +330,7 @@
             this.panel4.Controls.Add(this.Test5DifficultMenu_Button);
             this.panel4.Controls.Add(this.Test5EasyMenu_Button);
             this.panel4.Location = new System.Drawing.Point(829, 103);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(186, 289);
             this.panel4.TabIndex = 43;
@@ -354,6 +354,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Menu_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_Form_FormClosed);
             this.Load += new System.EventHandler(this.Menu_Form_Load);

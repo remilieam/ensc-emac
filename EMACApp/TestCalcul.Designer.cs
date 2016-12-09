@@ -289,6 +289,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TestCalcul_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calcul mental";
             this.Load += new System.EventHandler(this.TestCalcul_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).EndInit();

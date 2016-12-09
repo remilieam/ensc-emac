@@ -141,6 +141,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "TestDemonstration_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consigne et démonstration du test";
             this.Load += new System.EventHandler(this.TestPerceptionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureDemo_PictureBox)).EndInit();

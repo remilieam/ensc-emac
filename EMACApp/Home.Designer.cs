@@ -66,7 +66,7 @@
             // 
             this.ContinueHome_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContinueHome_Button.Location = new System.Drawing.Point(562, 426);
-            this.ContinueHome_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ContinueHome_Button.Margin = new System.Windows.Forms.Padding(2);
             this.ContinueHome_Button.Name = "ContinueHome_Button";
             this.ContinueHome_Button.Size = new System.Drawing.Size(164, 43);
             this.ContinueHome_Button.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.ExitHome_Button.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitHome_Button.Location = new System.Drawing.Point(303, 426);
-            this.ExitHome_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitHome_Button.Margin = new System.Windows.Forms.Padding(2);
             this.ExitHome_Button.Name = "ExitHome_Button";
             this.ExitHome_Button.Size = new System.Drawing.Size(164, 43);
             this.ExitHome_Button.TabIndex = 3;
@@ -101,9 +101,10 @@
             this.Controls.Add(this.TitleHome_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Home_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accueil";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomeForm_FormClosing);
             this.ResumeLayout(false);

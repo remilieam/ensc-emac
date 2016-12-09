@@ -251,6 +251,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.Name = "TestAttention_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Attention et concentration";
             this.Load += new System.EventHandler(this.TestAttention_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).EndInit();
