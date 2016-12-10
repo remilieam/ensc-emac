@@ -18,6 +18,11 @@ namespace EMACClass
 
         }
 
+        public TestProblemes(List<string>Rep)
+        {
+           reponses=Rep;
+
+        }
         protected override void GenererListeQuestions()
         {
             OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
@@ -169,7 +174,14 @@ namespace EMACClass
 
         public override double CalculerResultat()
         {
-            return Math.Round(this.score * 100.0 / 10);
+            double nbQuestionsTotales = 0;
+
+            for (int i = 0; i < this.reponses.Count; i++)
+            {
+                nbQuestionsTotales += this.reponses[i].Length;
+            }
+
+            return Math.Round(this.score * 100.0 / nbQuestionsTotales, 2);
         }
     }
 }
