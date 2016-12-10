@@ -49,7 +49,7 @@ namespace EMACApp
             Next_Button.Enabled = false;
             End_Button.Hide();
         
-            ConsigneMaths_TextBox.Text = " Question n°" + (compteur+1) + "  :  "+test.questions[0]  ;
+            ConsigneMaths_TextBox.Text = " Question n°" + (compteur+1) + "  :  "+ test.questions[0]  ;
             if (test.imagesQuestion[0] == "")
             {
                 PbMaths_pictureBox.Hide();
@@ -75,7 +75,7 @@ namespace EMACApp
                 Next_Button.Enabled = false;
                 Valider_Button.Enabled = true;
                
-                ConsigneMaths_TextBox.Text = " Question n°" + (compteur+1) + "\n\n \r"+test.questions[compteur];
+                ConsigneMaths_TextBox.Text = " Question n°" + (compteur+1) + ": "+test.questions[compteur];
                 if (test.imagesQuestion[compteur] == "")
                 {
                     PbMaths_pictureBox.Hide();

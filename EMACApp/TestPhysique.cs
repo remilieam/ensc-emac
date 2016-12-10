@@ -32,7 +32,7 @@ namespace EMACApp
 
         public TestPhysique_Form()
         {
-   
+           
           
         }
 
@@ -46,7 +46,7 @@ namespace EMACApp
             Question_TextBox.Enabled = false;
             Next_Button.Enabled = false;
 
-            Question_TextBox.Text = "Question n°" + (compteur + 1) + "\n\n \r" + test.questions[compteur];
+            Question_TextBox.Text = "Question n° " + (compteur + 1)+" :  " + test.questions[compteur];
             if (test.imagesQuestion[0] == "")
             {
                 PbPhysique_pictureBox.Hide();
@@ -65,7 +65,7 @@ namespace EMACApp
             {
                 Next_Button.Enabled = false;
                 Valider_Button.Enabled = true;
-               Question_TextBox.Text = "Question n° : " +(compteur+1)+test.questions[compteur];
+               Question_TextBox.Text = "Question n°  " +(compteur+1)+" :  "+test.questions[compteur];
                 if (test.imagesQuestion[compteur] == "")
                 {
                     PbPhysique_pictureBox.Hide();
