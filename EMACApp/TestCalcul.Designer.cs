@@ -30,77 +30,77 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestCalcul_Form));
-            this.ProgressTest3_TextBox = new System.Windows.Forms.TextBox();
-            this.NameTest3_Label = new System.Windows.Forms.Label();
-            this.Area_PictureBox = new System.Windows.Forms.PictureBox();
-            this.Confirm_Button = new System.Windows.Forms.Button();
+            this.ProgressionTest3_TextBox = new System.Windows.Forms.TextBox();
+            this.NomTest3_Label = new System.Windows.Forms.Label();
+            this.Zone_PictureBox = new System.Windows.Forms.PictureBox();
+            this.Valider_Button = new System.Windows.Forms.Button();
             this.Operation_TextBlox = new System.Windows.Forms.TextBox();
-            this.Answer_TextBox = new System.Windows.Forms.TextBox();
-            this.Equal_Label = new System.Windows.Forms.Label();
+            this.Reponse_TextBox = new System.Windows.Forms.TextBox();
+            this.Egal_Label = new System.Windows.Forms.Label();
             this.Addition_Button = new System.Windows.Forms.Button();
             this.Division_Button = new System.Windows.Forms.Button();
             this.Multiplication_Button = new System.Windows.Forms.Button();
-            this.Subtraction_Button = new System.Windows.Forms.Button();
-            this.Choice_TextBox = new System.Windows.Forms.TextBox();
-            this.DisplayQuestion_Timer = new System.Windows.Forms.Timer(this.components);
-            this.End_Button = new System.Windows.Forms.Button();
-            this.Result_TextBox = new System.Windows.Forms.TextBox();
-            this.CountTime_Timer = new System.Windows.Forms.Timer(this.components);
-            this.Timer_Panel = new System.Windows.Forms.Panel();
-            this.CountDisplay_Label = new System.Windows.Forms.Label();
-            this.DisplayPopUp_Timer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).BeginInit();
-            this.Timer_Panel.SuspendLayout();
+            this.Soustraction_Button = new System.Windows.Forms.Button();
+            this.Choix_TextBox = new System.Windows.Forms.TextBox();
+            this.AfficherQuestion_Timer = new System.Windows.Forms.Timer(this.components);
+            this.Terminer_Button = new System.Windows.Forms.Button();
+            this.Resultat_TextBox = new System.Windows.Forms.TextBox();
+            this.Decompte_Timer = new System.Windows.Forms.Timer(this.components);
+            this.Chrono_Panel = new System.Windows.Forms.Panel();
+            this.Decompte_Label = new System.Windows.Forms.Label();
+            this.AfficherPopUp_Timer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Zone_PictureBox)).BeginInit();
+            this.Chrono_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ProgressTest3_TextBox
+            // ProgressionTest3_TextBox
             // 
-            this.ProgressTest3_TextBox.BackColor = System.Drawing.Color.White;
-            this.ProgressTest3_TextBox.Enabled = false;
-            this.ProgressTest3_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProgressTest3_TextBox.ForeColor = System.Drawing.Color.Black;
-            this.ProgressTest3_TextBox.Location = new System.Drawing.Point(161, 99);
-            this.ProgressTest3_TextBox.Name = "ProgressTest3_TextBox";
-            this.ProgressTest3_TextBox.Size = new System.Drawing.Size(712, 29);
-            this.ProgressTest3_TextBox.TabIndex = 31;
-            this.ProgressTest3_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ProgressTest3_TextBox.Visible = false;
+            this.ProgressionTest3_TextBox.BackColor = System.Drawing.Color.White;
+            this.ProgressionTest3_TextBox.Enabled = false;
+            this.ProgressionTest3_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgressionTest3_TextBox.ForeColor = System.Drawing.Color.Black;
+            this.ProgressionTest3_TextBox.Location = new System.Drawing.Point(161, 99);
+            this.ProgressionTest3_TextBox.Name = "ProgressionTest3_TextBox";
+            this.ProgressionTest3_TextBox.Size = new System.Drawing.Size(712, 29);
+            this.ProgressionTest3_TextBox.TabIndex = 31;
+            this.ProgressionTest3_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ProgressionTest3_TextBox.Visible = false;
             // 
-            // NameTest3_Label
+            // NomTest3_Label
             // 
-            this.NameTest3_Label.AutoSize = true;
-            this.NameTest3_Label.BackColor = System.Drawing.Color.Transparent;
-            this.NameTest3_Label.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameTest3_Label.ForeColor = System.Drawing.Color.White;
-            this.NameTest3_Label.Location = new System.Drawing.Point(400, 35);
-            this.NameTest3_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.NameTest3_Label.Name = "NameTest3_Label";
-            this.NameTest3_Label.Size = new System.Drawing.Size(228, 37);
-            this.NameTest3_Label.TabIndex = 30;
-            this.NameTest3_Label.Text = "Calcul mental";
+            this.NomTest3_Label.AutoSize = true;
+            this.NomTest3_Label.BackColor = System.Drawing.Color.Transparent;
+            this.NomTest3_Label.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomTest3_Label.ForeColor = System.Drawing.Color.White;
+            this.NomTest3_Label.Location = new System.Drawing.Point(400, 35);
+            this.NomTest3_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.NomTest3_Label.Name = "NomTest3_Label";
+            this.NomTest3_Label.Size = new System.Drawing.Size(228, 37);
+            this.NomTest3_Label.TabIndex = 30;
+            this.NomTest3_Label.Text = "Calcul mental";
             // 
-            // Area_PictureBox
+            // Zone_PictureBox
             // 
-            this.Area_PictureBox.BackColor = System.Drawing.Color.White;
-            this.Area_PictureBox.Location = new System.Drawing.Point(161, 163);
-            this.Area_PictureBox.Name = "Area_PictureBox";
-            this.Area_PictureBox.Size = new System.Drawing.Size(712, 345);
-            this.Area_PictureBox.TabIndex = 32;
-            this.Area_PictureBox.TabStop = false;
-            this.Area_PictureBox.Visible = false;
+            this.Zone_PictureBox.BackColor = System.Drawing.Color.White;
+            this.Zone_PictureBox.Location = new System.Drawing.Point(161, 163);
+            this.Zone_PictureBox.Name = "Zone_PictureBox";
+            this.Zone_PictureBox.Size = new System.Drawing.Size(712, 345);
+            this.Zone_PictureBox.TabIndex = 32;
+            this.Zone_PictureBox.TabStop = false;
+            this.Zone_PictureBox.Visible = false;
             // 
-            // Confirm_Button
+            // Valider_Button
             // 
-            this.Confirm_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Confirm_Button.Location = new System.Drawing.Point(390, 418);
-            this.Confirm_Button.Margin = new System.Windows.Forms.Padding(6);
-            this.Confirm_Button.Name = "Confirm_Button";
-            this.Confirm_Button.Size = new System.Drawing.Size(254, 68);
-            this.Confirm_Button.TabIndex = 33;
-            this.Confirm_Button.Text = "VALIDER";
-            this.Confirm_Button.UseVisualStyleBackColor = true;
-            this.Confirm_Button.Visible = false;
-            this.Confirm_Button.Click += new System.EventHandler(this.Confirm_Button_Click);
+            this.Valider_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Valider_Button.Location = new System.Drawing.Point(390, 425);
+            this.Valider_Button.Margin = new System.Windows.Forms.Padding(6);
+            this.Valider_Button.Name = "Valider_Button";
+            this.Valider_Button.Size = new System.Drawing.Size(254, 68);
+            this.Valider_Button.TabIndex = 33;
+            this.Valider_Button.Text = "VALIDER";
+            this.Valider_Button.UseVisualStyleBackColor = true;
+            this.Valider_Button.Visible = false;
+            this.Valider_Button.Click += new System.EventHandler(this.Valider_Button_Click);
             // 
             // Operation_TextBlox
             // 
@@ -115,30 +115,30 @@
             this.Operation_TextBlox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Operation_TextBlox.Visible = false;
             // 
-            // Answer_TextBox
+            // Reponse_TextBox
             // 
-            this.Answer_TextBox.BackColor = System.Drawing.Color.White;
-            this.Answer_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Answer_TextBox.ForeColor = System.Drawing.Color.Black;
-            this.Answer_TextBox.Location = new System.Drawing.Point(602, 285);
-            this.Answer_TextBox.Name = "Answer_TextBox";
-            this.Answer_TextBox.Size = new System.Drawing.Size(123, 29);
-            this.Answer_TextBox.TabIndex = 35;
-            this.Answer_TextBox.Visible = false;
+            this.Reponse_TextBox.BackColor = System.Drawing.Color.White;
+            this.Reponse_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reponse_TextBox.ForeColor = System.Drawing.Color.Black;
+            this.Reponse_TextBox.Location = new System.Drawing.Point(602, 285);
+            this.Reponse_TextBox.Name = "Reponse_TextBox";
+            this.Reponse_TextBox.Size = new System.Drawing.Size(123, 29);
+            this.Reponse_TextBox.TabIndex = 35;
+            this.Reponse_TextBox.Visible = false;
             // 
-            // Equal_Label
+            // Egal_Label
             // 
-            this.Equal_Label.AutoSize = true;
-            this.Equal_Label.BackColor = System.Drawing.Color.White;
-            this.Equal_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equal_Label.ForeColor = System.Drawing.Color.Black;
-            this.Equal_Label.Location = new System.Drawing.Point(563, 288);
-            this.Equal_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.Equal_Label.Name = "Equal_Label";
-            this.Equal_Label.Size = new System.Drawing.Size(21, 22);
-            this.Equal_Label.TabIndex = 36;
-            this.Equal_Label.Text = "=";
-            this.Equal_Label.Visible = false;
+            this.Egal_Label.AutoSize = true;
+            this.Egal_Label.BackColor = System.Drawing.Color.White;
+            this.Egal_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Egal_Label.ForeColor = System.Drawing.Color.Black;
+            this.Egal_Label.Location = new System.Drawing.Point(563, 288);
+            this.Egal_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Egal_Label.Name = "Egal_Label";
+            this.Egal_Label.Size = new System.Drawing.Size(21, 22);
+            this.Egal_Label.TabIndex = 36;
+            this.Egal_Label.Text = "=";
+            this.Egal_Label.Visible = false;
             // 
             // Addition_Button
             // 
@@ -176,91 +176,96 @@
             this.Multiplication_Button.UseVisualStyleBackColor = true;
             this.Multiplication_Button.Click += new System.EventHandler(this.Multiplication_Button_Click);
             // 
-            // Subtraction_Button
+            // Soustraction_Button
             // 
-            this.Subtraction_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subtraction_Button.Location = new System.Drawing.Point(407, 323);
-            this.Subtraction_Button.Margin = new System.Windows.Forms.Padding(6);
-            this.Subtraction_Button.Name = "Subtraction_Button";
-            this.Subtraction_Button.Size = new System.Drawing.Size(68, 68);
-            this.Subtraction_Button.TabIndex = 40;
-            this.Subtraction_Button.Text = "–";
-            this.Subtraction_Button.UseVisualStyleBackColor = true;
-            this.Subtraction_Button.Click += new System.EventHandler(this.Subtraction_Button_Click);
+            this.Soustraction_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Soustraction_Button.Location = new System.Drawing.Point(407, 323);
+            this.Soustraction_Button.Margin = new System.Windows.Forms.Padding(6);
+            this.Soustraction_Button.Name = "Soustraction_Button";
+            this.Soustraction_Button.Size = new System.Drawing.Size(68, 68);
+            this.Soustraction_Button.TabIndex = 40;
+            this.Soustraction_Button.Text = "–";
+            this.Soustraction_Button.UseVisualStyleBackColor = true;
+            this.Soustraction_Button.Click += new System.EventHandler(this.Soustraction_Button_Click);
             // 
-            // Choice_TextBox
+            // Choix_TextBox
             // 
-            this.Choice_TextBox.BackColor = System.Drawing.Color.White;
-            this.Choice_TextBox.Enabled = false;
-            this.Choice_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Choice_TextBox.ForeColor = System.Drawing.Color.Black;
-            this.Choice_TextBox.Location = new System.Drawing.Point(161, 203);
-            this.Choice_TextBox.Multiline = true;
-            this.Choice_TextBox.Name = "Choice_TextBox";
-            this.Choice_TextBox.Size = new System.Drawing.Size(712, 52);
-            this.Choice_TextBox.TabIndex = 41;
-            this.Choice_TextBox.Text = "Cliquez sur le bouton comportant le signe de l’opération\r\nsur laquelle vous voule" +
+            this.Choix_TextBox.BackColor = System.Drawing.Color.White;
+            this.Choix_TextBox.Enabled = false;
+            this.Choix_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Choix_TextBox.ForeColor = System.Drawing.Color.Black;
+            this.Choix_TextBox.Location = new System.Drawing.Point(161, 203);
+            this.Choix_TextBox.Multiline = true;
+            this.Choix_TextBox.Name = "Choix_TextBox";
+            this.Choix_TextBox.Size = new System.Drawing.Size(712, 52);
+            this.Choix_TextBox.TabIndex = 41;
+            this.Choix_TextBox.Text = "Cliquez sur le bouton comportant le signe de l’opération\r\nsur laquelle vous voule" +
     "z vous tester.";
-            this.Choice_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Choix_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // End_Button
+            // AfficherQuestion_Timer
             // 
-            this.End_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.End_Button.Location = new System.Drawing.Point(390, 418);
-            this.End_Button.Margin = new System.Windows.Forms.Padding(6);
-            this.End_Button.Name = "End_Button";
-            this.End_Button.Size = new System.Drawing.Size(254, 68);
-            this.End_Button.TabIndex = 43;
-            this.End_Button.Text = "TERMINER";
-            this.End_Button.UseVisualStyleBackColor = true;
-            this.End_Button.Visible = false;
-            this.End_Button.Click += new System.EventHandler(this.End_Button_Click);
+            this.AfficherQuestion_Timer.Tick += new System.EventHandler(this.AfficherQuestion_Timer_Tick);
             // 
-            // Result_TextBox
+            // Terminer_Button
             // 
-            this.Result_TextBox.BackColor = System.Drawing.Color.White;
-            this.Result_TextBox.Enabled = false;
-            this.Result_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Result_TextBox.ForeColor = System.Drawing.Color.Black;
-            this.Result_TextBox.Location = new System.Drawing.Point(161, 244);
-            this.Result_TextBox.Name = "Result_TextBox";
-            this.Result_TextBox.Size = new System.Drawing.Size(712, 29);
-            this.Result_TextBox.TabIndex = 42;
-            this.Result_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Result_TextBox.Visible = false;
+            this.Terminer_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Terminer_Button.Location = new System.Drawing.Point(390, 425);
+            this.Terminer_Button.Margin = new System.Windows.Forms.Padding(6);
+            this.Terminer_Button.Name = "Terminer_Button";
+            this.Terminer_Button.Size = new System.Drawing.Size(254, 68);
+            this.Terminer_Button.TabIndex = 43;
+            this.Terminer_Button.Text = "TERMINER";
+            this.Terminer_Button.UseVisualStyleBackColor = true;
+            this.Terminer_Button.Visible = false;
+            this.Terminer_Button.Click += new System.EventHandler(this.Terminer_Button_Click);
             // 
-            // CountTime_Timer
+            // Resultat_TextBox
             // 
-            this.CountTime_Timer.Interval = 1000;
+            this.Resultat_TextBox.BackColor = System.Drawing.Color.White;
+            this.Resultat_TextBox.Enabled = false;
+            this.Resultat_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Resultat_TextBox.ForeColor = System.Drawing.Color.Black;
+            this.Resultat_TextBox.Location = new System.Drawing.Point(161, 244);
+            this.Resultat_TextBox.Name = "Resultat_TextBox";
+            this.Resultat_TextBox.Size = new System.Drawing.Size(712, 29);
+            this.Resultat_TextBox.TabIndex = 42;
+            this.Resultat_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Resultat_TextBox.Visible = false;
             // 
-            // Timer_Panel
+            // Decompte_Timer
             // 
-            this.Timer_Panel.BackColor = System.Drawing.Color.White;
-            this.Timer_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Timer_Panel.BackgroundImage")));
-            this.Timer_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Timer_Panel.Controls.Add(this.CountDisplay_Label);
-            this.Timer_Panel.Location = new System.Drawing.Point(161, 163);
-            this.Timer_Panel.Name = "Timer_Panel";
-            this.Timer_Panel.Size = new System.Drawing.Size(74, 77);
-            this.Timer_Panel.TabIndex = 44;
-            this.Timer_Panel.Visible = false;
+            this.Decompte_Timer.Interval = 1000;
+            this.Decompte_Timer.Tick += new System.EventHandler(this.Decompte_Timer_Tick);
             // 
-            // CountDisplay_Label
+            // Chrono_Panel
             // 
-            this.CountDisplay_Label.AutoSize = true;
-            this.CountDisplay_Label.BackColor = System.Drawing.Color.White;
-            this.CountDisplay_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountDisplay_Label.ForeColor = System.Drawing.Color.Red;
-            this.CountDisplay_Label.Location = new System.Drawing.Point(28, 34);
-            this.CountDisplay_Label.Name = "CountDisplay_Label";
-            this.CountDisplay_Label.Size = new System.Drawing.Size(21, 22);
-            this.CountDisplay_Label.TabIndex = 33;
-            this.CountDisplay_Label.Text = "5";
-            this.CountDisplay_Label.Visible = false;
+            this.Chrono_Panel.BackColor = System.Drawing.Color.White;
+            this.Chrono_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Chrono_Panel.BackgroundImage")));
+            this.Chrono_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Chrono_Panel.Controls.Add(this.Decompte_Label);
+            this.Chrono_Panel.Location = new System.Drawing.Point(161, 163);
+            this.Chrono_Panel.Name = "Chrono_Panel";
+            this.Chrono_Panel.Size = new System.Drawing.Size(74, 77);
+            this.Chrono_Panel.TabIndex = 44;
+            this.Chrono_Panel.Visible = false;
             // 
-            // DisplayPopUp_Timer
+            // Decompte_Label
             // 
-            this.DisplayPopUp_Timer.Interval = 3000;
+            this.Decompte_Label.AutoSize = true;
+            this.Decompte_Label.BackColor = System.Drawing.Color.White;
+            this.Decompte_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Decompte_Label.ForeColor = System.Drawing.Color.Red;
+            this.Decompte_Label.Location = new System.Drawing.Point(28, 34);
+            this.Decompte_Label.Name = "Decompte_Label";
+            this.Decompte_Label.Size = new System.Drawing.Size(21, 22);
+            this.Decompte_Label.TabIndex = 33;
+            this.Decompte_Label.Text = "5";
+            this.Decompte_Label.Visible = false;
+            // 
+            // AfficherPopUp_Timer
+            // 
+            this.AfficherPopUp_Timer.Interval = 3000;
             // 
             // TestCalcul_Form
             // 
@@ -270,31 +275,30 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 552);
-            this.Controls.Add(this.Timer_Panel);
-            this.Controls.Add(this.Equal_Label);
-            this.Controls.Add(this.End_Button);
-            this.Controls.Add(this.Result_TextBox);
-            this.Controls.Add(this.Choice_TextBox);
-            this.Controls.Add(this.Subtraction_Button);
+            this.Controls.Add(this.Chrono_Panel);
+            this.Controls.Add(this.Egal_Label);
+            this.Controls.Add(this.Terminer_Button);
+            this.Controls.Add(this.Resultat_TextBox);
+            this.Controls.Add(this.Choix_TextBox);
+            this.Controls.Add(this.Soustraction_Button);
             this.Controls.Add(this.Multiplication_Button);
             this.Controls.Add(this.Division_Button);
             this.Controls.Add(this.Addition_Button);
-            this.Controls.Add(this.Answer_TextBox);
+            this.Controls.Add(this.Reponse_TextBox);
             this.Controls.Add(this.Operation_TextBlox);
-            this.Controls.Add(this.Confirm_Button);
-            this.Controls.Add(this.ProgressTest3_TextBox);
-            this.Controls.Add(this.NameTest3_Label);
-            this.Controls.Add(this.Area_PictureBox);
+            this.Controls.Add(this.Valider_Button);
+            this.Controls.Add(this.ProgressionTest3_TextBox);
+            this.Controls.Add(this.NomTest3_Label);
+            this.Controls.Add(this.Zone_PictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TestCalcul_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calcul mental";
-            this.Load += new System.EventHandler(this.TestCalcul_Form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Area_PictureBox)).EndInit();
-            this.Timer_Panel.ResumeLayout(false);
-            this.Timer_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Zone_PictureBox)).EndInit();
+            this.Chrono_Panel.ResumeLayout(false);
+            this.Chrono_Panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,24 +306,24 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox ProgressTest3_TextBox;
-        private System.Windows.Forms.Label NameTest3_Label;
-        private System.Windows.Forms.PictureBox Area_PictureBox;
-        private System.Windows.Forms.Button Confirm_Button;
+        private System.Windows.Forms.TextBox ProgressionTest3_TextBox;
+        private System.Windows.Forms.Label NomTest3_Label;
+        private System.Windows.Forms.PictureBox Zone_PictureBox;
+        private System.Windows.Forms.Button Valider_Button;
         private System.Windows.Forms.TextBox Operation_TextBlox;
-        private System.Windows.Forms.TextBox Answer_TextBox;
-        private System.Windows.Forms.Label Equal_Label;
+        private System.Windows.Forms.TextBox Reponse_TextBox;
+        private System.Windows.Forms.Label Egal_Label;
         private System.Windows.Forms.Button Addition_Button;
         private System.Windows.Forms.Button Division_Button;
         private System.Windows.Forms.Button Multiplication_Button;
-        private System.Windows.Forms.Button Subtraction_Button;
-        private System.Windows.Forms.TextBox Choice_TextBox;
-        private System.Windows.Forms.Timer DisplayQuestion_Timer;
-        private System.Windows.Forms.Button End_Button;
-        private System.Windows.Forms.TextBox Result_TextBox;
-        private System.Windows.Forms.Timer CountTime_Timer;
-        private System.Windows.Forms.Panel Timer_Panel;
-        private System.Windows.Forms.Label CountDisplay_Label;
-        private System.Windows.Forms.Timer DisplayPopUp_Timer;
+        private System.Windows.Forms.Button Soustraction_Button;
+        private System.Windows.Forms.TextBox Choix_TextBox;
+        private System.Windows.Forms.Timer AfficherQuestion_Timer;
+        private System.Windows.Forms.Button Terminer_Button;
+        private System.Windows.Forms.TextBox Resultat_TextBox;
+        private System.Windows.Forms.Timer Decompte_Timer;
+        private System.Windows.Forms.Panel Chrono_Panel;
+        private System.Windows.Forms.Label Decompte_Label;
+        private System.Windows.Forms.Timer AfficherPopUp_Timer;
     }
 }
