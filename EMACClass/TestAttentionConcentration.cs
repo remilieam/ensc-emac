@@ -55,8 +55,8 @@ namespace EMACClass
         /// <returns>Liste avec des erreurs ([réponse juste, réponse du joueur])</returns>
         public override List<string> VerifierReponse(string reponse, int numQuestion)
         {
-            int question = numQuestion / 5;
-            int serie = numQuestion % 5;
+            int question = numQuestion % 5;
+            int serie = numQuestion / 5;
 
             List<string> erreurs = new List<string>();
 
