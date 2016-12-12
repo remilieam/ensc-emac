@@ -31,8 +31,6 @@ namespace EMACApp
             Regle_TextBox.Text = test.questions[compteur];
             AfficherImage_Timer.Interval = test.intervalle * 1000;
             ProgressionTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
-            Decompte_Timer.Tick += new EventHandler(Decompte_Timer_Tick);
-            AfficherImage_Timer.Tick += new EventHandler(AfficherImage_Timer_Tick);
         }
 
         // Affichage de l’image pendant 2 ou 4 secondes avec décompte

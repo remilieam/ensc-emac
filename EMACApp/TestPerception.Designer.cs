@@ -79,6 +79,10 @@
             this.Image_PictureBox.TabStop = false;
             this.Image_PictureBox.Visible = false;
             // 
+            // AfficherImage_Timer
+            // 
+            this.AfficherImage_Timer.Tick += new System.EventHandler(this.AfficherImage_Timer_Tick);
+            // 
             // Lettre1_Label
             // 
             this.Lettre1_Label.AutoSize = true;
@@ -238,6 +242,7 @@
             // Decompte_Timer
             // 
             this.Decompte_Timer.Interval = 1000;
+            this.Decompte_Timer.Tick += new System.EventHandler(this.Decompte_Timer_Tick);
             // 
             // Decompte_Label
             // 
