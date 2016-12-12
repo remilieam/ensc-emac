@@ -49,6 +49,7 @@
             this.Chrono_Panel = new System.Windows.Forms.Panel();
             this.Decompte_Label = new System.Windows.Forms.Label();
             this.AfficherPopUp_Timer = new System.Windows.Forms.Timer(this.components);
+            this.Menu_Panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Zone_PictureBox)).BeginInit();
             this.Chrono_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -267,6 +268,18 @@
             // 
             this.AfficherPopUp_Timer.Interval = 3000;
             // 
+            // Menu_Panel
+            // 
+            this.Menu_Panel.BackColor = System.Drawing.Color.White;
+            this.Menu_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Menu_Panel.BackgroundImage")));
+            this.Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Menu_Panel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Menu_Panel.Location = new System.Drawing.Point(975, 483);
+            this.Menu_Panel.Name = "Menu_Panel";
+            this.Menu_Panel.Size = new System.Drawing.Size(70, 70);
+            this.Menu_Panel.TabIndex = 45;
+            this.Menu_Panel.Click += new System.EventHandler(this.Menu_Panel_Click);
+            // 
             // TestCalcul_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +288,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 552);
+            this.Controls.Add(this.Menu_Panel);
             this.Controls.Add(this.Chrono_Panel);
             this.Controls.Add(this.Egal_Label);
             this.Controls.Add(this.Terminer_Button);
@@ -325,5 +339,6 @@
         private System.Windows.Forms.Panel Chrono_Panel;
         private System.Windows.Forms.Label Decompte_Label;
         private System.Windows.Forms.Timer AfficherPopUp_Timer;
+        private System.Windows.Forms.Panel Menu_Panel;
     }
 }

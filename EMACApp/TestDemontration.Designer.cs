@@ -36,6 +36,7 @@
             this.Jouer_Button = new System.Windows.Forms.Button();
             this.Suivant_PictureBox = new System.Windows.Forms.PictureBox();
             this.Precedent_PictureBox = new System.Windows.Forms.PictureBox();
+            this.Menu_Panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ImageDemo_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Suivant_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precedent_PictureBox)).BeginInit();
@@ -120,6 +121,18 @@
             this.Precedent_PictureBox.TabStop = false;
             this.Precedent_PictureBox.Click += new System.EventHandler(this.Precedent_PictureBox_Click);
             // 
+            // Menu_Panel
+            // 
+            this.Menu_Panel.BackColor = System.Drawing.Color.White;
+            this.Menu_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Menu_Panel.BackgroundImage")));
+            this.Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Menu_Panel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Menu_Panel.Location = new System.Drawing.Point(975, 483);
+            this.Menu_Panel.Name = "Menu_Panel";
+            this.Menu_Panel.Size = new System.Drawing.Size(70, 70);
+            this.Menu_Panel.TabIndex = 38;
+            this.Menu_Panel.Click += new System.EventHandler(this.Menu_Panel_Click);
+            // 
             // TestDemonstration_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,6 +141,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 552);
+            this.Controls.Add(this.Menu_Panel);
             this.Controls.Add(this.Instruction_TextBox);
             this.Controls.Add(this.Precedent_PictureBox);
             this.Controls.Add(this.Suivant_PictureBox);
@@ -160,6 +174,7 @@
         private System.Windows.Forms.Button Jouer_Button;
         private System.Windows.Forms.PictureBox Suivant_PictureBox;
         private System.Windows.Forms.PictureBox Precedent_PictureBox;
+        private System.Windows.Forms.Panel Menu_Panel;
 
     }
 }

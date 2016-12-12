@@ -100,6 +100,12 @@ namespace EMACApp
             this.Close();
         }
 
+        // Fermeture du formulaire pour retourner au menu
+        private void Menu_Panel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         #endregion
 
         #region Méthodes liées à des timers
