@@ -133,5 +133,10 @@ namespace EMACApp
         {
             this.Close();
         }
+
+        private void Menu_Panel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
