@@ -21,13 +21,13 @@ namespace EMACApp
             test = testRecu;
         }
 
-        private void TestPerceptionForm_Load(object sender, EventArgs e)
+        private void TestPerception_Form_Load(object sender, EventArgs e)
         {
-            NameTest_Label.Text = test.nom;
+            NomTest_Label.Text = test.nom;
             Instruction_TextBox.Text = test.consigne + " " ;
         }
 
-        private void Next_PictureBox_Click(object sender, EventArgs e)
+        private void Suivant_PictureBox_Click(object sender, EventArgs e)
         {
             if (compteur == test.imagesDemo.Count)
             {
@@ -42,8 +42,8 @@ namespace EMACApp
             if(compteur == 0)
             {
                 Instruction_TextBox.Show();
-                PictureDemo_PictureBox.Hide();
-                TextDemo_TextBox.Hide();
+                ImageDemo_PictureBox.Hide();
+                TexteDemo_TextBox.Hide();
 
                 Instruction_TextBox.Text = test.consigne + " " ;
             }
@@ -51,15 +51,15 @@ namespace EMACApp
             else
             {
                 Instruction_TextBox.Hide();
-                PictureDemo_PictureBox.Show();
+                ImageDemo_PictureBox.Show();
                 //TextDemo_TextBox.Show();
 
-                PictureDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur-1];
-                TextDemo_TextBox.Text = test.texteDemo[compteur - 1] + " "  ;
+                ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur-1];
+                TexteDemo_TextBox.Text = test.texteDemo[compteur - 1] + " "  ;
             }
         }
 
-        private void Previous_PictureBox_Click(object sender, EventArgs e)
+        private void Precedent_PictureBox_Click(object sender, EventArgs e)
         {
             if (compteur == 0)
             {
@@ -74,8 +74,8 @@ namespace EMACApp
             if (compteur == 0)
             {
                 Instruction_TextBox.Show();
-                PictureDemo_PictureBox.Hide();
-                TextDemo_TextBox.Hide();
+                ImageDemo_PictureBox.Hide();
+                TexteDemo_TextBox.Hide();
 
                 Instruction_TextBox.Text = test.consigne + " " + compteur;
             }
@@ -83,15 +83,15 @@ namespace EMACApp
             else
             {
                 Instruction_TextBox.Hide();
-                PictureDemo_PictureBox.Show();
+                ImageDemo_PictureBox.Show();
                 //TextDemo_TextBox.Show();
 
-                PictureDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur - 1];
-                TextDemo_TextBox.Text = test.texteDemo[compteur-1] + " " + compteur;
+                ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur - 1];
+                TexteDemo_TextBox.Text = test.texteDemo[compteur-1] + " " + compteur;
             }
         }
 
-        private void Play_Button_Click(object sender, EventArgs e)
+        private void Jouer_Button_Click(object sender, EventArgs e)
         {
             if (test is TestPerceptionMemoire)
             {
@@ -124,11 +124,6 @@ namespace EMACApp
             }
 
             this.Close();
-        }
-
-        private void Instruction_TextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
