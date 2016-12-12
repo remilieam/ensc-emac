@@ -175,7 +175,7 @@
             this.MaximizeBox = false;
             this.Name = "TestPhysique_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TestPhysique";
+            this.Text = "Problèmes Physiques";
             this.Load += new System.EventHandler(this.TestPhysique_Load);
             this.Answer_groupeBox.ResumeLayout(false);
             this.Answer_groupeBox.PerformLayout();
