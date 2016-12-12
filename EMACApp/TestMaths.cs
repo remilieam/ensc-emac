@@ -41,22 +41,22 @@ namespace EMACApp
 
         private void TestMaths_Form_Load(object sender, EventArgs e)
         {
-            Choice1_RadioButton.Checked = false;
-            Choice2_RadioButton.Checked = false;
-            Choice3_RadioButton.Checked = false;
-            Choice4_RadioButton.Checked = false;
-            ConsigneMaths_TextBox.Enabled = false;
-            Next_Button.Enabled = false;
-            End_Button.Hide();
+            Choix1_RadioButton.Checked = false;
+            Choix2_RadioButton.Checked = false;
+            Choix3_RadioButton.Checked = false;
+            Choix4_RadioButton.Checked = false;
+            QuestionMaths_TextBox.Enabled = false;
+            Suivant_Button.Enabled = false;
+            Terminer_Button.Hide();
         
-            ConsigneMaths_TextBox.Text = " Question n°" + (compteur+1) + "  :  "+ test.questions[0]  ;
+            QuestionMaths_TextBox.Text = " Question n°" + (compteur+1) + "  :  "+ test.questions[0]  ;
             if (test.imagesQuestion[0] == "")
             {
-                PbMaths_pictureBox.Hide();
+                PbMaths_PictureBox.Hide();
             }
             else
             {
-                PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[0];
+                PbMaths_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[0];
             }
 
             compteur = 1;
@@ -72,34 +72,34 @@ namespace EMACApp
         {
             if (compteur < 10)
             {
-                Next_Button.Enabled = false;
+                Suivant_Button.Enabled = false;
                 Valider_Button.Enabled = true;
                
-                ConsigneMaths_TextBox.Text = " Question n°" + (compteur+1) + ": "+test.questions[compteur];
+                QuestionMaths_TextBox.Text = " Question n°" + (compteur+1) + ": "+test.questions[compteur];
                 if (test.imagesQuestion[compteur] == "")
                 {
-                    PbMaths_pictureBox.Hide();
+                    PbMaths_PictureBox.Hide();
                 }
                 else
                 {
-                    PbMaths_pictureBox.Show();
-                    PbMaths_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur];
+                    PbMaths_PictureBox.Show();
+                    PbMaths_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur];
                 }
-                Choice1_RadioButton.Checked = false;
-                Choice2_RadioButton.Checked = false;
-                Choice3_RadioButton.Checked = false;
-                Choice4_RadioButton.Checked = false;
+                Choix1_RadioButton.Checked = false;
+                Choix2_RadioButton.Checked = false;
+                Choix3_RadioButton.Checked = false;
+                Choix4_RadioButton.Checked = false;
                 compteur++;
             }
             else
             {
-                Answer_GroupBox.Hide();
+                Reponse_GroupBox.Hide();
                 Valider_Button.Hide();
-                Next_Button.Hide();
-                End_Button.Show();
+                Suivant_Button.Hide();
+                Terminer_Button.Show();
                 double resultat =test.CalculerResultat() ;
                 MessageBox.Show("Vous avez fini la série! ");
-                ConsigneMaths_TextBox.Text = "Votre super résultat est de : " + resultat + " % ";
+                QuestionMaths_TextBox.Text = "Votre super résultat est de : " + resultat + " % ";
             }
         }
 
@@ -108,22 +108,22 @@ namespace EMACApp
             
             string indice_reponse = "0";
             //On recupère la valeur du radioButton sélectionné
-            if (Choice1_RadioButton.Checked)
+            if (Choix1_RadioButton.Checked)
             {
                 indice_reponse = "1";
             }
 
 
-            if (Choice2_RadioButton.Checked)
+            if (Choix2_RadioButton.Checked)
             {
                 indice_reponse = "2";
             }
 
-            if (Choice3_RadioButton.Checked)
+            if (Choix3_RadioButton.Checked)
             {
                 indice_reponse = "3";
             }
-            if (Choice4_RadioButton.Checked)
+            if (Choix4_RadioButton.Checked)
             {
                 indice_reponse = "4";
             }
@@ -134,7 +134,7 @@ namespace EMACApp
             if (indice_reponse == test.reponses[compteur-1])
               {
                             MessageBox.Show("Bonne réponse ! Bien joué !");
-                            Next_Button.Enabled = true;
+                            Suivant_Button.Enabled = true;
                             Valider_Button.Enabled = false;
                               
                
@@ -143,7 +143,7 @@ namespace EMACApp
                         else
                         {
                             MessageBox.Show("Erreur. La bonne réponse est  : " + test.reponses[compteur-1] );
-                            Next_Button.Enabled = true;
+                            Suivant_Button.Enabled = true;
                             Valider_Button.Enabled = false;
                         }
            

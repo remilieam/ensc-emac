@@ -38,22 +38,22 @@ namespace EMACApp
 
         private void TestPhysique_Load(object sender, EventArgs e)
         {
-            Choice1_RadioButton.Checked = false;
-            Choice2_RadioButton.Checked = false;
-            Choice3_RadioButton.Checked = false;
-            Choice4_RadioButton.Checked = false;
+            Choix1_RadioButton.Checked = false;
+            Choix2_RadioButton.Checked = false;
+            Choix3_RadioButton.Checked = false;
+            Choix4_RadioButton.Checked = false;
             End_Button.Hide();
             Question_TextBox.Enabled = false;
-            Next_Button.Enabled = false;
+            Suivant_Button.Enabled = false;
 
             Question_TextBox.Text = "Question n° " + (compteur + 1)+" :  " + test.questions[compteur];
             if (test.imagesQuestion[0] == "")
             {
-                PbPhysique_pictureBox.Hide();
+                PbPhysique_PictureBox.Hide();
             }
             else
             {
-                PbPhysique_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_5\\" + test.imagesQuestion[0];
+                PbPhysique_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_5\\" + test.imagesQuestion[0];
             }
 
             compteur = 1;
@@ -63,29 +63,29 @@ namespace EMACApp
         {
             if (compteur < 10)
             {
-                Next_Button.Enabled = false;
+                Suivant_Button.Enabled = false;
                 Valider_Button.Enabled = true;
                Question_TextBox.Text = "Question n°  " +(compteur+1)+" :  "+test.questions[compteur];
                 if (test.imagesQuestion[compteur] == "")
                 {
-                    PbPhysique_pictureBox.Hide();
+                    PbPhysique_PictureBox.Hide();
                 }
                 else
                 {
-                    PbPhysique_pictureBox.Show();
-                    PbPhysique_pictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_5\\" + test.imagesQuestion[compteur];
+                    PbPhysique_PictureBox.Show();
+                    PbPhysique_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_5\\" + test.imagesQuestion[compteur];
                 }
-                Choice1_RadioButton.Checked = false;
-                Choice2_RadioButton.Checked = false;
-                Choice3_RadioButton.Checked = false;
-                Choice4_RadioButton.Checked = false;
+                Choix1_RadioButton.Checked = false;
+                Choix2_RadioButton.Checked = false;
+                Choix3_RadioButton.Checked = false;
+                Choix4_RadioButton.Checked = false;
                 compteur++;
             }
             else
             {
-                Answer_groupeBox.Hide();
+                Reponse_GroupeBox.Hide();
                 Valider_Button.Hide();
-                Next_Button.Hide();
+                Suivant_Button.Hide();
                 End_Button.Show();
                 double resultat = test.CalculerResultat();
                 MessageBox.Show("Vous avez fini la série! ");
@@ -97,22 +97,22 @@ namespace EMACApp
         {
             string indice_reponse = "0";
             //On recupère la valeur du radioButton sélectionné
-            if (Choice1_RadioButton.Checked)
+            if (Choix1_RadioButton.Checked)
             {
                 indice_reponse = "1";
             }
 
 
-            if (Choice2_RadioButton.Checked)
+            if (Choix2_RadioButton.Checked)
             {
                 indice_reponse = "2";
             }
 
-            if (Choice3_RadioButton.Checked)
+            if (Choix3_RadioButton.Checked)
             {
                 indice_reponse = "3";
             }
-            if (Choice4_RadioButton.Checked)
+            if (Choix4_RadioButton.Checked)
             {
                 indice_reponse = "4";
             }
@@ -123,7 +123,7 @@ namespace EMACApp
             if (indice_reponse == test.reponses[compteur - 1])
             {
                 MessageBox.Show("Bonne réponse ! Bien joué !");
-                Next_Button.Enabled = true;
+                Suivant_Button.Enabled = true;
                 Valider_Button.Enabled = false;
 
 
@@ -132,7 +132,7 @@ namespace EMACApp
             else
             {
                 MessageBox.Show("Erreur. La bonne réponse est  : " + test.reponses[compteur - 1]);
-                Next_Button.Enabled = true;
+                Suivant_Button.Enabled = true;
                 Valider_Button.Enabled = false;
             }
         }
