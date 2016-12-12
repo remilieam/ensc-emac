@@ -38,7 +38,7 @@
             this.Suivant_Button = new System.Windows.Forms.Button();
             this.Valider_Button = new System.Windows.Forms.Button();
             this.PbPhysique_PictureBox = new System.Windows.Forms.PictureBox();
-            this.End_Button = new System.Windows.Forms.Button();
+            this.Terminer_Button = new System.Windows.Forms.Button();
             this.Reponse_GroupeBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbPhysique_PictureBox)).BeginInit();
             this.SuspendLayout();
@@ -123,7 +123,7 @@
             this.Suivant_Button.TabIndex = 5;
             this.Suivant_Button.Text = "Question suivante";
             this.Suivant_Button.UseVisualStyleBackColor = true;
-            this.Suivant_Button.Click += new System.EventHandler(this.Next_Button_Click);
+            this.Suivant_Button.Click += new System.EventHandler(this.Suivant_Button_Click);
             // 
             // Valider_Button
             // 
@@ -145,18 +145,18 @@
             this.PbPhysique_PictureBox.TabIndex = 7;
             this.PbPhysique_PictureBox.TabStop = false;
             // 
-            // End_Button
+            // Terminer_Button
             // 
-            this.End_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.End_Button.Location = new System.Drawing.Point(549, 358);
-            this.End_Button.Margin = new System.Windows.Forms.Padding(6);
-            this.End_Button.Name = "End_Button";
-            this.End_Button.Size = new System.Drawing.Size(254, 68);
-            this.End_Button.TabIndex = 45;
-            this.End_Button.Text = "TERMINER";
-            this.End_Button.UseVisualStyleBackColor = true;
-            this.End_Button.Visible = false;
-            this.End_Button.Click += new System.EventHandler(this.End_Button_Click);
+            this.Terminer_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Terminer_Button.Location = new System.Drawing.Point(549, 358);
+            this.Terminer_Button.Margin = new System.Windows.Forms.Padding(6);
+            this.Terminer_Button.Name = "Terminer_Button";
+            this.Terminer_Button.Size = new System.Drawing.Size(254, 68);
+            this.Terminer_Button.TabIndex = 45;
+            this.Terminer_Button.Text = "TERMINER";
+            this.Terminer_Button.UseVisualStyleBackColor = true;
+            this.Terminer_Button.Visible = false;
+            this.Terminer_Button.Click += new System.EventHandler(this.Terminer_Button_Click);
             // 
             // TestPhysique_Form
             // 
@@ -165,7 +165,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1034, 542);
-            this.Controls.Add(this.End_Button);
+            this.Controls.Add(this.Terminer_Button);
             this.Controls.Add(this.PbPhysique_PictureBox);
             this.Controls.Add(this.Valider_Button);
             this.Controls.Add(this.Suivant_Button);
@@ -176,7 +176,7 @@
             this.Name = "TestPhysique_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Problèmes Physiques";
-            this.Load += new System.EventHandler(this.TestPhysique_Load);
+            this.Load += new System.EventHandler(this.TestPhysique_Form_Load);
             this.Reponse_GroupeBox.ResumeLayout(false);
             this.Reponse_GroupeBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbPhysique_PictureBox)).EndInit();
@@ -196,6 +196,6 @@
         private System.Windows.Forms.Button Suivant_Button;
         private System.Windows.Forms.Button Valider_Button;
         private System.Windows.Forms.PictureBox PbPhysique_PictureBox;
-        private System.Windows.Forms.Button End_Button;
+        private System.Windows.Forms.Button Terminer_Button;
     }
 }
