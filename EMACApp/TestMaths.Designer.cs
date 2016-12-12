@@ -52,7 +52,6 @@
             this.QuestionMaths_TextBox.Name = "QuestionMaths_TextBox";
             this.QuestionMaths_TextBox.Size = new System.Drawing.Size(620, 193);
             this.QuestionMaths_TextBox.TabIndex = 0;
-            this.QuestionMaths_TextBox.TextChanged += new System.EventHandler(this.ConsigneMaths_TxtBox_TextChanged);
             // 
             // Reponse_GroupBox
             // 
@@ -67,7 +66,6 @@
             this.Reponse_GroupBox.TabIndex = 2;
             this.Reponse_GroupBox.TabStop = false;
             this.Reponse_GroupBox.Text = "Veuillez cocher votre réponse";
-            this.Reponse_GroupBox.Enter += new System.EventHandler(this.Answer_groupBox_Enter);
             // 
             // Choix4_RadioButton
             // 
@@ -92,7 +90,6 @@
             this.Choix3_RadioButton.TabStop = true;
             this.Choix3_RadioButton.Text = "Choix 3";
             this.Choix3_RadioButton.UseVisualStyleBackColor = true;
-            this.Choix3_RadioButton.CheckedChanged += new System.EventHandler(this.Choice3_radioBtn_CheckedChanged);
             // 
             // Choix2_RadioButton
             // 
@@ -127,7 +124,7 @@
             this.Valider_Button.TabIndex = 3;
             this.Valider_Button.Text = "Valider";
             this.Valider_Button.UseVisualStyleBackColor = true;
-            this.Valider_Button.Click += new System.EventHandler(this.Valider_Btn_Click);
+            this.Valider_Button.Click += new System.EventHandler(this.Valider_Button_Click);
             // 
             // Suivant_Button
             // 
@@ -138,7 +135,7 @@
             this.Suivant_Button.TabIndex = 4;
             this.Suivant_Button.Text = "Question suivante";
             this.Suivant_Button.UseVisualStyleBackColor = true;
-            this.Suivant_Button.Click += new System.EventHandler(this.Next_Btn_Click);
+            this.Suivant_Button.Click += new System.EventHandler(this.Suivant_Button_Click);
             // 
             // PbMaths_PictureBox
             // 
@@ -148,7 +145,6 @@
             this.PbMaths_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbMaths_PictureBox.TabIndex = 5;
             this.PbMaths_PictureBox.TabStop = false;
-            this.PbMaths_PictureBox.Click += new System.EventHandler(this.PbMaths_pictureBox_Click);
             // 
             // Terminer_Button
             // 
@@ -161,7 +157,7 @@
             this.Terminer_Button.Text = "TERMINER";
             this.Terminer_Button.UseVisualStyleBackColor = true;
             this.Terminer_Button.Visible = false;
-            this.Terminer_Button.Click += new System.EventHandler(this.End_Button_Click);
+            this.Terminer_Button.Click += new System.EventHandler(this.Terminer_Button_Click);
             // 
             // TestMaths_Form
             // 
