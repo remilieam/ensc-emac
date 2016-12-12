@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="DisplayQuestion_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="AfficherQuestion_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Timer_Panel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Chrono_Panel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUAAAAGQCAIAAABQzC7SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr0AAA69AUf7kK0AAP+lSURBVHhe7P0FfBVX974PT9yPu0sU1xptcXd3lwoFSgXq
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAP+lSURBVHhe7P0FfBVX974PT9yPu0sU1xptcXd3lwoFSgXq
         1NDiEFwSHELchQgRAiFKCBDcXULc33vPDqcppdhDn+f7f39Zn8UwZ85kzsyefe17rT17ZpjaBntNq36m
         19RWwGtrK+HllSU1tZVVNZXVtVVlVZVVtbVVtdXFFUXltSWVtUVpuQnrvBbN/nbigJEfNn1LqXZ1kBts
         pDorscZMojWX6S1ZN5fqzKhjnv1o8U+Ov6Jef4npz1n/c+W/utUTx58wEh1j+hP2R8meiDUWKhd7lbOj
@@ -2016,10 +2016,10 @@
         e1sUnadeNMeR2lpSvLTWbLYli4X162ov9vNFNdEaVjb6+5IbN/4fIJl6Wt+wydMAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="CountTime_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="Decompte_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>193, 17</value>
   </metadata>
-  <metadata name="DisplayPopUp_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="AfficherPopUp_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>340, 17</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
