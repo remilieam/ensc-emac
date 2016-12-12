@@ -17,7 +17,7 @@ namespace EMACClass
         /// <summary>
         /// Constructeur pour les tests unitaires
         /// </summary>
-        /// <param name="reponsesTest"></param>
+        /// <param name="reponsesTest">Liste des réponses</param>
         public TestAttentionConcentration(List<string> reponsesTest)
         {
             reponses = reponsesTest;

@@ -13,7 +13,16 @@ namespace EMACClass
         private readonly int idTest = 3;
         private readonly int nbQuestions = 10;
         private string operation = "";
-        
+
+        /// <summary>
+        /// Constructeur pour les tests unitaires
+        /// </summary>
+        /// <param name="reponsesTest">Liste des réponses</param>
+        public TestCalculMental(List<string> reponsesTest)
+        {
+            reponses = reponsesTest;
+        }
+
         /// <summary>
         /// Construit un nouveau test “Attention et concentration”.
         /// Initialise le score à 0.
@@ -82,7 +91,7 @@ namespace EMACClass
         /// <returns>Résultat de l’utilisateur</returns>
         public override double CalculerResultat()
         {
-            return this.score * 100.0 / this.nbQuestions;
+            return Math.Round(this.score * 100.0 / this.reponses.Count, 2); ;
         }
 
         /// <summary>

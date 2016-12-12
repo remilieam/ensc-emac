@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestAttentionConcentrationTest.cs" />
+    <Compile Include="TestCalculMentalTest.cs" />
     <Compile Include="TestPerceptionMemoireTest.cs" />
     <Compile Include="TestProblemesTest.cs" />
   </ItemGroup>
