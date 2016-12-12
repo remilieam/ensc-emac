@@ -15,7 +15,7 @@ namespace EMACApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home_Form());
+            Application.Run(new Accueil_Form());
         }
     }
 }

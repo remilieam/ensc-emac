@@ -9,19 +9,19 @@ using System.Windows.Forms;
 
 namespace EMACApp
 {
-    public partial class Home_Form : Form
+    public partial class Accueil_Form : Form
     {
-        public Home_Form()
+        public Accueil_Form()
         {
             InitializeComponent();
         }
 
-        private void ExitButtom_Click(object sender, EventArgs e)
+        private void Quitter_Buttom_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void Accueil_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Êtes-vous sûr(e) de vouloir quitter ?", "Demande de confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
@@ -29,7 +29,7 @@ namespace EMACApp
             }
         }
 
-        private void ContinueButtom_Click(object sender, EventArgs e)
+        private void Continuer_Buttom_Click(object sender, EventArgs e)
         {
             this.Hide();
 
