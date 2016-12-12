@@ -23,82 +23,47 @@ namespace EMACApp
             test = testRecu;
         }
 
+        #region Méthodes liées à des actions sur les composants du formulaire
+
         // Affichage de la première règle lors du chargement de la page et implémentation du timer (2 s en difficile, 4 s en facile)
         private void TestPerception_Form_Load(object sender, EventArgs e)
         {
-            Rule_TextBox.Text = test.questions[compteur];
-            DisplayPicture_Timer.Interval = test.intervalle * 1000;
-            ProgressTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
-            CountTime_Timer.Tick += new EventHandler(CountTimeTimerTick);
-            DisplayPicture_Timer.Tick += new EventHandler(DisplayPictureTimerTick);
+            Regle_TextBox.Text = test.questions[compteur];
+            AfficherImage_Timer.Interval = test.intervalle * 1000;
+            ProgressionTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
+            Decompte_Timer.Tick += new EventHandler(Decompte_Timer_Tick);
+            AfficherImage_Timer.Tick += new EventHandler(AfficherImage_Timer_Tick);
         }
 
         // Affichage de l’image pendant 2 ou 4 secondes avec décompte
-        private void Next_Button_Click(object sender, EventArgs e)
+        private void Suivant_Button_Click(object sender, EventArgs e)
         {
-            Rule_TextBox.Hide();
-            Next_Button.Hide();
-            Picture_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_1\\" + test.imagesQuestion[compteur];
-            Picture_PictureBox.Show();
+            Regle_TextBox.Hide();
+            Suivant_Button.Hide();
+            Image_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_1\\" + test.imagesQuestion[compteur];
+            Image_PictureBox.Show();
 
             decompte = test.intervalle;
-            Timer_Panel.Show();
-            CountDisplay_Label.Show();
-            CountDisplay_Label.Text = decompte.ToString();
-            CountTime_Timer.Start();
-            DisplayPicture_Timer.Start();
-        }
-
-        // Décompte
-        public void CountTimeTimerTick(object sender, EventArgs e)
-        {
-            decompte--;
-            CountDisplay_Label.Text = decompte.ToString();
-        }
-
-        // Affichage du formulaire pour répondre à la question
-        public void DisplayPictureTimerTick(object sender, EventArgs e)
-        {
-            CountTime_Timer.Stop();
-            DisplayPicture_Timer.Stop();
-            Timer_Panel.Hide();
-            CountDisplay_Label.Hide();
-
-            Letter1_Label.Text = test.lettres[compteur][0] + " :";
-            Letter2_Label.Text = test.lettres[compteur][1] + " :";
-            Letter3_Label.Text = test.lettres[compteur][2] + " :";
-
-            Picture_PictureBox.Hide();
-            Letter1_Label.Show();
-            Letter1_TextBox.Show();
-            Letter2_Label.Show();
-            Letter2_TextBox.Show();
-            Letter3_Label.Show();
-            Letter3_TextBox.Show();
-
-            if (test.reponses[compteur].Length == 4)
-            {
-                Letter4_Label.Text = test.lettres[compteur][3] + " :";
-                Letter4_Label.Show();
-                Letter4_TextBox.Show();
-            }
-
-            Submit_Button.Show();
+            Chrono_Panel.Show();
+            Decompte_Label.Show();
+            Decompte_Label.Text = decompte.ToString();
+            Decompte_Timer.Start();
+            AfficherImage_Timer.Start();
         }
 
         // Vérification de la réponse du joueur, mise à jour du score et affichage des erreurs (ou non) dans un pop-up
-        private void Submit_Button_Click(object sender, EventArgs e)
+        private void Valider_Button_Click(object sender, EventArgs e)
         {
-            Letter1_TextBox.Text = (Letter1_TextBox.Text != "") ? Letter1_TextBox.Text : " ";
-            Letter2_TextBox.Text = (Letter2_TextBox.Text != "") ? Letter2_TextBox.Text : " ";
-            Letter3_TextBox.Text = (Letter3_TextBox.Text != "") ? Letter3_TextBox.Text : " ";
+            Lettre1_TextBox.Text = (Lettre1_TextBox.Text != "") ? Lettre1_TextBox.Text : " ";
+            Lettre2_TextBox.Text = (Lettre2_TextBox.Text != "") ? Lettre2_TextBox.Text : " ";
+            Lettre3_TextBox.Text = (Lettre3_TextBox.Text != "") ? Lettre3_TextBox.Text : " ";
 
-            string reponseJoueur = Letter1_TextBox.Text + Letter2_TextBox.Text + Letter3_TextBox.Text;
+            string reponseJoueur = Lettre1_TextBox.Text + Lettre2_TextBox.Text + Lettre3_TextBox.Text;
 
             if (test.reponses[compteur].Length == 4)
             {
-                Letter4_TextBox.Text = (Letter4_TextBox.Text != "") ? Letter4_TextBox.Text : " ";
-                reponseJoueur += Letter4_TextBox.Text;
+                Lettre4_TextBox.Text = (Lettre4_TextBox.Text != "") ? Lettre4_TextBox.Text : " ";
+                reponseJoueur += Lettre4_TextBox.Text;
             }
 
             List<string> erreursJoueur = test.VerifierReponse(reponseJoueur, compteur);
@@ -143,65 +108,112 @@ namespace EMACApp
             }
         }
 
+        // Fermeture du formulaire à la fin du test
+        private void Terminer_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #endregion
+
+        #region Méthodes liées à des timers
+
+        // Décompte
+        public void Decompte_Timer_Tick(object sender, EventArgs e)
+        {
+            decompte--;
+            Decompte_Label.Text = decompte.ToString();
+        }
+
+        // Affichage du formulaire pour répondre à la question
+        public void AfficherImage_Timer_Tick(object sender, EventArgs e)
+        {
+            Decompte_Timer.Stop();
+            AfficherImage_Timer.Stop();
+            Chrono_Panel.Hide();
+            Decompte_Label.Hide();
+
+            Lettre1_Label.Text = test.lettres[compteur][0] + " :";
+            Lettre2_Label.Text = test.lettres[compteur][1] + " :";
+            Lettre3_Label.Text = test.lettres[compteur][2] + " :";
+
+            Image_PictureBox.Hide();
+            Lettre1_Label.Show();
+            Lettre1_TextBox.Show();
+            Lettre2_Label.Show();
+            Lettre2_TextBox.Show();
+            Lettre3_Label.Show();
+            Lettre3_TextBox.Show();
+
+            if (test.reponses[compteur].Length == 4)
+            {
+                Lettre4_Label.Text = test.lettres[compteur][3] + " :";
+                Lettre4_Label.Show();
+                Lettre4_TextBox.Show();
+            }
+
+            Valider_Button.Show();
+        }
+
+        #endregion
+
+        #region Méthodes auxiliaires
+
         // Affichage de la règle
         private void AfficherRegle()
         {
-            ProgressTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
-            Rule_TextBox.Text = test.questions[compteur];
-            Rule_TextBox.Show();
-            Next_Button.Show();
+            ProgressionTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
+            Regle_TextBox.Text = test.questions[compteur];
+            Regle_TextBox.Show();
+            Suivant_Button.Show();
 
-            Letter1_Label.Hide();
-            Letter1_TextBox.Hide();
-            Letter1_TextBox.Clear();
-            Letter2_Label.Hide();
-            Letter2_TextBox.Hide();
-            Letter2_TextBox.Clear();
-            Letter3_Label.Hide();
-            Letter3_TextBox.Hide();
-            Letter3_TextBox.Clear();
+            Lettre1_Label.Hide();
+            Lettre1_TextBox.Hide();
+            Lettre1_TextBox.Clear();
+            Lettre2_Label.Hide();
+            Lettre2_TextBox.Hide();
+            Lettre2_TextBox.Clear();
+            Lettre3_Label.Hide();
+            Lettre3_TextBox.Hide();
+            Lettre3_TextBox.Clear();
 
             if (test.reponses[compteur-1].Length == 4)
             {
-                Letter4_Label.Hide();
-                Letter4_TextBox.Hide();
-                Letter4_TextBox.Clear();
+                Lettre4_Label.Hide();
+                Lettre4_TextBox.Hide();
+                Lettre4_TextBox.Clear();
             }
 
-            Submit_Button.Hide();
+            Valider_Button.Hide();
         }
 
         // Affichage du résultat à l’issue des 10 questions
         public void AfficherResultat()
         {
-            Rule_TextBox.Text = "Vous avez un taux de réussite de " + test.CalculerResultat() + " % !";
-            Rule_TextBox.Show();
-            End_Button.Show();
+            Regle_TextBox.Text = "Vous avez un taux de réussite de " + test.CalculerResultat() + " % !";
+            Regle_TextBox.Show();
+            Terminer_Button.Show();
 
-            Letter1_Label.Hide();
-            Letter1_TextBox.Hide();
-            Letter1_TextBox.Clear();
-            Letter2_Label.Hide();
-            Letter2_TextBox.Hide();
-            Letter2_TextBox.Clear();
-            Letter3_Label.Hide();
-            Letter3_TextBox.Hide();
-            Letter3_TextBox.Clear();
+            Lettre1_Label.Hide();
+            Lettre1_TextBox.Hide();
+            Lettre1_TextBox.Clear();
+            Lettre2_Label.Hide();
+            Lettre2_TextBox.Hide();
+            Lettre2_TextBox.Clear();
+            Lettre3_Label.Hide();
+            Lettre3_TextBox.Hide();
+            Lettre3_TextBox.Clear();
 
             if (test.reponses[compteur-1].Length == 4)
             {
-                Letter4_Label.Hide();
-                Letter4_TextBox.Hide();
-                Letter4_TextBox.Clear();
+                Lettre4_Label.Hide();
+                Lettre4_TextBox.Hide();
+                Lettre4_TextBox.Clear();
             }
 
-            Submit_Button.Hide();
+            Valider_Button.Hide();
         }
 
-        // Fermeture du formulaire à la fin du test
-        private void End_Button_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        #endregion
     }
 }

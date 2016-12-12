@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="DisplayPicture_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="AfficherImage_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>-10, 17</value>
   </metadata>
-  <metadata name="CountTime_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="Decompte_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>154, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Timer_Panel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Chrono_Panel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUAAAAGQCAIAAABQzC7SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAP+lSURBVHhe7P0FfBVX974PT9yPu0sU1xptcXd3lwoFSgXq
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAP+lSURBVHhe7P0FfBVX974PT9yPu0sU1xptcXd3lwoFSgXq
         1NDiEFwSHELchQgRAiFKCBDcXULc33vPDqcppdhDn+f7f39Zn8UwZ85kzsyefe17rT17ZpjaBntNq36m
         19RWwGtrK+HllSU1tZVVNZXVtVVlVZVVtbVVtdXFFUXltSWVtUVpuQnrvBbN/nbigJEfNn1LqXZ1kBts
         pDorscZMojWX6S1ZN5fqzKhjnv1o8U+Ov6Jef4npz1n/c+W/utUTx58wEh1j+hP2R8meiDUWKhd7lbOj
@@ -2019,7 +2019,7 @@
         e1sUnadeNMeR2lpSvLTWbLYli4X162ov9vNFNdEaVjb6+5IbN/4fIJl6Wt+wydMAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="DisplayPopUp_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="AfficherPopUp_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>504, 17</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
