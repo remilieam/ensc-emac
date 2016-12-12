@@ -156,7 +156,7 @@ namespace EMACApp
         // Affichage de la réponse selon si elle est juste ou non
         private void AfficherReponse(string reponseJoueur)
         {
-            List<string> erreurJoueur = this.test.VerifierBouton(reponseJoueur, this.compteurSerie, this.compteurQuestion);
+            List<string> erreurJoueur = this.test.VerifierReponse(reponseJoueur, this.compteurSerie * this.compteurQuestion);
 
             if (erreurJoueur.Count == 0)
             {

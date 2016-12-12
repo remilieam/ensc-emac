@@ -15,6 +15,15 @@ namespace EMACClass
         private readonly int nbQuestions = 3;
 
         /// <summary>
+        /// Constructeur pour les tests unitaires
+        /// </summary>
+        /// <param name="reponsesTest"></param>
+        public TestAttentionConcentration(List<string> reponsesTest)
+        {
+            reponses = reponsesTest;
+        }
+
+        /// <summary>
         /// Construit un nouveau test “Attention et concentration”.
         /// Initialise le score à 0.
         /// Prend en argument la difficulté du test (false = facile, true = difficile)
@@ -38,25 +47,22 @@ namespace EMACClass
             GenererListeQuestions();
         }
 
-        public override List<string> VerifierReponse(string reponse, int numQuestion)
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Compare la réponse entrée par l’utilisateur à la réponse juste.
         /// </summary>
         /// <param name="reponse">Chaîne de caractères correspondant à la réponse de l’utilisateur</param>
-        /// <param name="numSerie">Numéro de la série à laquelle appartient la question</param>
-        /// <param name="numQuestion">Numéro de la question à vérifier</param>
+        /// <param name="numQuestion">Numéro de la question totale (0 à 14)</param>
         /// <returns>Liste avec des erreurs ([réponse juste, réponse du joueur])</returns>
-        public List<string> VerifierBouton(string reponse, int numSerie, int numQuestion)
+        public override List<string> VerifierReponse(string reponse, int numQuestion)
         {
+            int question = numQuestion / 5;
+            int serie = numQuestion % 5;
+
             List<string> erreurs = new List<string>();
 
-            if (this.reponses[numSerie][numQuestion].ToString() != reponse)
+            if (this.reponses[serie][question].ToString() != reponse)
             {
-                erreurs.Add(this.reponses[numSerie][numQuestion].ToString());
+                erreurs.Add(this.reponses[serie][question].ToString());
                 erreurs.Add(reponse.ToString());
             }
 
