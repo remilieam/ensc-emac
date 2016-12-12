@@ -165,13 +165,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1034, 542);
+            this.ClientSize = new System.Drawing.Size(1044, 552);
             this.Controls.Add(this.Terminer_Button);
             this.Controls.Add(this.PbMaths_PictureBox);
             this.Controls.Add(this.Suivant_Button);
             this.Controls.Add(this.Valider_Button);
             this.Controls.Add(this.Reponse_GroupBox);
             this.Controls.Add(this.QuestionMaths_TextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TestMaths_Form";
