@@ -243,7 +243,6 @@
             this.Menu_Panel.Size = new System.Drawing.Size(70, 70);
             this.Menu_Panel.TabIndex = 37;
             this.Menu_Panel.Click += new System.EventHandler(this.Menu_Panel_Click);
-            this.Menu_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Menu_Panel_Paint);
             // 
             // TestAttention_Form
             // 

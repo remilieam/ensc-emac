@@ -165,7 +165,7 @@
             this.Menu_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Menu_Panel.BackgroundImage")));
             this.Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Menu_Panel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Menu_Panel.Location = new System.Drawing.Point(975, 483);
+            this.Menu_Panel.Location = new System.Drawing.Point(971, 479);
             this.Menu_Panel.Name = "Menu_Panel";
             this.Menu_Panel.Size = new System.Drawing.Size(70, 70);
             this.Menu_Panel.TabIndex = 46;
