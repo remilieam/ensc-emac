@@ -34,7 +34,7 @@ namespace EMACApp
         private void Addition_Button_Click(object sender, EventArgs e)
         {
             this.test.GenererQuestions("Addition");
-            this.CacherPremierInterface();
+            this.CacherPremiereInterface();
             this.AfficherQuestion();
         }
 
@@ -42,7 +42,7 @@ namespace EMACApp
         private void Soustraction_Button_Click(object sender, EventArgs e)
         {
             this.test.GenererQuestions("Soustraction");
-            this.CacherPremierInterface();
+            this.CacherPremiereInterface();
             this.AfficherQuestion();
         }
 
@@ -50,7 +50,7 @@ namespace EMACApp
         private void Multiplication_Button_Click(object sender, EventArgs e)
         {
             this.test.GenererQuestions("Multiplication");
-            this.CacherPremierInterface();
+            this.CacherPremiereInterface();
             this.AfficherQuestion();
         }
 
@@ -58,7 +58,7 @@ namespace EMACApp
         private void Division_Button_Click(object sender, EventArgs e)
         {
             this.test.GenererQuestions("Division");
-            this.CacherPremierInterface();
+            this.CacherPremiereInterface();
             this.AfficherQuestion();
         }
 
@@ -116,7 +116,7 @@ namespace EMACApp
         #region Méthodes auxiliaires
 
         // Masquage de l’interface permettant à l’utilisateur de choisir l’opération sur laquelle il veut se tester
-        private void CacherPremierInterface()
+        private void CacherPremiereInterface()
         {
             Choix_TextBox.Hide();
             Addition_Button.Hide();
@@ -158,25 +158,29 @@ namespace EMACApp
 
             if (erreurJoueur.Count == 0)
             {
-                if (MessageBox.Show("Bravo ! Votre calcul est correct !", "Résultat", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
+                TestResultat_Form resultat = new TestResultat_Form("Bravo ! Votre calcul est correct !");
+
+                if (resultat.ShowDialog() == DialogResult.OK)
                 {
-                    this.PasserQuestionSuivate();
+                    resultat.Close();
+                    this.PasserQuestionSuivante();
                 }
             }
 
             else
             {
-                string message = this.test.AfficherErreur(erreurJoueur);
+                TestResultat_Form resultat = new TestResultat_Form(this.test.AfficherErreur(erreurJoueur));
 
-                if (MessageBox.Show(message, "Résultat", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
+                if (resultat.ShowDialog() == DialogResult.OK)
                 {
-                    this.PasserQuestionSuivate();
+                    resultat.Close();
+                    this.PasserQuestionSuivante();
                 }
             }
         }
 
         // Gestion du passage à la question suivante ou au résultat
-        private void PasserQuestionSuivate()
+        private void PasserQuestionSuivante()
         {
             Zone_PictureBox.Hide();
             Egal_Label.Hide();

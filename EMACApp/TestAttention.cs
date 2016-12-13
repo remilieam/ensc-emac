@@ -176,22 +176,32 @@ namespace EMACApp
         // Affichage de la réponse selon si elle est juste ou non
         private void AfficherReponse(string reponseJoueur)
         {
+            Objet_PictureBox.Hide();
+            Zone_PictureBox.Hide();
+            Bouton1_Button.Hide();
+            Bouton2_Button.Hide();
+            Bouton3_Button.Hide();
+
             List<string> erreurJoueur = this.test.VerifierReponse(reponseJoueur, this.compteurSerie * 5 + this.compteurQuestion);
 
             if (erreurJoueur.Count == 0)
             {
-                if (MessageBox.Show("OK ! Vous avez choisi le bon bouton !", "Résultat", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
+                TestResultat_Form resultat = new TestResultat_Form("OK ! Vous avez choisi le bon bouton !");
+
+                if (resultat.ShowDialog() == DialogResult.OK)
                 {
+                    resultat.Close();
                     this.PasserQuestionSuivante();
                 }
             }
 
             else
             {
-                string message = this.test.AfficherErreur(erreurJoueur);
+                TestResultat_Form resultat = new TestResultat_Form(this.test.AfficherErreur(erreurJoueur));
 
-                if (MessageBox.Show(message, "Résultat", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
+                if (resultat.ShowDialog() == DialogResult.OK)
                 {
+                    resultat.Close();
                     this.PasserQuestionSuivante();
                 }
             }
@@ -200,12 +210,6 @@ namespace EMACApp
         // Gestion du passage à la question suivante
         private void PasserQuestionSuivante()
         {
-            Objet_PictureBox.Hide();
-            Zone_PictureBox.Hide();
-            Bouton1_Button.Hide();
-            Bouton2_Button.Hide();
-            Bouton3_Button.Hide();
-
             // Cas où on n’en est pas à la dernière série de questions
             if (this.compteurSerie < 2)
             {

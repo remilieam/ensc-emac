@@ -45,7 +45,6 @@
             this.Decompte_Label = new System.Windows.Forms.Label();
             this.Chrono_Panel = new System.Windows.Forms.Panel();
             this.Decompte_Timer = new System.Windows.Forms.Timer(this.components);
-            this.AfficherPopUp_Timer = new System.Windows.Forms.Timer(this.components);
             this.Menu_Panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Zone_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Objet_PictureBox)).BeginInit();
@@ -228,10 +227,6 @@
             this.Decompte_Timer.Interval = 1000;
             this.Decompte_Timer.Tick += new System.EventHandler(this.Decompte_Timer_Tick);
             // 
-            // AfficherPopUp_Timer
-            // 
-            this.AfficherPopUp_Timer.Interval = 3000;
-            // 
             // Menu_Panel
             // 
             this.Menu_Panel.BackColor = System.Drawing.Color.White;
@@ -299,7 +294,6 @@
         private System.Windows.Forms.Label Decompte_Label;
         private System.Windows.Forms.Panel Chrono_Panel;
         private System.Windows.Forms.Timer Decompte_Timer;
-        private System.Windows.Forms.Timer AfficherPopUp_Timer;
         private System.Windows.Forms.Panel Menu_Panel;
     }
 }
