@@ -77,7 +77,7 @@ namespace EMACClass
         /// <returns>Chaîne de caractères à afficher au joueur</returns>
         public override string AfficherErreur(List<string> erreur)
         {
-            if (erreur[1] == "0")
+            if (erreur[1] == "0" || erreur[1] == "")
             {
                 return "Vous n’avez pas entré de résultat.\r\nPour information, il fallait trouver " + erreur[0] + ".";
             }
