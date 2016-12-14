@@ -191,6 +191,7 @@
             this.Name = "TestPhysique_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Problèmes Physiques";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestPhysique_Form_FormClosing);
             this.Load += new System.EventHandler(this.TestPhysique_Form_Load);
             this.Reponse_GroupeBox.ResumeLayout(false);
             this.Reponse_GroupeBox.PerformLayout();

@@ -29,73 +29,231 @@ namespace EMACApp
         private void Test1Facile_Button_Click(object sender, EventArgs e)
         {
             TestPerceptionMemoire test = new TestPerceptionMemoire(false);
-            TestDemonstration_Form testPerception = new TestDemonstration_Form(test);
-            testPerception.Show();
+            TestDemonstration_Form testDemoPerception = new TestDemonstration_Form(test);
+
+            this.Hide();
+
+            if (testDemoPerception.ShowDialog() == DialogResult.OK)
+            {
+                TestPerception_Form testPerception = new TestPerception_Form(test);
+
+                if (testPerception.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Test1Difficile_Button_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             TestPerceptionMemoire test = new TestPerceptionMemoire(true);
-            TestDemonstration_Form testPerception = new TestDemonstration_Form(test);
-            testPerception.Show();
+            TestDemonstration_Form testDemoPerception = new TestDemonstration_Form(test);
+
+            if (testDemoPerception.ShowDialog() == DialogResult.OK)
+            {
+                TestPerception_Form testPerception = new TestPerception_Form(test);
+
+                if (testPerception.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Test2Facile_Button_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             TestAttentionConcentration test = new TestAttentionConcentration(false);
-            TestDemonstration_Form testAttention = new TestDemonstration_Form(test);
-            testAttention.Show();
+            TestDemonstration_Form testDemoAttention = new TestDemonstration_Form(test);
+
+            if (testDemoAttention.ShowDialog() == DialogResult.OK)
+            {
+                TestAttention_Form testAttention = new TestAttention_Form(test);
+
+                if (testAttention.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Test2Difficile_Button_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             TestAttentionConcentration test = new TestAttentionConcentration(true);
-            TestDemonstration_Form testAttention = new TestDemonstration_Form(test);
-            testAttention.Show();
+            TestDemonstration_Form testDemoAttention = new TestDemonstration_Form(test);
+
+            if (testDemoAttention.ShowDialog() == DialogResult.OK)
+            {
+                TestAttention_Form testAttention = new TestAttention_Form(test);
+
+                if (testAttention.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Test3Facile_Button_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             TestCalculMental test = new TestCalculMental(false);
-            TestDemonstration_Form testCalcul = new TestDemonstration_Form(test);
-            testCalcul.Show();
+            TestDemonstration_Form testDemoCalcul = new TestDemonstration_Form(test);
+
+            if (testDemoCalcul.ShowDialog() == DialogResult.OK)
+            {
+                TestCalcul_Form testCalcul = new TestCalcul_Form(test);
+
+                if (testCalcul.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Test3Difficile_Button_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             TestCalculMental test = new TestCalculMental(true);
-            TestDemonstration_Form testCalcul = new TestDemonstration_Form(test);
-            testCalcul.Show();
+            TestDemonstration_Form testDemoCalcul = new TestDemonstration_Form(test);
+
+            if (testDemoCalcul.ShowDialog() == DialogResult.OK)
+            {
+                TestCalcul_Form testCalcul = new TestCalcul_Form(test);
+
+                if (testCalcul.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Test4Facile_Button_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             TestProblemesMathematiques test = new TestProblemesMathematiques(false);
-            TestDemonstration_Form testMaths = new TestDemonstration_Form(test);
-            testMaths.Show();
+            TestDemonstration_Form testDemoMaths = new TestDemonstration_Form(test);
+
+            if (testDemoMaths.ShowDialog() == DialogResult.OK)
+            {
+                TestMaths_Form testMaths = new TestMaths_Form(test);
+
+                if (testMaths.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Test4Difficile_Button_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             TestProblemesMathematiques test = new TestProblemesMathematiques(true);
-            TestDemonstration_Form testMaths = new TestDemonstration_Form(test);
-            testMaths.Show();
+            TestDemonstration_Form testDemoMaths = new TestDemonstration_Form(test);
+
+            if (testDemoMaths.ShowDialog() == DialogResult.OK)
+            {
+                TestMaths_Form testMaths = new TestMaths_Form(test);
+
+                if (testMaths.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Test5Facile_Button_Click(object sender, EventArgs e)
         {
-            TestProblemesPhysiques test = new TestProblemesPhysiques(false);
-            TestDemonstration_Form testPhysique = new TestDemonstration_Form(test);
-            testPhysique.Show();
+            this.Hide();
 
+            TestProblemesPhysiques test = new TestProblemesPhysiques(false);
+            TestDemonstration_Form testDemoPhysiques = new TestDemonstration_Form(test);
+
+            if (testDemoPhysiques.ShowDialog() == DialogResult.OK)
+            {
+                TestPhysique_Form testPhysiques = new TestPhysique_Form(test);
+
+                if (testPhysiques.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
 
         private void Test5Difficile_Button_Click(object sender, EventArgs e)
         {
-            TestProblemesPhysiques test = new TestProblemesPhysiques(true);
-            TestDemonstration_Form testPhysique = new TestDemonstration_Form(test);
-            testPhysique.Show();
+            this.Hide();
 
+            TestProblemesPhysiques test = new TestProblemesPhysiques(true);
+            TestDemonstration_Form testDemoPhysiques = new TestDemonstration_Form(test);
+
+            if (testDemoPhysiques.ShowDialog() == DialogResult.OK)
+            {
+                TestPhysique_Form testPhysiques = new TestPhysique_Form(test);
+
+                if (testPhysiques.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+            }
+
+            else
+            {
+                this.Show();
+            }
         }
     }
 }

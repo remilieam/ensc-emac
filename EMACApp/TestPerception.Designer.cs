@@ -313,6 +313,7 @@
             this.Name = "TestPerception_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perception et mémoire associative";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestPerception_Form_FormClosing);
             this.Load += new System.EventHandler(this.TestPerception_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Image_PictureBox)).EndInit();
             this.Chrono_Panel.ResumeLayout(false);

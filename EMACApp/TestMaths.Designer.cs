@@ -192,6 +192,7 @@
             this.Name = "TestMaths_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Problèmes mathématiques";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestMaths_Form_FormClosing);
             this.Load += new System.EventHandler(this.TestMaths_Form_Load);
             this.Reponse_GroupBox.ResumeLayout(false);
             this.Reponse_GroupBox.PerformLayout();

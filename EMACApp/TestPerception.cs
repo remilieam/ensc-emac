@@ -25,6 +25,12 @@ namespace EMACApp
 
         #region Méthodes liées à des actions sur les composants du formulaire
 
+        // Fermeture du formulaire
+        private void TestPerception_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
         // Affichage de la première règle lors du chargement de la page et implémentation du timer (2 s en difficile, 4 s en facile)
         private void TestPerception_Form_Load(object sender, EventArgs e)
         {

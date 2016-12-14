@@ -146,5 +146,10 @@ namespace EMACApp
         {
             this.Close();
         }
+
+        private void TestMaths_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

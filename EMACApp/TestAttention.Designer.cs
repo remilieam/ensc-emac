@@ -267,6 +267,7 @@
             this.Name = "TestAttention_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Attention et concentration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestAttention_Form_FormClosing);
             this.Load += new System.EventHandler(this.TestAttention_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Zone_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Objet_PictureBox)).EndInit();

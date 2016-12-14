@@ -26,6 +26,12 @@ namespace EMACApp
 
         #region Méthodes liées à des actions sur les composants du formulaire
 
+        // Fermeture du formulaire
+        private void TestAttention_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
         // Affichage de la première règle et définition du chronomètre si le joueur a choisi le mode difficile
         private void TestAttention_Form_Load(object sender, EventArgs e)
         {

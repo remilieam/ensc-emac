@@ -93,36 +93,7 @@ namespace EMACApp
 
         private void Jouer_Button_Click(object sender, EventArgs e)
         {
-            if (test is TestPerceptionMemoire)
-            {
-                TestPerception_Form jeu = new TestPerception_Form((TestPerceptionMemoire)test);
-                jeu.Show();
-            }
-
-            if (test is TestAttentionConcentration)
-            {
-                TestAttention_Form jeu = new TestAttention_Form((TestAttentionConcentration)test);
-                jeu.Show();
-            }
-
-            if (test is TestCalculMental)
-            {
-                TestCalcul_Form jeu = new TestCalcul_Form((TestCalculMental)test);
-                jeu.Show();
-            }
-
-            if (test is TestProblemesMathematiques)
-            {
-                TestMaths_Form jeu = new TestMaths_Form((TestProblemesMathematiques)test);
-                jeu.Show();
-            }
-
-            if (test is TestProblemesPhysiques)
-            {
-                TestPhysique_Form jeu = new TestPhysique_Form((TestProblemesPhysiques)test);
-                jeu.Show();
-            }
-
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

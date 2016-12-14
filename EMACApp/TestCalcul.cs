@@ -30,6 +30,12 @@ namespace EMACApp
 
         #region Méthodes liées à des actions sur les composants du formulaire
 
+        // Fermeture du formulaire
+        private void TestCalcul_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
         // Génération d’une liste d’additions et appel de la fonction affichant la première question
         private void Addition_Button_Click(object sender, EventArgs e)
         {

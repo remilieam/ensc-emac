@@ -138,5 +138,10 @@ namespace EMACApp
         {
             this.Close();
         }
+
+        private void TestPhysique_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }
