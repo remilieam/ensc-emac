@@ -34,23 +34,23 @@ namespace EMACApp
         // Affichage de la première règle lors du chargement de la page et implémentation du timer (2 s en difficile, 4 s en facile)
         private void TestPerception_Form_Load(object sender, EventArgs e)
         {
-            Regle_TextBox.Text = test.questions[compteur];
+            Regle_Label.Text = test.questions[compteur];
             AfficherImage_Timer.Interval = test.intervalle * 1000;
-            ProgressionTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
+            Progression_Label.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
         }
 
         // Affichage de l’image pendant 2 ou 4 secondes avec décompte
         private void Suivant_Button_Click(object sender, EventArgs e)
         {
-            Regle_TextBox.Hide();
+            Regle_Label.Hide();
             Suivant_Button.Hide();
             Image_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_1\\" + test.imagesQuestion[compteur];
             Image_PictureBox.Show();
 
             decompte = test.intervalle;
+            Decompte_Label.Text = decompte.ToString();
             Chrono_Panel.Show();
             Decompte_Label.Show();
-            Decompte_Label.Text = decompte.ToString();
             Decompte_Timer.Start();
             AfficherImage_Timer.Start();
         }
@@ -172,9 +172,9 @@ namespace EMACApp
         // Affichage de la règle
         private void AfficherRegle()
         {
-            ProgressionTest1_TextBox.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
-            Regle_TextBox.Text = test.questions[compteur];
-            Regle_TextBox.Show();
+            Progression_Label.Text = "Question " + (compteur + 1) + " sur " + test.questions.Count;
+            Regle_Label.Text = test.questions[compteur];
+            Regle_Label.Show();
             Suivant_Button.Show();
 
             Lettre1_Label.Hide();
@@ -200,8 +200,8 @@ namespace EMACApp
         // Affichage du résultat à l’issue des 10 questions
         public void AfficherResultat()
         {
-            Regle_TextBox.Text = "Vous avez un taux de réussite de " + test.CalculerResultat() + " % !";
-            Regle_TextBox.Show();
+            Regle_Label.Text = "Vous avez un taux de réussite de " + test.CalculerResultat() + " % !";
+            Regle_Label.Show();
             Terminer_Button.Show();
 
             Lettre1_Label.Hide();

@@ -24,7 +24,7 @@ namespace EMACApp
         private void TestPerception_Form_Load(object sender, EventArgs e)
         {
             NomTest_Label.Text = test.nom;
-            Instruction_TextBox.Text = test.consigne + " " ;
+            Consigne_Label.Text = test.consigne + " ";
         }
 
         private void Suivant_PictureBox_Click(object sender, EventArgs e)
@@ -41,21 +41,21 @@ namespace EMACApp
 
             if(compteur == 0)
             {
-                Instruction_TextBox.Show();
+                Consigne_Label.Show();
                 ImageDemo_PictureBox.Hide();
-                TexteDemo_TextBox.Hide();
+                //TexteDemo_TextBox.Hide();
 
-                Instruction_TextBox.Text = test.consigne + " " ;
+                Consigne_Label.Text = test.consigne + " ";
             }
 
             else
             {
-                Instruction_TextBox.Hide();
+                Consigne_Label.Hide();
                 ImageDemo_PictureBox.Show();
                 //TextDemo_TextBox.Show();
 
                 ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur-1];
-                TexteDemo_TextBox.Text = test.texteDemo[compteur - 1] + " "  ;
+                //TexteDemo_TextBox.Text = test.texteDemo[compteur - 1] + " "  ;
             }
         }
 
@@ -73,21 +73,21 @@ namespace EMACApp
 
             if (compteur == 0)
             {
-                Instruction_TextBox.Show();
+                Consigne_Label.Show();
                 ImageDemo_PictureBox.Hide();
-                TexteDemo_TextBox.Hide();
+                //TexteDemo_TextBox.Hide();
 
-                Instruction_TextBox.Text = test.consigne + " " + compteur;
+                Consigne_Label.Text = test.consigne + " " + compteur;
             }
 
             else
             {
-                Instruction_TextBox.Hide();
+                Consigne_Label.Hide();
                 ImageDemo_PictureBox.Show();
                 //TextDemo_TextBox.Show();
 
                 ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur - 1];
-                TexteDemo_TextBox.Text = test.texteDemo[compteur-1] + " " + compteur;
+                //TexteDemo_TextBox.Text = test.texteDemo[compteur-1] + " " + compteur;
             }
         }
 

@@ -41,24 +41,24 @@ namespace EMACApp
         // Affichage de la première règle et définition du chronomètre si le joueur a choisi le mode difficile
         private void TestAttention_Form_Load(object sender, EventArgs e)
         {
-            ProgressionTest2_TextBox.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
+            Progression_Label.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
 
             if (test.difficulte)
             {
-                Regle_TextBox.Text = "Consigne de la série " + (this.compteurSerie + 1) + " :\r\n\r\n" + this.test.questions[this.compteurSerie];
+                Regle_Label.Text = "Consigne de la série " + (this.compteurSerie + 1) + " :\r\n\r\n" + this.test.questions[this.compteurSerie];
                 AfficherQuestion_Timer.Interval = this.test.intervalle * 1000;
             }
 
             else
             {
-                Regle_TextBox.Text = "Consigne pour les 3 séries de questions :\r\n\r\n" + this.test.questions[compteurSerie];
+                Regle_Label.Text = "Consigne pour les 3 séries de questions :\r\n\r\n" + this.test.questions[compteurSerie];
             }
         }
         
         // Appel de la fonction qui affiche la question
         private void Suivant_Button_Click(object sender, EventArgs e)
         {
-            Regle_TextBox.Hide();
+            Regle_Label.Hide();
             Suivant_Button.Hide();
 
             this.AfficherQuestion();
@@ -147,21 +147,21 @@ namespace EMACApp
         // Affichage de la consigne à suivre dans la série ou les 3 séries
         private void AfficherConsigne()
         {
-            ProgressionTest2_TextBox.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
+            Progression_Label.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
 
             if (test.difficulte)
             {
-                Regle_TextBox.Text = "Consigne de la série " + this.compteurSerie + " :\r\n\r\n" + test.questions[this.compteurSerie];
+                Regle_Label.Text = "Consigne de la série " + this.compteurSerie + " :\r\n\r\n" + test.questions[this.compteurSerie];
             }
 
-            Regle_TextBox.Show();
+            Regle_Label.Show();
             Suivant_Button.Show();
         }
 
         // Affichage de l’image et des boutons
         private void AfficherQuestion()
         {
-            ProgressionTest2_TextBox.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
+            Progression_Label.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
 
             Objet_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_2\\" + this.test.imagesSeries[this.compteurSerie][this.compteurQuestion];
             Objet_PictureBox.Show();
@@ -177,9 +177,9 @@ namespace EMACApp
             if (test.difficulte)
             {
                 decompte = test.intervalle;
+                Decompte_Label.Text = decompte.ToString();
                 Chrono_Panel.Show();
                 Decompte_Label.Show();
-                Decompte_Label.Text = decompte.ToString();
                 Decompte_Timer.Start();
                 AfficherQuestion_Timer.Start();
             }
@@ -267,8 +267,8 @@ namespace EMACApp
         // Affichage du résultat à l’issue des 3 séries de 5 questions
         private void AfficherResultat()
         {
-            Resultat_TextBox.Text = "Vous avez un taux de réussite de " + test.CalculerResultat() + " % !";
-            Resultat_TextBox.Show();
+            Resultat_Label.Text = "Vous avez un taux de réussite de " + test.CalculerResultat() + " % !";
+            Resultat_Label.Show();
             Terminer_Button.Show();
         }
 

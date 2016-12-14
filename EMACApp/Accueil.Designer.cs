@@ -51,13 +51,12 @@
             // 
             // ExplicationAccueil_Label
             // 
-            this.ExplicationAccueil_Label.AutoSize = true;
             this.ExplicationAccueil_Label.BackColor = System.Drawing.Color.White;
             this.ExplicationAccueil_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExplicationAccueil_Label.Location = new System.Drawing.Point(256, 159);
+            this.ExplicationAccueil_Label.Location = new System.Drawing.Point(246, 126);
             this.ExplicationAccueil_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ExplicationAccueil_Label.Name = "ExplicationAccueil_Label";
-            this.ExplicationAccueil_Label.Size = new System.Drawing.Size(546, 198);
+            this.ExplicationAccueil_Label.Size = new System.Drawing.Size(565, 246);
             this.ExplicationAccueil_Label.TabIndex = 1;
             this.ExplicationAccueil_Label.Text = resources.GetString("ExplicationAccueil_Label.Text");
             this.ExplicationAccueil_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

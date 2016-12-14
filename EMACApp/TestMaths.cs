@@ -37,11 +37,11 @@ namespace EMACApp
             Choix2_RadioButton.Checked = false;
             Choix3_RadioButton.Checked = false;
             Choix4_RadioButton.Checked = false;
-            QuestionMaths_TextBox.Enabled = false;
+            QuestionMaths_Label.Enabled = false;
             Suivant_Button.Enabled = false;
             Terminer_Button.Hide();
 
-            QuestionMaths_TextBox.Text = " Question n°" + (compteur + 1) + "  :  " + test.questions[0];
+            QuestionMaths_Label.Text = " Question n°" + (compteur + 1) + " : " + test.questions[0];
 
             if (test.imagesQuestion[0] == "")
             {
@@ -63,7 +63,7 @@ namespace EMACApp
                 Suivant_Button.Enabled = false;
                 Valider_Button.Enabled = true;
 
-                QuestionMaths_TextBox.Text = " Question n°" + (compteur + 1) + ": " + test.questions[compteur];
+                QuestionMaths_Label.Text = " Question n°" + (compteur + 1) + " : " + test.questions[compteur];
 
                 if (test.imagesQuestion[compteur] == "")
                 {
@@ -90,8 +90,8 @@ namespace EMACApp
                 Suivant_Button.Hide();
                 Terminer_Button.Show();
                 double resultat = test.CalculerResultat();
-                MessageBox.Show("Vous avez fini la série! ");
-                QuestionMaths_TextBox.Text = "Votre super résultat est de : " + resultat + " % ";
+                MessageBox.Show("Vous avez fini la série !");
+                QuestionMaths_Label.Text = "Votre super résultat est de : " + resultat + " % ";
             }
         }
 
@@ -131,7 +131,7 @@ namespace EMACApp
 
             else
             {
-                MessageBox.Show("Erreur. La bonne réponse est  : " + test.reponses[compteur - 1]);
+                MessageBox.Show("Erreur. La bonne réponse est : " + test.reponses[compteur - 1]);
                 Suivant_Button.Enabled = true;
                 Valider_Button.Enabled = false;
             }

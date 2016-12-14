@@ -134,7 +134,7 @@ namespace EMACApp
         // Masquage de l’interface permettant à l’utilisateur de choisir l’opération sur laquelle il veut se tester
         private void CacherPremiereInterface()
         {
-            Choix_TextBox.Hide();
+            Choix_Label.Hide();
             Addition_Button.Hide();
             Soustraction_Button.Hide();
             Multiplication_Button.Hide();
@@ -144,14 +144,14 @@ namespace EMACApp
         // Affichage de la question
         private void AfficherQuestion()
         {
-            ProgressionTest3_TextBox.Text = "Question " + (this.compteurQuestion + 1) + " sur " + this.test.questions.Count;
-            Operation_TextBlox.Text = this.test.questions[this.compteurQuestion];
+            Progression_Label.Text = "Question " + (this.compteurQuestion + 1) + " sur " + this.test.questions.Count;
+            Operation_Label.Text = this.test.questions[this.compteurQuestion];
             Reponse_TextBox.Clear();
 
             Zone_PictureBox.Show();
             Egal_Label.Show();
-            ProgressionTest3_TextBox.Show();
-            Operation_TextBlox.Show();
+            Progression_Label.Show();
+            Operation_Label.Show();
             Reponse_TextBox.Show();
             Valider_Button.Show();
 
@@ -159,9 +159,9 @@ namespace EMACApp
             if (test.difficulte)
             {
                 decompte = test.intervalle;
+                Decompte_Label.Text = decompte.ToString();
                 Chrono_Panel.Show();
                 Decompte_Label.Show();
-                Decompte_Label.Text = decompte.ToString();
                 Decompte_Timer.Start();
                 AfficherQuestion_Timer.Start();
             }
@@ -200,8 +200,8 @@ namespace EMACApp
         {
             Zone_PictureBox.Hide();
             Egal_Label.Hide();
-            ProgressionTest3_TextBox.Hide();
-            Operation_TextBlox.Hide();
+            Progression_Label.Hide();
+            Operation_Label.Hide();
             Reponse_TextBox.Hide();
             Valider_Button.Hide();
 
@@ -220,8 +220,8 @@ namespace EMACApp
         // Affichage du résultat (proportion de bonnes réponses du joueur)
         private void AfficherResultat()
         {
-            Resultat_TextBox.Text = "Vous avez un taux de réussite de " + this.test.CalculerResultat() + " % !";
-            Resultat_TextBox.Show();
+            Resultat_Label.Text = "Vous avez un taux de réussite de " + this.test.CalculerResultat() + " % !";
+            Resultat_Label.Show();
             Terminer_Button.Show();
         }
 

@@ -32,20 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestAttention_Form));
             this.NomTest2_Label = new System.Windows.Forms.Label();
             this.AfficherQuestion_Timer = new System.Windows.Forms.Timer(this.components);
-            this.ProgressionTest2_TextBox = new System.Windows.Forms.TextBox();
             this.Zone_PictureBox = new System.Windows.Forms.PictureBox();
             this.Terminer_Button = new System.Windows.Forms.Button();
-            this.Resultat_TextBox = new System.Windows.Forms.TextBox();
             this.Bouton3_Button = new System.Windows.Forms.Button();
             this.Bouton2_Button = new System.Windows.Forms.Button();
             this.Bouton1_Button = new System.Windows.Forms.Button();
             this.Objet_PictureBox = new System.Windows.Forms.PictureBox();
-            this.Regle_TextBox = new System.Windows.Forms.TextBox();
             this.Suivant_Button = new System.Windows.Forms.Button();
             this.Decompte_Label = new System.Windows.Forms.Label();
             this.Chrono_Panel = new System.Windows.Forms.Panel();
             this.Decompte_Timer = new System.Windows.Forms.Timer(this.components);
             this.Menu_Panel = new System.Windows.Forms.Panel();
+            this.Progression_Label = new System.Windows.Forms.Label();
+            this.Resultat_Label = new System.Windows.Forms.Label();
+            this.Regle_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Zone_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Objet_PictureBox)).BeginInit();
             this.Chrono_Panel.SuspendLayout();
@@ -67,19 +67,6 @@
             // AfficherQuestion_Timer
             // 
             this.AfficherQuestion_Timer.Tick += new System.EventHandler(this.AfficherQuestion_Timer_Tick);
-            // 
-            // ProgressionTest2_TextBox
-            // 
-            this.ProgressionTest2_TextBox.BackColor = System.Drawing.Color.White;
-            this.ProgressionTest2_TextBox.Enabled = false;
-            this.ProgressionTest2_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProgressionTest2_TextBox.ForeColor = System.Drawing.Color.Black;
-            this.ProgressionTest2_TextBox.Location = new System.Drawing.Point(162, 81);
-            this.ProgressionTest2_TextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ProgressionTest2_TextBox.Name = "ProgressionTest2_TextBox";
-            this.ProgressionTest2_TextBox.Size = new System.Drawing.Size(712, 29);
-            this.ProgressionTest2_TextBox.TabIndex = 20;
-            this.ProgressionTest2_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Zone_PictureBox
             // 
@@ -104,20 +91,6 @@
             this.Terminer_Button.UseVisualStyleBackColor = true;
             this.Terminer_Button.Visible = false;
             this.Terminer_Button.Click += new System.EventHandler(this.Terminer_Button_Click);
-            // 
-            // Resultat_TextBox
-            // 
-            this.Resultat_TextBox.BackColor = System.Drawing.Color.White;
-            this.Resultat_TextBox.Enabled = false;
-            this.Resultat_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Resultat_TextBox.ForeColor = System.Drawing.Color.Black;
-            this.Resultat_TextBox.Location = new System.Drawing.Point(162, 234);
-            this.Resultat_TextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Resultat_TextBox.Name = "Resultat_TextBox";
-            this.Resultat_TextBox.Size = new System.Drawing.Size(712, 29);
-            this.Resultat_TextBox.TabIndex = 22;
-            this.Resultat_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Resultat_TextBox.Visible = false;
             // 
             // Bouton3_Button
             // 
@@ -161,7 +134,7 @@
             // Objet_PictureBox
             // 
             this.Objet_PictureBox.BackColor = System.Drawing.Color.White;
-            this.Objet_PictureBox.Location = new System.Drawing.Point(241, 159);
+            this.Objet_PictureBox.Location = new System.Drawing.Point(251, 159);
             this.Objet_PictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Objet_PictureBox.Name = "Objet_PictureBox";
             this.Objet_PictureBox.Size = new System.Drawing.Size(251, 280);
@@ -169,21 +142,6 @@
             this.Objet_PictureBox.TabIndex = 21;
             this.Objet_PictureBox.TabStop = false;
             this.Objet_PictureBox.Visible = false;
-            // 
-            // Regle_TextBox
-            // 
-            this.Regle_TextBox.BackColor = System.Drawing.Color.White;
-            this.Regle_TextBox.Enabled = false;
-            this.Regle_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regle_TextBox.ForeColor = System.Drawing.Color.Black;
-            this.Regle_TextBox.Location = new System.Drawing.Point(162, 192);
-            this.Regle_TextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Regle_TextBox.Multiline = true;
-            this.Regle_TextBox.Name = "Regle_TextBox";
-            this.Regle_TextBox.Size = new System.Drawing.Size(712, 121);
-            this.Regle_TextBox.TabIndex = 23;
-            this.Regle_TextBox.Text = "x\r\n\r\nx\r\nx\r\nx";
-            this.Regle_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Suivant_Button
             // 
@@ -216,7 +174,7 @@
             this.Chrono_Panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Chrono_Panel.BackgroundImage")));
             this.Chrono_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Chrono_Panel.Controls.Add(this.Decompte_Label);
-            this.Chrono_Panel.Location = new System.Drawing.Point(162, 143);
+            this.Chrono_Panel.Location = new System.Drawing.Point(167, 148);
             this.Chrono_Panel.Name = "Chrono_Panel";
             this.Chrono_Panel.Size = new System.Drawing.Size(74, 77);
             this.Chrono_Panel.TabIndex = 36;
@@ -239,6 +197,40 @@
             this.Menu_Panel.TabIndex = 37;
             this.Menu_Panel.Click += new System.EventHandler(this.Menu_Panel_Click);
             // 
+            // Progression_Label
+            // 
+            this.Progression_Label.BackColor = System.Drawing.Color.White;
+            this.Progression_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Progression_Label.Location = new System.Drawing.Point(162, 81);
+            this.Progression_Label.Name = "Progression_Label";
+            this.Progression_Label.Size = new System.Drawing.Size(712, 29);
+            this.Progression_Label.TabIndex = 40;
+            this.Progression_Label.Text = "Progression";
+            this.Progression_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Resultat_Label
+            // 
+            this.Resultat_Label.BackColor = System.Drawing.Color.White;
+            this.Resultat_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Resultat_Label.Location = new System.Drawing.Point(162, 230);
+            this.Resultat_Label.Name = "Resultat_Label";
+            this.Resultat_Label.Size = new System.Drawing.Size(710, 92);
+            this.Resultat_Label.TabIndex = 41;
+            this.Resultat_Label.Text = "Résultat";
+            this.Resultat_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Resultat_Label.Visible = false;
+            // 
+            // Regle_Label
+            // 
+            this.Regle_Label.BackColor = System.Drawing.Color.White;
+            this.Regle_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regle_Label.Location = new System.Drawing.Point(162, 143);
+            this.Regle_Label.Name = "Regle_Label";
+            this.Regle_Label.Size = new System.Drawing.Size(710, 206);
+            this.Regle_Label.TabIndex = 43;
+            this.Regle_Label.Text = "Règle";
+            this.Regle_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TestAttention_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,18 +239,18 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 552);
+            this.Controls.Add(this.Resultat_Label);
+            this.Controls.Add(this.Progression_Label);
             this.Controls.Add(this.Menu_Panel);
             this.Controls.Add(this.Chrono_Panel);
             this.Controls.Add(this.Objet_PictureBox);
             this.Controls.Add(this.Terminer_Button);
-            this.Controls.Add(this.Resultat_TextBox);
             this.Controls.Add(this.Bouton3_Button);
             this.Controls.Add(this.Bouton2_Button);
             this.Controls.Add(this.Bouton1_Button);
-            this.Controls.Add(this.Regle_TextBox);
             this.Controls.Add(this.Suivant_Button);
-            this.Controls.Add(this.ProgressionTest2_TextBox);
             this.Controls.Add(this.NomTest2_Label);
+            this.Controls.Add(this.Regle_Label);
             this.Controls.Add(this.Zone_PictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -282,19 +274,19 @@
 
         private System.Windows.Forms.Label NomTest2_Label;
         private System.Windows.Forms.Timer AfficherQuestion_Timer;
-        private System.Windows.Forms.TextBox ProgressionTest2_TextBox;
         private System.Windows.Forms.PictureBox Zone_PictureBox;
         private System.Windows.Forms.Button Terminer_Button;
-        private System.Windows.Forms.TextBox Resultat_TextBox;
         private System.Windows.Forms.Button Bouton3_Button;
         private System.Windows.Forms.Button Bouton2_Button;
         private System.Windows.Forms.Button Bouton1_Button;
         private System.Windows.Forms.PictureBox Objet_PictureBox;
-        private System.Windows.Forms.TextBox Regle_TextBox;
         private System.Windows.Forms.Button Suivant_Button;
         private System.Windows.Forms.Label Decompte_Label;
         private System.Windows.Forms.Panel Chrono_Panel;
         private System.Windows.Forms.Timer Decompte_Timer;
         private System.Windows.Forms.Panel Menu_Panel;
+        private System.Windows.Forms.Label Progression_Label;
+        private System.Windows.Forms.Label Resultat_Label;
+        private System.Windows.Forms.Label Regle_Label;
     }
 }

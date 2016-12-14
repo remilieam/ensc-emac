@@ -30,13 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestDemonstration_Form));
             this.NomTest_Label = new System.Windows.Forms.Label();
-            this.Instruction_TextBox = new System.Windows.Forms.TextBox();
-            this.TexteDemo_TextBox = new System.Windows.Forms.TextBox();
             this.ImageDemo_PictureBox = new System.Windows.Forms.PictureBox();
             this.Jouer_Button = new System.Windows.Forms.Button();
             this.Suivant_PictureBox = new System.Windows.Forms.PictureBox();
             this.Precedent_PictureBox = new System.Windows.Forms.PictureBox();
             this.Menu_Panel = new System.Windows.Forms.Panel();
+            this.Consigne_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ImageDemo_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Suivant_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precedent_PictureBox)).BeginInit();
@@ -44,34 +43,14 @@
             // 
             // NomTest_Label
             // 
-            this.NomTest_Label.AutoSize = true;
             this.NomTest_Label.BackColor = System.Drawing.Color.Transparent;
             this.NomTest_Label.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomTest_Label.ForeColor = System.Drawing.Color.White;
             this.NomTest_Label.Location = new System.Drawing.Point(239, 26);
             this.NomTest_Label.Name = "NomTest_Label";
-            this.NomTest_Label.Size = new System.Drawing.Size(0, 37);
+            this.NomTest_Label.Size = new System.Drawing.Size(563, 37);
             this.NomTest_Label.TabIndex = 0;
-            // 
-            // Instruction_TextBox
-            // 
-            this.Instruction_TextBox.Enabled = false;
-            this.Instruction_TextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Instruction_TextBox.Location = new System.Drawing.Point(52, 89);
-            this.Instruction_TextBox.Multiline = true;
-            this.Instruction_TextBox.Name = "Instruction_TextBox";
-            this.Instruction_TextBox.Size = new System.Drawing.Size(926, 378);
-            this.Instruction_TextBox.TabIndex = 1;
-            // 
-            // TexteDemo_TextBox
-            // 
-            this.TexteDemo_TextBox.Enabled = false;
-            this.TexteDemo_TextBox.Location = new System.Drawing.Point(52, 51);
-            this.TexteDemo_TextBox.Multiline = true;
-            this.TexteDemo_TextBox.Name = "TexteDemo_TextBox";
-            this.TexteDemo_TextBox.Size = new System.Drawing.Size(926, 62);
-            this.TexteDemo_TextBox.TabIndex = 2;
-            this.TexteDemo_TextBox.Visible = false;
+            this.NomTest_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ImageDemo_PictureBox
             // 
@@ -133,6 +112,17 @@
             this.Menu_Panel.TabIndex = 38;
             this.Menu_Panel.Click += new System.EventHandler(this.Menu_Panel_Click);
             // 
+            // Consigne_Label
+            // 
+            this.Consigne_Label.BackColor = System.Drawing.Color.White;
+            this.Consigne_Label.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Consigne_Label.Location = new System.Drawing.Point(49, 89);
+            this.Consigne_Label.Name = "Consigne_Label";
+            this.Consigne_Label.Size = new System.Drawing.Size(929, 378);
+            this.Consigne_Label.TabIndex = 39;
+            this.Consigne_Label.Text = "Les meilleurs consignes du monde !";
+            this.Consigne_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // TestDemonstration_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,12 +131,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 552);
+            this.Controls.Add(this.Consigne_Label);
             this.Controls.Add(this.Menu_Panel);
-            this.Controls.Add(this.Instruction_TextBox);
             this.Controls.Add(this.Precedent_PictureBox);
             this.Controls.Add(this.Suivant_PictureBox);
             this.Controls.Add(this.Jouer_Button);
-            this.Controls.Add(this.TexteDemo_TextBox);
             this.Controls.Add(this.NomTest_Label);
             this.Controls.Add(this.ImageDemo_PictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -161,20 +150,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.Suivant_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Precedent_PictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label NomTest_Label;
-        private System.Windows.Forms.TextBox Instruction_TextBox;
-        private System.Windows.Forms.TextBox TexteDemo_TextBox;
         private System.Windows.Forms.PictureBox ImageDemo_PictureBox;
         private System.Windows.Forms.Button Jouer_Button;
         private System.Windows.Forms.PictureBox Suivant_PictureBox;
         private System.Windows.Forms.PictureBox Precedent_PictureBox;
         private System.Windows.Forms.Panel Menu_Panel;
+        private System.Windows.Forms.Label Consigne_Label;
 
     }
 }

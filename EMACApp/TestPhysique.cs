@@ -31,10 +31,10 @@ namespace EMACApp
             Choix3_RadioButton.Checked = false;
             Choix4_RadioButton.Checked = false;
             Terminer_Button.Hide();
-            Question_TextBox.Enabled = false;
+            QuestionPhysique_Label.Enabled = false;
             Suivant_Button.Enabled = false;
 
-            Question_TextBox.Text = "Question n° " + (compteur + 1) + " :  " + test.questions[compteur];
+            QuestionPhysique_Label.Text = "Question n° " + (compteur + 1) + " : " + test.questions[compteur];
 
             if (test.imagesQuestion[0] == "")
             {
@@ -55,7 +55,7 @@ namespace EMACApp
             {
                 Suivant_Button.Enabled = false;
                 Valider_Button.Enabled = true;
-                Question_TextBox.Text = "Question n°  " + (compteur + 1) + " :  " + test.questions[compteur];
+                QuestionPhysique_Label.Text = "Question n° " + (compteur + 1) + " :  " + test.questions[compteur];
 
                 if (test.imagesQuestion[compteur] == "")
                 {
@@ -77,13 +77,13 @@ namespace EMACApp
 
             else
             {
-                Reponse_GroupeBox.Hide();
+                Reponse_GroupBox.Hide();
                 Valider_Button.Hide();
                 Suivant_Button.Hide();
                 Terminer_Button.Show();
                 double resultat = test.CalculerResultat();
                 MessageBox.Show("Vous avez fini la série! ");
-                Question_TextBox.Text = "Votre super résultat est de : " + resultat + " % ";
+                QuestionPhysique_Label.Text = "Votre super résultat est de : " + resultat + " % ";
             }
         }
 
@@ -123,7 +123,7 @@ namespace EMACApp
 
             else
             {
-                MessageBox.Show("Erreur. La bonne réponse est  : " + test.reponses[compteur - 1]);
+                MessageBox.Show("Erreur. La bonne réponse est : " + test.reponses[compteur - 1]);
                 Suivant_Button.Enabled = true;
                 Valider_Button.Enabled = false;
             }
