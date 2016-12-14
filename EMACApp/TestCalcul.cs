@@ -21,11 +21,6 @@ namespace EMACApp
         {
             InitializeComponent();
             this.test = testRecu;
-
-            if (test.difficulte)
-            {
-                AfficherQuestion_Timer.Interval = this.test.intervalle * 1000;
-            }
         }
 
         #region Méthodes liées à des actions sur les composants du formulaire
@@ -33,7 +28,22 @@ namespace EMACApp
         // Fermeture du formulaire
         private void TestCalcul_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (this.test.difficulte)
+            {
+                AfficherQuestion_Timer.Stop();
+                Decompte_Timer.Stop();
+            }
+
             this.DialogResult = DialogResult.OK;
+        }
+
+        // Définition du chronomètre si le joueur a choisi le mode difficile
+        private void TestCalcul_Form_Load(object sender, EventArgs e)
+        {
+            if (test.difficulte)
+            {
+                AfficherQuestion_Timer.Interval = this.test.intervalle * 1000;
+            }
         }
 
         // Génération d’une liste d’additions et appel de la fonction affichant la première question
@@ -92,12 +102,6 @@ namespace EMACApp
         // Fermeture du formulaire pour retourner au menu
         private void Menu_Panel_Click(object sender, EventArgs e)
         {
-            if (this.test.difficulte)
-            {
-                AfficherQuestion_Timer.Stop();
-                Decompte_Timer.Stop();
-            }
-
             this.Close();
         }
 

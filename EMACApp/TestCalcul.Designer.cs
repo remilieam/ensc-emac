@@ -306,6 +306,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calcul mental";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestCalcul_Form_FormClosing);
+            this.Load += new System.EventHandler(this.TestCalcul_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Zone_PictureBox)).EndInit();
             this.Chrono_Panel.ResumeLayout(false);
             this.Chrono_Panel.PerformLayout();
