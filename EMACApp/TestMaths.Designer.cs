@@ -72,9 +72,9 @@
             // PbMaths_PictureBox
             // 
             this.PbMaths_PictureBox.BackColor = System.Drawing.Color.White;
-            this.PbMaths_PictureBox.Location = new System.Drawing.Point(630, 99);
+            this.PbMaths_PictureBox.Location = new System.Drawing.Point(630, 92);
             this.PbMaths_PictureBox.Name = "PbMaths_PictureBox";
-            this.PbMaths_PictureBox.Size = new System.Drawing.Size(318, 196);
+            this.PbMaths_PictureBox.Size = new System.Drawing.Size(318, 228);
             this.PbMaths_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbMaths_PictureBox.TabIndex = 5;
             this.PbMaths_PictureBox.TabStop = false;
@@ -96,9 +96,9 @@
             this.QuestionMaths_Label.BackColor = System.Drawing.Color.White;
             this.QuestionMaths_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestionMaths_Label.ForeColor = System.Drawing.Color.Black;
-            this.QuestionMaths_Label.Location = new System.Drawing.Point(93, 101);
+            this.QuestionMaths_Label.Location = new System.Drawing.Point(93, 92);
             this.QuestionMaths_Label.Name = "QuestionMaths_Label";
-            this.QuestionMaths_Label.Size = new System.Drawing.Size(539, 193);
+            this.QuestionMaths_Label.Size = new System.Drawing.Size(539, 231);
             this.QuestionMaths_Label.TabIndex = 46;
             this.QuestionMaths_Label.Text = "Blabla";
             this.QuestionMaths_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,6 +137,7 @@
             this.Terminer_Button.Text = "TERMINER";
             this.Terminer_Button.UseVisualStyleBackColor = true;
             this.Terminer_Button.Visible = false;
+            this.Terminer_Button.Click += new System.EventHandler(this.Terminer_Button_Click);
             // 
             // Reponse_GroupBox
             // 
@@ -146,7 +147,7 @@
             this.Reponse_GroupBox.Controls.Add(this.Choix2_RadioButton);
             this.Reponse_GroupBox.Controls.Add(this.Choix1_RadioButton);
             this.Reponse_GroupBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reponse_GroupBox.Location = new System.Drawing.Point(293, 321);
+            this.Reponse_GroupBox.Location = new System.Drawing.Point(293, 326);
             this.Reponse_GroupBox.Name = "Reponse_GroupBox";
             this.Reponse_GroupBox.Size = new System.Drawing.Size(458, 106);
             this.Reponse_GroupBox.TabIndex = 54;

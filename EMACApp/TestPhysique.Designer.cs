@@ -36,12 +36,12 @@
             this.Choix2_RadioButton = new System.Windows.Forms.RadioButton();
             this.Choix1_RadioButton = new System.Windows.Forms.RadioButton();
             this.Fond_Panel = new System.Windows.Forms.Panel();
+            this.QuestionPhysique_Label = new System.Windows.Forms.Label();
             this.Valider_Button = new System.Windows.Forms.Button();
             this.Suivant_Button = new System.Windows.Forms.Button();
             this.PbPhysique_PictureBox = new System.Windows.Forms.PictureBox();
             this.Terminer_Button = new System.Windows.Forms.Button();
             this.NomTest4_Label = new System.Windows.Forms.Label();
-            this.QuestionPhysique_Label = new System.Windows.Forms.Label();
             this.Reponse_GroupBox.SuspendLayout();
             this.Fond_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbPhysique_PictureBox)).BeginInit();
@@ -67,7 +67,7 @@
             this.Reponse_GroupBox.Controls.Add(this.Choix2_RadioButton);
             this.Reponse_GroupBox.Controls.Add(this.Choix1_RadioButton);
             this.Reponse_GroupBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reponse_GroupBox.Location = new System.Drawing.Point(293, 321);
+            this.Reponse_GroupBox.Location = new System.Drawing.Point(293, 331);
             this.Reponse_GroupBox.Name = "Reponse_GroupBox";
             this.Reponse_GroupBox.Size = new System.Drawing.Size(458, 106);
             this.Reponse_GroupBox.TabIndex = 66;
@@ -133,6 +133,17 @@
             this.Fond_Panel.Size = new System.Drawing.Size(859, 439);
             this.Fond_Panel.TabIndex = 64;
             // 
+            // QuestionPhysique_Label
+            // 
+            this.QuestionPhysique_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionPhysique_Label.ForeColor = System.Drawing.Color.Black;
+            this.QuestionPhysique_Label.Location = new System.Drawing.Point(3, 4);
+            this.QuestionPhysique_Label.Name = "QuestionPhysique_Label";
+            this.QuestionPhysique_Label.Size = new System.Drawing.Size(528, 235);
+            this.QuestionPhysique_Label.TabIndex = 5;
+            this.QuestionPhysique_Label.Text = "Blabla";
+            this.QuestionPhysique_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Valider_Button
             // 
             this.Valider_Button.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,9 +169,9 @@
             // PbPhysique_PictureBox
             // 
             this.PbPhysique_PictureBox.BackColor = System.Drawing.Color.White;
-            this.PbPhysique_PictureBox.Location = new System.Drawing.Point(630, 99);
+            this.PbPhysique_PictureBox.Location = new System.Drawing.Point(630, 93);
             this.PbPhysique_PictureBox.Name = "PbPhysique_PictureBox";
-            this.PbPhysique_PictureBox.Size = new System.Drawing.Size(318, 196);
+            this.PbPhysique_PictureBox.Size = new System.Drawing.Size(318, 232);
             this.PbPhysique_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbPhysique_PictureBox.TabIndex = 61;
             this.PbPhysique_PictureBox.TabStop = false;
@@ -190,16 +201,6 @@
             this.NomTest4_Label.Size = new System.Drawing.Size(346, 37);
             this.NomTest4_Label.TabIndex = 63;
             this.NomTest4_Label.Text = "Problèmes physiques";
-            // 
-            // QuestionPhysique_Label
-            // 
-            this.QuestionPhysique_Label.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionPhysique_Label.ForeColor = System.Drawing.Color.Black;
-            this.QuestionPhysique_Label.Location = new System.Drawing.Point(3, 10);
-            this.QuestionPhysique_Label.Name = "QuestionPhysique_Label";
-            this.QuestionPhysique_Label.Size = new System.Drawing.Size(528, 196);
-            this.QuestionPhysique_Label.TabIndex = 5;
-            this.QuestionPhysique_Label.Text = "Blabla";
             // 
             // TestPhysique_Form
             // 
