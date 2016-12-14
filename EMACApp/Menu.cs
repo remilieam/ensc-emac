@@ -51,10 +51,10 @@ namespace EMACApp
 
         private void Test1Difficile_Button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             TestPerceptionMemoire test = new TestPerceptionMemoire(true);
             TestDemonstration_Form testDemoPerception = new TestDemonstration_Form(test);
+
+            this.Hide();
 
             if (testDemoPerception.ShowDialog() == DialogResult.OK)
             {
@@ -74,10 +74,10 @@ namespace EMACApp
 
         private void Test2Facile_Button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             TestAttentionConcentration test = new TestAttentionConcentration(false);
             TestDemonstration_Form testDemoAttention = new TestDemonstration_Form(test);
+
+            this.Hide();
 
             if (testDemoAttention.ShowDialog() == DialogResult.OK)
             {
@@ -97,10 +97,10 @@ namespace EMACApp
 
         private void Test2Difficile_Button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             TestAttentionConcentration test = new TestAttentionConcentration(true);
             TestDemonstration_Form testDemoAttention = new TestDemonstration_Form(test);
+
+            this.Hide();
 
             if (testDemoAttention.ShowDialog() == DialogResult.OK)
             {
@@ -120,10 +120,10 @@ namespace EMACApp
 
         private void Test3Facile_Button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             TestCalculMental test = new TestCalculMental(false);
             TestDemonstration_Form testDemoCalcul = new TestDemonstration_Form(test);
+
+            this.Hide();
 
             if (testDemoCalcul.ShowDialog() == DialogResult.OK)
             {
@@ -143,10 +143,10 @@ namespace EMACApp
 
         private void Test3Difficile_Button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             TestCalculMental test = new TestCalculMental(true);
             TestDemonstration_Form testDemoCalcul = new TestDemonstration_Form(test);
+
+            this.Hide();
 
             if (testDemoCalcul.ShowDialog() == DialogResult.OK)
             {
@@ -166,10 +166,10 @@ namespace EMACApp
 
         private void Test4Facile_Button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             TestProblemesMathematiques test = new TestProblemesMathematiques(false);
             TestDemonstration_Form testDemoMaths = new TestDemonstration_Form(test);
+
+            this.Hide();
 
             if (testDemoMaths.ShowDialog() == DialogResult.OK)
             {
@@ -189,10 +189,10 @@ namespace EMACApp
 
         private void Test4Difficile_Button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             TestProblemesMathematiques test = new TestProblemesMathematiques(true);
             TestDemonstration_Form testDemoMaths = new TestDemonstration_Form(test);
+
+            this.Hide();
 
             if (testDemoMaths.ShowDialog() == DialogResult.OK)
             {
@@ -212,10 +212,10 @@ namespace EMACApp
 
         private void Test5Facile_Button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             TestProblemesPhysiques test = new TestProblemesPhysiques(false);
             TestDemonstration_Form testDemoPhysiques = new TestDemonstration_Form(test);
+
+            this.Hide();
 
             if (testDemoPhysiques.ShowDialog() == DialogResult.OK)
             {
@@ -235,10 +235,10 @@ namespace EMACApp
 
         private void Test5Difficile_Button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             TestProblemesPhysiques test = new TestProblemesPhysiques(true);
             TestDemonstration_Form testDemoPhysiques = new TestDemonstration_Form(test);
+
+            this.Hide();
 
             if (testDemoPhysiques.ShowDialog() == DialogResult.OK)
             {
