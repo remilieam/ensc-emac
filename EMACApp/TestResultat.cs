@@ -21,11 +21,13 @@ namespace EMACApp
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
+            AfficherPopUp_Timer.Stop();
             this.DialogResult = DialogResult.OK;
         }
 
         private void TestResultat_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
+            AfficherPopUp_Timer.Stop();
             this.DialogResult = DialogResult.OK;
         }
 

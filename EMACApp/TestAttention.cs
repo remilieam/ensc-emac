@@ -109,6 +109,12 @@ namespace EMACApp
         // Fermeture du formulaire pour retourner au menu
         private void Menu_Panel_Click(object sender, EventArgs e)
         {
+            if (this.test.difficulte)
+            {
+                AfficherQuestion_Timer.Stop();
+                Decompte_Timer.Stop();
+            }
+
             this.Close();
         }
 
