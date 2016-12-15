@@ -58,10 +58,7 @@ namespace EMACClass
         /// <returns>Liste des erreurs [lettre, réponse juste, réponse du joueur]</returns>
         public override List<string> VerifierReponse(string reponse, int numQuestion)
         {
-            List<string> erreurs = new List<string>();
-            erreurs.Add("");
-            erreurs.Add("");
-            erreurs.Add("");
+            List<string> erreurs = new List<string> { "", "", "" };
 
             for (int i = 0; i < this.reponses[numQuestion].Length; i++)
             {
