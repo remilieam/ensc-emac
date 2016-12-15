@@ -26,22 +26,16 @@ namespace EMACApp
             test = testRecu;
         }
 
-        public TestMaths_Form()
-        {
-            InitializeComponent();
-        }
-
         private void TestMaths_Form_Load(object sender, EventArgs e)
         {
             Choix1_RadioButton.Checked = false;
             Choix2_RadioButton.Checked = false;
             Choix3_RadioButton.Checked = false;
             Choix4_RadioButton.Checked = false;
-            QuestionMaths_Label.Enabled = false;
             Suivant_Button.Enabled = false;
             Terminer_Button.Hide();
 
-            QuestionMaths_Label.Text = "Question n°" + (compteur + 1) + " : " + test.questions[0];
+            QuestionMaths_Label.Text = "Question n° " + (compteur + 1) + " : " + test.questions[0];
 
             if (test.imagesQuestion[0] == "")
             {
@@ -63,7 +57,7 @@ namespace EMACApp
                 Suivant_Button.Enabled = false;
                 Valider_Button.Enabled = true;
 
-                QuestionMaths_Label.Text = "Question n°" + (compteur + 1) + " : " + test.questions[compteur];
+                QuestionMaths_Label.Text = "Question n° " + (compteur + 1) + " : " + test.questions[compteur];
 
                 if (test.imagesQuestion[compteur] == "")
                 {

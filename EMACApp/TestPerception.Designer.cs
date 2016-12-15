@@ -147,6 +147,7 @@
             this.Lettre1_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lettre1_TextBox.Location = new System.Drawing.Point(566, 179);
             this.Lettre1_TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Lettre1_TextBox.MaxLength = 1;
             this.Lettre1_TextBox.Name = "Lettre1_TextBox";
             this.Lettre1_TextBox.Size = new System.Drawing.Size(66, 29);
             this.Lettre1_TextBox.TabIndex = 8;
@@ -158,6 +159,7 @@
             this.Lettre2_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lettre2_TextBox.Location = new System.Drawing.Point(566, 244);
             this.Lettre2_TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Lettre2_TextBox.MaxLength = 1;
             this.Lettre2_TextBox.Name = "Lettre2_TextBox";
             this.Lettre2_TextBox.Size = new System.Drawing.Size(66, 29);
             this.Lettre2_TextBox.TabIndex = 9;
@@ -169,6 +171,7 @@
             this.Lettre3_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lettre3_TextBox.Location = new System.Drawing.Point(566, 309);
             this.Lettre3_TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Lettre3_TextBox.MaxLength = 1;
             this.Lettre3_TextBox.Name = "Lettre3_TextBox";
             this.Lettre3_TextBox.Size = new System.Drawing.Size(66, 29);
             this.Lettre3_TextBox.TabIndex = 10;
@@ -180,6 +183,7 @@
             this.Lettre4_TextBox.Font = new System.Drawing.Font("Arial", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lettre4_TextBox.Location = new System.Drawing.Point(566, 374);
             this.Lettre4_TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Lettre4_TextBox.MaxLength = 1;
             this.Lettre4_TextBox.Name = "Lettre4_TextBox";
             this.Lettre4_TextBox.Size = new System.Drawing.Size(66, 29);
             this.Lettre4_TextBox.TabIndex = 11;
