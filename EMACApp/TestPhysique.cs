@@ -30,9 +30,8 @@ namespace EMACApp
             Choix2_RadioButton.Checked = false;
             Choix3_RadioButton.Checked = false;
             Choix4_RadioButton.Checked = false;
-            Terminer_Button.Hide();
-            QuestionPhysique_Label.Enabled = false;
             Suivant_Button.Enabled = false;
+            Terminer_Button.Hide();
 
             QuestionPhysique_Label.Text = "Question n° " + (compteur + 1) + " : " + test.questions[compteur];
 
@@ -55,7 +54,7 @@ namespace EMACApp
             {
                 Suivant_Button.Enabled = false;
                 Valider_Button.Enabled = true;
-                QuestionPhysique_Label.Text = "Question n° " + (compteur + 1) + " :  " + test.questions[compteur];
+                QuestionPhysique_Label.Text = "Question n° " + (compteur + 1) + " : " + test.questions[compteur];
 
                 if (test.imagesQuestion[compteur] == "")
                 {
