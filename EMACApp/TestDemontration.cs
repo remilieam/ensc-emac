@@ -43,7 +43,6 @@ namespace EMACApp
             {
                 Consigne_Label.Show();
                 ImageDemo_PictureBox.Hide();
-                //TexteDemo_TextBox.Hide();
 
                 Consigne_Label.Text = test.consigne + " ";
             }
@@ -55,7 +54,6 @@ namespace EMACApp
                 //TextDemo_TextBox.Show();
 
                 ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur-1];
-                //TexteDemo_TextBox.Text = test.texteDemo[compteur - 1] + " "  ;
             }
         }
 
@@ -75,7 +73,6 @@ namespace EMACApp
             {
                 Consigne_Label.Show();
                 ImageDemo_PictureBox.Hide();
-                //TexteDemo_TextBox.Hide();
 
                 Consigne_Label.Text = test.consigne + " " + compteur;
             }
@@ -84,10 +81,8 @@ namespace EMACApp
             {
                 Consigne_Label.Hide();
                 ImageDemo_PictureBox.Show();
-                //TextDemo_TextBox.Show();
 
                 ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur - 1];
-                //TexteDemo_TextBox.Text = test.texteDemo[compteur-1] + " " + compteur;
             }
         }
 

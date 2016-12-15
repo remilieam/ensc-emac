@@ -15,7 +15,6 @@ namespace EMACClass
             nom = "Problèmes Physiques";
             consigne = "";
             imagesDemo = new List<string>();
-            texteDemo = new List<string>();
             difficulte = difficulteTest;
             questions = new List<string>();
             imagesQuestion = new List<string>();

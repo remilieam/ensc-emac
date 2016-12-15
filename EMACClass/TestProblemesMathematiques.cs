@@ -16,7 +16,6 @@ namespace EMACClass
             nom = "Problèmes Mathématiques";
             consigne = "";
             imagesDemo = new List<string>();
-            texteDemo = new List<string>();
             difficulte = difficulteTest;
             questions = new List<string>();
             imagesQuestion = new List<string>();

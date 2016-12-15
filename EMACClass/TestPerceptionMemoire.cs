@@ -36,7 +36,6 @@ namespace EMACClass
             nom = "";
             consigne = "";
             imagesDemo = new List<string>();
-            texteDemo = new List<string>();
             difficulte = difficulteTest;
             questions = new List<string>();
             imagesQuestion = new List<string>();
@@ -151,7 +150,6 @@ namespace EMACClass
                         while (reader2.Read())
                         {
                             this.imagesDemo.Add(reader2["ImageDemo"].ToString());
-                            this.texteDemo.Add(reader2["TexteDemo"].ToString());
                         }
                     }
                 }

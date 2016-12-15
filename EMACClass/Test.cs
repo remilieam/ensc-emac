@@ -17,7 +17,6 @@ namespace EMACClass
         public string nom { get; protected set; }
         public string consigne { get; protected set; }
         public List<string> imagesDemo { get; protected set; }
-        public List<string> texteDemo { get; protected set; }
         public bool difficulte { get; protected set; }
         public List<string> questions { get; protected set; }
         public List<string> imagesQuestion { get; protected set; }

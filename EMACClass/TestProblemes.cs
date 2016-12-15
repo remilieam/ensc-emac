@@ -140,7 +140,6 @@ namespace EMACClass
                         while (reader2.Read())
                         {
                             this.imagesDemo.Add(reader2["ImageDemo"].ToString());
-                            this.texteDemo.Add(reader2["TexteDemo"].ToString());
                         }
                     }
                 }
