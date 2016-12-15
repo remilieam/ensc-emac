@@ -28,231 +28,311 @@ namespace EMACApp
 
         private void Test1Facile_Button_Click(object sender, EventArgs e)
         {
-            TestPerceptionMemoire test = new TestPerceptionMemoire(false);
-            TestDemonstration_Form testDemoPerception = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoPerception.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestPerception_Form testPerception = new TestPerception_Form(test);
+                TestPerceptionMemoire test = new TestPerceptionMemoire(false);
+                TestDemonstration_Form testDemoPerception = new TestDemonstration_Form(test);
 
-                if (testPerception.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoPerception.ShowDialog() == DialogResult.OK)
+                {
+                    TestPerception_Form testPerception = new TestPerception_Form(test);
+
+                    if (testPerception.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Test1Difficile_Button_Click(object sender, EventArgs e)
         {
-            TestPerceptionMemoire test = new TestPerceptionMemoire(true);
-            TestDemonstration_Form testDemoPerception = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoPerception.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestPerception_Form testPerception = new TestPerception_Form(test);
+                TestPerceptionMemoire test = new TestPerceptionMemoire(true);
+                TestDemonstration_Form testDemoPerception = new TestDemonstration_Form(test);
 
-                if (testPerception.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoPerception.ShowDialog() == DialogResult.OK)
+                {
+                    TestPerception_Form testPerception = new TestPerception_Form(test);
+
+                    if (testPerception.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Test2Facile_Button_Click(object sender, EventArgs e)
         {
-            TestAttentionConcentration test = new TestAttentionConcentration(false);
-            TestDemonstration_Form testDemoAttention = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoAttention.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestAttention_Form testAttention = new TestAttention_Form(test);
+                TestAttentionConcentration test = new TestAttentionConcentration(false);
+                TestDemonstration_Form testDemoAttention = new TestDemonstration_Form(test);
 
-                if (testAttention.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoAttention.ShowDialog() == DialogResult.OK)
+                {
+                    TestAttention_Form testAttention = new TestAttention_Form(test);
+
+                    if (testAttention.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Test2Difficile_Button_Click(object sender, EventArgs e)
         {
-            TestAttentionConcentration test = new TestAttentionConcentration(true);
-            TestDemonstration_Form testDemoAttention = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoAttention.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestAttention_Form testAttention = new TestAttention_Form(test);
+                TestAttentionConcentration test = new TestAttentionConcentration(true);
+                TestDemonstration_Form testDemoAttention = new TestDemonstration_Form(test);
 
-                if (testAttention.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoAttention.ShowDialog() == DialogResult.OK)
+                {
+                    TestAttention_Form testAttention = new TestAttention_Form(test);
+
+                    if (testAttention.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Test3Facile_Button_Click(object sender, EventArgs e)
         {
-            TestCalculMental test = new TestCalculMental(false);
-            TestDemonstration_Form testDemoCalcul = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoCalcul.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestCalcul_Form testCalcul = new TestCalcul_Form(test);
+                TestCalculMental test = new TestCalculMental(false);
+                TestDemonstration_Form testDemoCalcul = new TestDemonstration_Form(test);
 
-                if (testCalcul.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoCalcul.ShowDialog() == DialogResult.OK)
+                {
+                    TestCalcul_Form testCalcul = new TestCalcul_Form(test);
+
+                    if (testCalcul.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Test3Difficile_Button_Click(object sender, EventArgs e)
         {
-            TestCalculMental test = new TestCalculMental(true);
-            TestDemonstration_Form testDemoCalcul = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoCalcul.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestCalcul_Form testCalcul = new TestCalcul_Form(test);
+                TestCalculMental test = new TestCalculMental(true);
+                TestDemonstration_Form testDemoCalcul = new TestDemonstration_Form(test);
 
-                if (testCalcul.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoCalcul.ShowDialog() == DialogResult.OK)
+                {
+                    TestCalcul_Form testCalcul = new TestCalcul_Form(test);
+
+                    if (testCalcul.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Test4Facile_Button_Click(object sender, EventArgs e)
         {
-            TestProblemesMathematiques test = new TestProblemesMathematiques(false);
-            TestDemonstration_Form testDemoMaths = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoMaths.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestMaths_Form testMaths = new TestMaths_Form(test);
+                TestProblemesMathematiques test = new TestProblemesMathematiques(false);
+                TestDemonstration_Form testDemoMaths = new TestDemonstration_Form(test);
 
-                if (testMaths.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoMaths.ShowDialog() == DialogResult.OK)
+                {
+                    TestMaths_Form testMaths = new TestMaths_Form(test);
+
+                    if (testMaths.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Test4Difficile_Button_Click(object sender, EventArgs e)
         {
-            TestProblemesMathematiques test = new TestProblemesMathematiques(true);
-            TestDemonstration_Form testDemoMaths = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoMaths.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestMaths_Form testMaths = new TestMaths_Form(test);
+                TestProblemesMathematiques test = new TestProblemesMathematiques(true);
+                TestDemonstration_Form testDemoMaths = new TestDemonstration_Form(test);
 
-                if (testMaths.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoMaths.ShowDialog() == DialogResult.OK)
+                {
+                    TestMaths_Form testMaths = new TestMaths_Form(test);
+
+                    if (testMaths.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Test5Facile_Button_Click(object sender, EventArgs e)
         {
-            TestProblemesPhysiques test = new TestProblemesPhysiques(false);
-            TestDemonstration_Form testDemoPhysiques = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoPhysiques.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestPhysique_Form testPhysiques = new TestPhysique_Form(test);
+                TestProblemesPhysiques test = new TestProblemesPhysiques(false);
+                TestDemonstration_Form testDemoPhysiques = new TestDemonstration_Form(test);
 
-                if (testPhysiques.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoPhysiques.ShowDialog() == DialogResult.OK)
+                {
+                    TestPhysique_Form testPhysiques = new TestPhysique_Form(test);
+
+                    if (testPhysiques.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Test5Difficile_Button_Click(object sender, EventArgs e)
         {
-            TestProblemesPhysiques test = new TestProblemesPhysiques(true);
-            TestDemonstration_Form testDemoPhysiques = new TestDemonstration_Form(test);
-
-            this.Hide();
-
-            if (testDemoPhysiques.ShowDialog() == DialogResult.OK)
+            try
             {
-                TestPhysique_Form testPhysiques = new TestPhysique_Form(test);
+                TestProblemesPhysiques test = new TestProblemesPhysiques(true);
+                TestDemonstration_Form testDemoPhysiques = new TestDemonstration_Form(test);
 
-                if (testPhysiques.ShowDialog() == DialogResult.OK)
+                this.Hide();
+
+                if (testDemoPhysiques.ShowDialog() == DialogResult.OK)
+                {
+                    TestPhysique_Form testPhysiques = new TestPhysique_Form(test);
+
+                    if (testPhysiques.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Show();
+                    }
+                }
+
+                else
                 {
                     this.Show();
                 }
             }
 
-            else
+            catch (Exception)
             {
-                this.Show();
+                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

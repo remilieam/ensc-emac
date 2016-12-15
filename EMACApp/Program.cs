@@ -15,7 +15,16 @@ namespace EMACApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Accueil_Form());
+            
+            try
+            {
+                Application.Run(new Accueil_Form());
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
