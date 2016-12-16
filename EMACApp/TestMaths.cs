@@ -78,6 +78,8 @@ namespace EMACApp
                 indice_reponse = "4";
             }
 
+            this.test.VerifierReponse(indice_reponse, compteur - 1);
+
             // En cas de bonne réponse
             if (indice_reponse == this.test.reponses[this.compteur - 1])
             {
@@ -130,14 +132,15 @@ namespace EMACApp
             QuestionMaths_Label.Text = "Question n° " + (this.compteur + 1) + " : " + this.test.questions[this.compteur];
 
             // Affichage de la première image si nécessaire
-            if (this.test.imagesQuestion[0] == "")
+            if (this.test.imagesQuestion[this.compteur] == "")
             {
                 PbMaths_PictureBox.Hide();
             }
 
             else
             {
-                PbMaths_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + this.test.imagesQuestion[0];
+                PbMaths_PictureBox.Show();
+                PbMaths_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + this.test.imagesQuestion[this.compteur];
             }
 
             this.compteur++;

@@ -77,6 +77,8 @@ namespace EMACApp
                 indice_reponse = "4";
             }
 
+            this.test.VerifierReponse(indice_reponse, compteur - 1);
+
             // En cas de bonne réponse
             if (indice_reponse == this.test.reponses[this.compteur - 1])
             {
@@ -129,14 +131,15 @@ namespace EMACApp
             QuestionPhysique_Label.Text = "Question n° " + (this.compteur + 1) + " : " + this.test.questions[this.compteur];
 
             // Affichage de la première image si nécessaire
-            if (this.test.imagesQuestion[0] == "")
+            if (this.test.imagesQuestion[this.compteur] == "")
             {
                 PbPhysique_PictureBox.Hide();
             }
 
             else
             {
-                PbPhysique_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_5\\" + this.test.imagesQuestion[0];
+                PbPhysique_PictureBox.Show();
+                PbPhysique_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_5\\" + this.test.imagesQuestion[this.compteur];
             }
 
             this.compteur++;
