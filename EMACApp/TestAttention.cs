@@ -41,18 +41,12 @@ namespace EMACApp
         // Affichage de la première règle et définition du chronomètre si le joueur a choisi le mode difficile
         private void TestAttention_Form_Load(object sender, EventArgs e)
         {
-            Progression_Label.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
-
-            if (test.difficulte)
+            if (this.test.difficulte)
             {
-                Regle_Label.Text = "Consigne de la série " + (this.compteurSerie + 1) + " :\r\n\r\n" + this.test.questions[this.compteurSerie];
                 AfficherQuestion_Timer.Interval = this.test.intervalle * 1000;
             }
 
-            else
-            {
-                Regle_Label.Text = "Consigne pour les 3 séries de questions :\r\n\r\n" + this.test.questions[compteurSerie];
-            }
+            this.AfficherConsigne();
         }
         
         // Appel de la fonction qui affiche la question
@@ -67,12 +61,9 @@ namespace EMACApp
         // Affichage de la réponse dans le cas où on a appuyé sur le bouton 1
         private void Bouton1_Button_Click(object sender, EventArgs e)
         {
-            if (test.difficulte)
+            if (this.test.difficulte)
             {
-                AfficherQuestion_Timer.Stop();
-                Decompte_Timer.Stop();
-                Chrono_Panel.Hide();
-                Decompte_Label.Hide();
+                this.CacherChrono();
             }
 
             this.AfficherReponse("1");
@@ -81,12 +72,9 @@ namespace EMACApp
         // Affichage de la réponse dans le cas où on a appuyé sur le bouton 2
         private void Bouton2_Button_Click(object sender, EventArgs e)
         {
-            if (test.difficulte)
+            if (this.test.difficulte)
             {
-                AfficherQuestion_Timer.Stop();
-                Decompte_Timer.Stop();
-                Chrono_Panel.Hide();
-                Decompte_Label.Hide();
+                this.CacherChrono();
             }
 
             this.AfficherReponse("2");
@@ -95,12 +83,9 @@ namespace EMACApp
         // Affichage de la réponse dans le cas où on a appuyé sur le bouton 3
         private void Bouton3_Button_Click(object sender, EventArgs e)
         {
-            if (test.difficulte)
+            if (this.test.difficulte)
             {
-                AfficherQuestion_Timer.Stop();
-                Decompte_Timer.Stop();
-                Chrono_Panel.Hide();
-                Decompte_Label.Hide();
+                this.CacherChrono();
             }
 
             this.AfficherReponse("3");
@@ -125,8 +110,8 @@ namespace EMACApp
         // Décompte
         public void Decompte_Timer_Tick(object sender, EventArgs e)
         {
-            decompte--;
-            Decompte_Label.Text = decompte.ToString();
+            this.decompte--;
+            Decompte_Label.Text = this.decompte.ToString();
         }
 
         // Affichage de la réponse dans le cas où on n’a pas répondu à temps
@@ -149,9 +134,14 @@ namespace EMACApp
         {
             Progression_Label.Text = "Série : " + (this.compteurSerie + 1) + "    –    Question : " + (this.compteurQuestion + 1);
 
-            if (test.difficulte)
+            if (this.test.difficulte)
             {
-                Regle_Label.Text = "Consigne de la série " + this.compteurSerie + " :\r\n\r\n" + test.questions[this.compteurSerie];
+                Regle_Label.Text = "Consigne de la série " + (this.compteurSerie + 1) + " :\r\n\r\n" + this.test.questions[this.compteurSerie];
+            }
+
+            else
+            {
+                Regle_Label.Text = "Consigne pour les 3 séries de questions :\r\n\r\n" + this.test.questions[this.compteurSerie];
             }
 
             Regle_Label.Show();
@@ -174,10 +164,11 @@ namespace EMACApp
                 Bouton1_Button.Show();
             }
 
-            if (test.difficulte)
+            // Démarrage et affichage du chronomètre en mode difficile
+            if (this.test.difficulte)
             {
-                decompte = test.intervalle;
-                Decompte_Label.Text = decompte.ToString();
+                this.decompte = this.test.intervalle;
+                Decompte_Label.Text = this.decompte.ToString();
                 Chrono_Panel.Show();
                 Decompte_Label.Show();
                 Decompte_Timer.Start();
@@ -196,6 +187,7 @@ namespace EMACApp
 
             List<string> erreurJoueur = this.test.VerifierReponse(reponseJoueur, this.compteurSerie * 5 + this.compteurQuestion);
 
+            // Cas où le joueur n’a pas commis d’erreur
             if (erreurJoueur.Count == 0)
             {
                 TestResultat_Form resultat = new TestResultat_Form("OK ! Vous avez choisi le bon bouton !");
@@ -207,6 +199,7 @@ namespace EMACApp
                 }
             }
 
+            // Cas où le joueur a fait une erreur
             else
             {
                 TestResultat_Form resultat = new TestResultat_Form(this.test.AfficherErreur(erreurJoueur));
@@ -264,10 +257,19 @@ namespace EMACApp
             }
         }
 
+        // Cacher le chronomètre
+        private void CacherChrono()
+        {
+            AfficherQuestion_Timer.Stop();
+            Decompte_Timer.Stop();
+            Chrono_Panel.Hide();
+            Decompte_Label.Hide();
+        }
+
         // Affichage du résultat à l’issue des 3 séries de 5 questions
         private void AfficherResultat()
         {
-            Resultat_Label.Text = "Vous avez un taux de réussite de " + test.CalculerResultat() + " % !";
+            Resultat_Label.Text = "Vous avez un taux de réussite de " + this.test.CalculerResultat() + " % !";
             Resultat_Label.Show();
             Terminer_Button.Show();
         }

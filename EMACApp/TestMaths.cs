@@ -13,87 +13,51 @@ namespace EMACApp
 {
     public partial class TestMaths_Form : Form
     {
+        private int compteur = 0; // Contient le numéro de la question en cours (10 questions au total)
+        public TestProblemesMathematiques test; // Contient le test en cours
 
-        private int compteur;
-        public TestProblemesMathematiques test;
-        public int score;
-
-        private const string BDD = "|DataDirectory|\\AppData\\EMAC.mdb";
-
+        // Constructeur du test de problèmes mathématiques (enchaînement des questions)
         public TestMaths_Form(TestProblemesMathematiques testRecu)
         {
             InitializeComponent();
-            test = testRecu;
+            this.test = testRecu;
         }
 
+        // Affichage de la première question
         private void TestMaths_Form_Load(object sender, EventArgs e)
         {
-            Choix1_RadioButton.Checked = false;
-            Choix2_RadioButton.Checked = false;
-            Choix3_RadioButton.Checked = false;
-            Choix4_RadioButton.Checked = false;
-            Suivant_Button.Enabled = false;
             Terminer_Button.Hide();
-
-            QuestionMaths_Label.Text = "Question n° " + (compteur + 1) + " : " + test.questions[0];
-
-            if (test.imagesQuestion[0] == "")
-            {
-                PbMaths_PictureBox.Hide();
-            }
-
-            else
-            {
-                PbMaths_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[0];
-            }
-
-            compteur = 1;
+            this.AfficherQuestion();
         }
 
+        // Passage à la question suivante
         private void Suivant_Button_Click(object sender, EventArgs e)
         {
-            if (compteur < 10)
+            // Cas où le joueur n’a pas répondu à toutes les questions
+            if (this.compteur < 10)
             {
-                Suivant_Button.Enabled = false;
-                Valider_Button.Enabled = true;
-
-                QuestionMaths_Label.Text = "Question n° " + (compteur + 1) + " : " + test.questions[compteur];
-
-                if (test.imagesQuestion[compteur] == "")
-                {
-                    PbMaths_PictureBox.Hide();
-                }
-
-                else
-                {
-                    PbMaths_PictureBox.Show();
-                    PbMaths_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + test.imagesQuestion[compteur];
-                }
-
-                Choix1_RadioButton.Checked = false;
-                Choix2_RadioButton.Checked = false;
-                Choix3_RadioButton.Checked = false;
-                Choix4_RadioButton.Checked = false;
-                compteur++;
+                AfficherQuestion();
             }
 
+            // Cas où le joueur a terminé le test
             else
             {
                 Reponse_GroupBox.Hide();
                 Valider_Button.Hide();
                 Suivant_Button.Hide();
                 Terminer_Button.Show();
-                double resultat = test.CalculerResultat();
+                double resultat = this.test.CalculerResultat();
                 MessageBox.Show("Vous avez fini la série !");
                 QuestionMaths_Label.Text = "Votre super résultat est de : " + resultat + " % ";
             }
         }
 
+        // Vérification de la réponse du joueur
         private void Valider_Button_Click(object sender, EventArgs e)
         {
             string indice_reponse = "0";
 
-            // On recupère la valeur du radioButton sélectionné
+            // On recupère la valeur du RadioButton sélectionné
             if (Choix1_RadioButton.Checked)
             {
                 indice_reponse = "1";
@@ -114,36 +78,69 @@ namespace EMACApp
                 indice_reponse = "4";
             }
 
-            test.VerifierReponse(indice_reponse, compteur - 1);
-
-            if (indice_reponse == test.reponses[compteur - 1])
+            // En cas de bonne réponse
+            if (indice_reponse == this.test.reponses[this.compteur - 1])
             {
                 MessageBox.Show("Bonne réponse ! Bien joué !");
                 Suivant_Button.Enabled = true;
                 Valider_Button.Enabled = false;
             }
 
+            // En cas de mauvaise réponse
             else
             {
-                MessageBox.Show("Erreur. La bonne réponse est : " + test.reponses[compteur - 1]);
+                MessageBox.Show("Erreur. La bonne réponse est : " + this.test.reponses[this.compteur - 1]);
                 Suivant_Button.Enabled = true;
                 Valider_Button.Enabled = false;
             }
         }
 
+        // Fermeture du formulaire
         private void Terminer_Button_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Fermeture du formulaire pour retourner au menu
         private void Menu_Panel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Fermeture du formulaire
         private void TestMaths_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        // Affichage de la question
+        private void AfficherQuestion()
+        {
+            // Décochage des boutons radios
+            Choix1_RadioButton.Checked = false;
+            Choix2_RadioButton.Checked = false;
+            Choix3_RadioButton.Checked = false;
+            Choix4_RadioButton.Checked = false;
+
+            // Gestion des boutons
+            Suivant_Button.Enabled = false;
+            Valider_Button.Enabled = true;
+
+            // Affichage de la première question question
+            QuestionMaths_Label.Text = "Question n° " + (this.compteur + 1) + " : " + this.test.questions[this.compteur];
+
+            // Affichage de la première image si nécessaire
+            if (this.test.imagesQuestion[0] == "")
+            {
+                PbMaths_PictureBox.Hide();
+            }
+
+            else
+            {
+                PbMaths_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\Test_4\\" + this.test.imagesQuestion[0];
+            }
+
+            this.compteur++;
         }
     }
 }

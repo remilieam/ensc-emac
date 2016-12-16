@@ -40,7 +40,7 @@ namespace EMACApp
         // Définition du chronomètre si le joueur a choisi le mode difficile
         private void TestCalcul_Form_Load(object sender, EventArgs e)
         {
-            if (test.difficulte)
+            if (this.test.difficulte)
             {
                 AfficherQuestion_Timer.Interval = this.test.intervalle * 1000;
             }
@@ -50,7 +50,7 @@ namespace EMACApp
         private void Addition_Button_Click(object sender, EventArgs e)
         {
             this.test.GenererQuestions("Addition");
-            this.CacherPremiereInterface();
+            this.ChangerInterface();
             this.AfficherQuestion();
         }
 
@@ -58,7 +58,7 @@ namespace EMACApp
         private void Soustraction_Button_Click(object sender, EventArgs e)
         {
             this.test.GenererQuestions("Soustraction");
-            this.CacherPremiereInterface();
+            this.ChangerInterface();
             this.AfficherQuestion();
         }
 
@@ -66,7 +66,7 @@ namespace EMACApp
         private void Multiplication_Button_Click(object sender, EventArgs e)
         {
             this.test.GenererQuestions("Multiplication");
-            this.CacherPremiereInterface();
+            this.ChangerInterface();
             this.AfficherQuestion();
         }
 
@@ -74,14 +74,15 @@ namespace EMACApp
         private void Division_Button_Click(object sender, EventArgs e)
         {
             this.test.GenererQuestions("Division");
-            this.CacherPremiereInterface();
+            this.ChangerInterface();
             this.AfficherQuestion();
         }
 
         // Appel de la fonction affichant la réponse
         private void Valider_Button_Click(object sender, EventArgs e)
         {
-            if (test.difficulte)
+            // Masquage et arrêt du chronomètre
+            if (this.test.difficulte)
             {
                 Decompte_Timer.Stop();
                 Chrono_Panel.Hide();
@@ -112,8 +113,8 @@ namespace EMACApp
         // Décompte
         public void Decompte_Timer_Tick(object sender, EventArgs e)
         {
-            decompte--;
-            Decompte_Label.Text = decompte.ToString();
+            this.decompte--;
+            Decompte_Label.Text = this.decompte.ToString();
         }
 
         // Événement si le chronomètre atteint 5 secondes
@@ -132,13 +133,21 @@ namespace EMACApp
         #region Méthodes auxiliaires
 
         // Masquage de l’interface permettant à l’utilisateur de choisir l’opération sur laquelle il veut se tester
-        private void CacherPremiereInterface()
+        // Affichage de l’interface permettant à l’utilisateur de répondre à la première question
+        private void ChangerInterface()
         {
             Choix_Label.Hide();
             Addition_Button.Hide();
             Soustraction_Button.Hide();
             Multiplication_Button.Hide();
             Division_Button.Hide();
+
+            Zone_PictureBox.Show();
+            Egal_Label.Show();
+            Progression_Label.Show();
+            Operation_Label.Show();
+            Reponse_TextBox.Show();
+            Valider_Button.Show();
         }
 
         // Affichage de la question
@@ -148,18 +157,11 @@ namespace EMACApp
             Operation_Label.Text = this.test.questions[this.compteurQuestion];
             Reponse_TextBox.Clear();
 
-            Zone_PictureBox.Show();
-            Egal_Label.Show();
-            Progression_Label.Show();
-            Operation_Label.Show();
-            Reponse_TextBox.Show();
-            Valider_Button.Show();
-
-            // Démarrage du chronomètre en mode difficile
-            if (test.difficulte)
+            // Démarrage et affichage du chronomètre en mode difficile
+            if (this.test.difficulte)
             {
-                decompte = test.intervalle;
-                Decompte_Label.Text = decompte.ToString();
+                this.decompte = this.test.intervalle;
+                Decompte_Label.Text = this.decompte.ToString();
                 Chrono_Panel.Show();
                 Decompte_Label.Show();
                 Decompte_Timer.Start();
@@ -172,6 +174,7 @@ namespace EMACApp
         {
             List<string> erreurJoueur = this.test.VerifierReponse(reponseJoueur, this.compteurQuestion);
 
+            // Cas où le joueur n’a pas commis d’erreur
             if (erreurJoueur.Count == 0)
             {
                 TestResultat_Form resultat = new TestResultat_Form("Bravo ! Votre calcul est correct !");
@@ -183,6 +186,7 @@ namespace EMACApp
                 }
             }
 
+            // Cas où le joueur a fait une erreur
             else
             {
                 TestResultat_Form resultat = new TestResultat_Form(this.test.AfficherErreur(erreurJoueur));
@@ -198,14 +202,7 @@ namespace EMACApp
         // Gestion du passage à la question suivante ou au résultat
         private void PasserQuestionSuivante()
         {
-            Zone_PictureBox.Hide();
-            Egal_Label.Hide();
-            Progression_Label.Hide();
-            Operation_Label.Hide();
-            Reponse_TextBox.Hide();
-            Valider_Button.Hide();
-
-            if (compteurQuestion < 9)
+            if (this.compteurQuestion < 9)
             {
                 this.compteurQuestion++;
                 this.AfficherQuestion();
@@ -220,6 +217,14 @@ namespace EMACApp
         // Affichage du résultat (proportion de bonnes réponses du joueur)
         private void AfficherResultat()
         {
+            // Masquage de la dernière question
+            Zone_PictureBox.Hide();
+            Egal_Label.Hide();
+            Progression_Label.Hide();
+            Operation_Label.Hide();
+            Reponse_TextBox.Hide();
+            Valider_Button.Hide();
+
             Resultat_Label.Text = "Vous avez un taux de réussite de " + this.test.CalculerResultat() + " % !";
             Resultat_Label.Show();
             Terminer_Button.Show();

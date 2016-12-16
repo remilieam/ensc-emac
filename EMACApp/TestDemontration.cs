@@ -15,77 +15,75 @@ namespace EMACApp
         private int compteur = 0;
         private Test test;
 
+        // Constructeur du formulaire d’affichage de la consigne et de la démonstration
         public TestDemonstration_Form(Test testRecu)
         {
             InitializeComponent();
-            test = testRecu;
+            this.test = testRecu;
         }
 
+        // Récupération du nom et de la consigne du test
         private void TestPerception_Form_Load(object sender, EventArgs e)
         {
-            NomTest_Label.Text = test.nom;
-            Consigne_Label.Text = test.consigne + " ";
+            NomTest_Label.Text = this.test.nom;
+            Consigne_Label.Text = this.test.consigne;
         }
 
+        // Affichage de l’écran suivant
         private void Suivant_PictureBox_Click(object sender, EventArgs e)
         {
-            if (compteur == test.imagesDemo.Count)
+            if (this.compteur == this.test.imagesDemo.Count)
             {
-                compteur = 0;
+                this.compteur = 0;
             }
 
             else
             {
-                compteur++;
+                this.compteur++;
             }
 
-            if(compteur == 0)
+            if (this.compteur == 0)
             {
                 Consigne_Label.Show();
                 ImageDemo_PictureBox.Hide();
-
-                Consigne_Label.Text = test.consigne + " ";
             }
 
             else
             {
                 Consigne_Label.Hide();
                 ImageDemo_PictureBox.Show();
-                //TextDemo_TextBox.Show();
-
-                ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur-1];
+                ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + this.test.imagesDemo[this.compteur - 1];
             }
         }
 
+        // Affichage de l’écran précédent
         private void Precedent_PictureBox_Click(object sender, EventArgs e)
         {
-            if (compteur == 0)
+            if (this.compteur == 0)
             {
-                compteur = test.imagesDemo.Count;
+                this.compteur = this.test.imagesDemo.Count;
             }
 
             else
             {
-                compteur--;
+                this.compteur--;
             }
 
-            if (compteur == 0)
+            if (this.compteur == 0)
             {
                 Consigne_Label.Show();
                 ImageDemo_PictureBox.Hide();
-
-                Consigne_Label.Text = test.consigne + " " + compteur;
             }
 
             else
             {
                 Consigne_Label.Hide();
                 ImageDemo_PictureBox.Show();
-
-                ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + test.imagesDemo[compteur - 1];
+                ImageDemo_PictureBox.ImageLocation = "..\\..\\..\\EMACApp\\AppImages\\" + this.test.imagesDemo[this.compteur - 1];
             }
         }
 
+        // Fermeture du formulaire pour accéder au test
         private void Jouer_Button_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;

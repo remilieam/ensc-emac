@@ -31,6 +31,7 @@ namespace EMACApp
 
         private void Continuer_Buttom_Click(object sender, EventArgs e)
         {
+            // Tant qu’on n’a pas fermé le formulaire de menu, on cache le formulaire de bienvenue
             this.Hide();
 
             Menu_Form menu = new Menu_Form();

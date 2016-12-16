@@ -23,6 +23,8 @@ namespace EMACApp
 
         private void Menu_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Lorsqu’on ferme le formulaire, on fait comme si on avait cliqué sur un bouton “OK”
+            // Cela permettra de réafficher le formulaire de bienvenue
             this.DialogResult = DialogResult.OK;
         }
 
@@ -30,15 +32,20 @@ namespace EMACApp
         {
             try
             {
+                // On crée le test qu’a choisi l’utilisateur
+                // Et on crée le formulaire pour afficher la consigne et la démonstration du test
                 TestPerceptionMemoire test = new TestPerceptionMemoire(false);
                 TestDemonstration_Form testDemoPerception = new TestDemonstration_Form(test);
 
+                // Tant qu’on n’a pas fermé le formulaire de démonstration, on cache le formulaire de menu
                 this.Hide();
 
                 if (testDemoPerception.ShowDialog() == DialogResult.OK)
                 {
+                    // L’utilisateur veut jouer, on crée le formulaire de jeu
                     TestPerception_Form testPerception = new TestPerception_Form(test);
 
+                    // Et on l’affiche
                     if (testPerception.ShowDialog() == DialogResult.OK)
                     {
                         this.Show();
@@ -53,7 +60,8 @@ namespace EMACApp
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -84,7 +92,8 @@ namespace EMACApp
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -115,7 +124,8 @@ namespace EMACApp
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -146,7 +156,8 @@ namespace EMACApp
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -171,13 +182,15 @@ namespace EMACApp
 
                 else
                 {
-                    this.Show();
+                    MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
                 }
             }
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -208,7 +221,8 @@ namespace EMACApp
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -239,7 +253,8 @@ namespace EMACApp
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -270,7 +285,8 @@ namespace EMACApp
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -301,7 +317,8 @@ namespace EMACApp
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -332,7 +349,8 @@ namespace EMACApp
 
             catch (Exception)
             {
-                MessageBox.Show("Impossible de générer le test...", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Une erreur est survenue lors de la génération du test…", "Erreur !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
     }

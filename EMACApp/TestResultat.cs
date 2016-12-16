@@ -40,7 +40,7 @@ namespace EMACApp
         private void TestResultat_Form_Load(object sender, EventArgs e)
         {
             AfficherPopUp_Timer.Start();
-            Resultat_Label.Text = message;
+            Resultat_Label.Text = this.message;
         }
     }
 }
