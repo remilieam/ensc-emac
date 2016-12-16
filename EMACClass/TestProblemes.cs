@@ -184,7 +184,7 @@ namespace EMACClass
         /// <returns>Résultat de l’utilisateur</returns>
         public override double CalculerResultat()
         {
-            return Math.Round(score * 100.0 / nbquestion, 2);
+            return Math.Round(score * 100.0 / reponses.Count, 2);
         }
 
         public override string AfficherErreur(List<string> erreurs)
