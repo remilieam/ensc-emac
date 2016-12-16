@@ -8,101 +8,103 @@ namespace EMACClass
 {
     public class TestProblemes : Test
     {
-        protected int compteur;
-        protected int nbquestion = 10;
+        // Attributs inhérents à la classe
+        protected readonly int nbquestion = 10;
         protected int idTest;
 
+        /// <summary>
+        /// Constructeur pour les tests unitaires.
+        /// </summary>
+        /// <param name="Rep">Liste des réponses</param>
+        public TestProblemes(List<string> Rep)
+        {
+            reponses = Rep;
+        }
+
+        /// <summary>
+        /// Initialise l’attribut “difficulte” du test (false = facile, true = difficile).
+        /// </summary>
+        /// <param name="difficulteTest">Difficulté du test</param>
         public TestProblemes(bool difficulteTest)
         {
             difficulte = difficulteTest;
-
         }
 
-        public TestProblemes(List<string>Rep)
-        {
-           reponses=Rep;
-
-        }
+        /// <summary>
+        /// Génère une liste de questions aléatoirement grâce aux questions de la base de données.
+        /// </summary>
         protected override void GenererListeQuestions()
         {
             OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
 
-            // Creation d'une requete
             using (connexionBDD)
             {
                 connexionBDD.Open();
 
-                using (OleDbCommand requete2 = new OleDbCommand())
+                // Création d’une requête
+                using (OleDbCommand requete = new OleDbCommand())
                 {
-                    requete2.Connection = connexionBDD;
+                    requete.Connection = connexionBDD;
+
                     if (difficulte == true)
                     {
-                        requete2.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question=q.Id WHERE Test="+idTest+" and type='Difficile'";
-                        OleDbDataReader reader2 = requete2.ExecuteReader();
+                        requete.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question = q.Id WHERE Test = " + idTest + " and type = 'Difficile'";
+                        OleDbDataReader reader = requete.ExecuteReader();
 
-                        // Si le resultat comporte des lignes
-                        //    if(reader2.HasRows)
-                        while (reader2.Read())
+                        while (reader.Read())
                         {
-                            //reader2.Read();
-
-                            // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
-                            questions.Add((string)reader2["Q.Question"]);
-                            imagesQuestion.Add(reader2["ImageQuestion"].ToString());
-                            reponses.Add(reader2["Reponse"].ToString());
+                            questions.Add((string)reader["Q.Question"]);
+                            imagesQuestion.Add(reader["ImageQuestion"].ToString());
+                            reponses.Add(reader["Reponse"].ToString());
                         }
                     }
 
                     else
                     {
-                        requete2.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question=q.Id WHERE Test=" + idTest + " and type='Facile'";
-                        OleDbDataReader reader2 = requete2.ExecuteReader();
+                        requete.CommandText = "SELECT * FROM Questions q LEFT JOIN Images i ON i.Question = q.Id WHERE Test = " + idTest + " and type = 'Facile'";
+                        OleDbDataReader reader = requete.ExecuteReader();
 
-                        // Si le resultat comporte des lignes
-                        //    if(reader2.HasRows)
-                        while (reader2.Read())
+                        while (reader.Read())
                         {
-                            //reader2.Read();
-
-                            // ConsigneMaths_TxtBox.Text = "Question :" + reader2["Question"];
-                            questions.Add((string)reader2["Q.Question"]);
-                            imagesQuestion.Add(reader2["ImageQuestion"].ToString());
-                            // Génération aléatoire des questions
-                            reponses.Add(reader2["Reponse"].ToString());
-                         
-                           
+                            questions.Add((string)reader["Q.Question"]);
+                            imagesQuestion.Add(reader["ImageQuestion"].ToString());
+                            reponses.Add(reader["Reponse"].ToString());
                         }
                     }
                 }
 
                 connexionBDD.Close();
             }
-            // Nouvelles istes contenant les questions et les réponses
+
+            // Nouvelles listes contenant les questions et les réponses
             List<string> newQuestions = new List<string>();
             List<string> newReponses = new List<string>();
             List<string> newImages= new List<string>();
-            int nombre = 10;
+            int nombre = nbquestion;
             Random rnd = new Random();
 
             // Remplissage des nouvelles listes aléatoirement
             for (int i = 0; i < nombre; i++)
             {
-                int indice = rnd.Next(0, this.questions.Count);
-                newQuestions.Add(this.questions[indice]);
-                newReponses.Add(this.reponses[indice]);
-                newImages.Add(this.imagesQuestion[indice]);
+                int indice = rnd.Next(0, questions.Count);
+                newQuestions.Add(questions[indice]);
+                newReponses.Add(reponses[indice]);
+                newImages.Add(imagesQuestion[indice]);
 
-                this.questions.RemoveAt(indice);
-                this.reponses.RemoveAt(indice);
-                this.imagesQuestion.RemoveAt(indice);
+                questions.RemoveAt(indice);
+                reponses.RemoveAt(indice);
+                imagesQuestion.RemoveAt(indice);
             }
 
             // Modifications des listes de la classe
-            this.questions = newQuestions;
-            this.reponses = newReponses;
-            this.imagesQuestion = newImages;
+            questions = newQuestions;
+            reponses = newReponses;
+            imagesQuestion = newImages;
         }
 
+        /// <summary>
+        /// Récupère le test (nom et consigne) et ses écrans de démonstration.
+        /// </summary>
         protected override void RecupererDemonstration()
         {
             OleDbConnection connexionBDD = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + BDD);
@@ -115,15 +117,15 @@ namespace EMACClass
                 {
                     requete.Connection = connexionBDD;
 
-                    // Récupération du test
-                    requete.CommandText = "SELECT * FROM Test WHERE Id = " + this.idTest;
+                    // Récupération du test (consigne et nom)
+                    requete.CommandText = "SELECT * FROM Test WHERE Id = " + idTest;
                     OleDbDataReader reader = requete.ExecuteReader();
 
                     if (reader.HasRows)
                     {
                         reader.Read();
-                        this.nom = reader["Nom"].ToString();
-                        this.consigne = reader["Consigne"].ToString();
+                        nom = reader["Nom"].ToString();
+                        consigne = reader["Consigne"].ToString();
                     }
                 }
 
@@ -132,14 +134,14 @@ namespace EMACClass
                     requete2.Connection = connexionBDD;
 
                     // Récupération de la démonstration
-                    requete2.CommandText = "SELECT * FROM Demo WHERE Test = " + this.idTest;
+                    requete2.CommandText = "SELECT * FROM Demo WHERE Test = " + idTest;
                     OleDbDataReader reader2 = requete2.ExecuteReader();
 
                     if (reader2.HasRows)
                     {
                         while (reader2.Read())
                         {
-                            this.imagesDemo.Add(reader2["ImageDemo"].ToString());
+                            imagesDemo.Add(reader2["ImageDemo"].ToString());
                         }
                     }
                 }
@@ -148,39 +150,46 @@ namespace EMACClass
             }
         }
 
+        /// <summary>
+        /// Compare la entrée par l’utilisateur à la réponse juste et met à jour son score.
+        /// </summary>
+        /// <param name="reponse">Chaîne de caractères correspondant à la réponse de l’utilisateur</param>
+        /// <param name="numQuestion">Numéro de la question à vérifier</param>
+        /// <returns>Liste avec l’éventuel erreur du joueur ([réponse juste, réponse du joueur])</returns>
         public override List<string> VerifierReponse(string reponse, int numQuestion)
         {
             List<string> erreurs = new List<string>();
 
-            if (this.reponses[numQuestion].ToString() != reponse)
+            // Si la réponse du joueur ne correspond pas à la “vraie” réponse
+            if (reponses[numQuestion].ToString() != reponse)
             {
-                erreurs.Add(this.reponses[numQuestion].ToString());
+                // Implémentation de la liste contenant son erreur
+                erreurs.Add(reponses[numQuestion].ToString());
                 erreurs.Add(reponse.ToString());
             }
 
+            // Si la réponse du joueur correspond à la “vraie” réponse
             else
             {
-                this.score++;
+                // Incrémentation de son score
+                score++;
             }
 
             return erreurs;
         }
 
-        public override string AfficherErreur(List<string> erreur)
-        {
-            return "";
-        }
-
+        /// <summary>
+        /// Calcule le résultat de l’utilisateur, c’est-à-dire sa proportion de réponses justes.
+        /// </summary>
+        /// <returns>Résultat de l’utilisateur</returns>
         public override double CalculerResultat()
         {
-            double nbQuestionsTotales = 0;
+            return Math.Round(score * 100.0 / nbquestion, 2);
+        }
 
-            for (int i = 0; i < this.reponses.Count; i++)
-            {
-                nbQuestionsTotales += this.reponses[i].Length;
-            }
-
-            return Math.Round(this.score * 100.0 / nbQuestionsTotales, 2);
+        public override string AfficherErreur(List<string> erreurs)
+        {
+            throw new NotImplementedException();
         }
     }
 }

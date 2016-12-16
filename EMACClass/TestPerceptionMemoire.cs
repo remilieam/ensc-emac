@@ -15,7 +15,7 @@ namespace EMACClass
         private readonly int nbQuestions = 10;
 
         /// <summary>
-        /// Constructeur pour les tests unitaires
+        /// Constructeur pour les tests unitaires.
         /// </summary>
         /// <param name="reponsesTest">Liste des réponses</param>
         /// <param name="lettresTest">Liste des lettres des réponses</param>
@@ -28,11 +28,12 @@ namespace EMACClass
         /// <summary>
         /// Construit un nouveau test “Perception et mémoire associative”.
         /// Initialise le score à 0.
-        /// Prend en argument la difficulté du test (false = facile, true = difficile)
+        /// Prend en argument la difficulté du test (false = facile, true = difficile).
         /// </summary>
         /// <param name="difficulteTest">Difficulté du test</param>
         public TestPerceptionMemoire(bool difficulteTest)
         {
+            // Initialisation des attributs
             nom = "";
             consigne = "";
             imagesDemo = new List<string>();
@@ -44,13 +45,14 @@ namespace EMACClass
             intervalle = (difficulte) ? 2 : 4;
             lettres = new List<string>();
 
+            // Appel aux méthodes implémentant les attributs avec la base de données
             RecupererDemonstration();
             GenererListeQuestions();
             SeparerLettresReponses();
         }
 
         /// <summary>
-        /// Compare la entrée par l’utilisateur à la réponse juste.
+        /// Compare la entrée par l’utilisateur à la réponse juste et met à jour son score.
         /// </summary>
         /// <param name="reponse">Chaîne de caractères correspondant à la réponse de l’utilisateur</param>
         /// <param name="numQuestion">Numéro de la question à vérifier</param>
@@ -59,18 +61,22 @@ namespace EMACClass
         {
             List<string> erreurs = new List<string> { "", "", "" };
 
-            for (int i = 0; i < this.reponses[numQuestion].Length; i++)
+            for (int i = 0; i < reponses[numQuestion].Length; i++)
             {
-                if (this.reponses[numQuestion][i] != reponse[i])
+                // Si la réponse du joueur ne correspond pas à la “vraie” réponse
+                if (reponses[numQuestion][i] != reponse[i])
                 {
-                    erreurs[0] += this.lettres[numQuestion][i].ToString();
-                    erreurs[1] += this.reponses[numQuestion][i].ToString();
+                    // Implémentation de la liste contenant son erreur
+                    erreurs[0] += lettres[numQuestion][i].ToString();
+                    erreurs[1] += reponses[numQuestion][i].ToString();
                     erreurs[2] += reponse[i].ToString();
                 }
 
+                // Si la réponse du joueur correspond à la “vraie” réponse
                 else
                 {
-                    this.score++;
+                    // Incrémentation de son score
+                    score++;
                 }
             }
 
@@ -78,7 +84,7 @@ namespace EMACClass
         }
 
         /// <summary>
-        /// Affiche à l’utilisateur le nombre d’erreurs qu’il a commis avec les réponses qu’il aurait dû mettre.
+        /// Affiche à l’utilisateur ses erreurs.
         /// </summary>
         /// <param name="erreurs">Liste obtenue grâce à la méthode “VerifierReponse”</param>
         /// <returns>Chaîne de caractères à afficher au joueur</returns>
@@ -102,16 +108,18 @@ namespace EMACClass
         {
             double nbQuestionsTotales = 0;
 
-            for (int i = 0; i < this.reponses.Count; i++)
+            // On compte le nombre de champs qu’a dû remplir le joueur
+            // (Variable car on ne peut pas prédire si la question comporte 3 ou 4 sous-questions
+            for (int i = 0; i < reponses.Count; i++)
             {
-                nbQuestionsTotales += this.reponses[i].Length;
+                nbQuestionsTotales += reponses[i].Length;
             }
 
-            return Math.Round(this.score * 100.0 / nbQuestionsTotales, 2);
+            return Math.Round(score * 100.0 / nbQuestionsTotales, 2);
         }
 
         /// <summary>
-        /// Récupère la consigne et la démonstration du test dont on entre l'id
+        /// Récupère le test (nom et consigne) et ses écrans de démonstration.
         /// </summary>
         protected override void RecupererDemonstration()
         {
@@ -125,15 +133,15 @@ namespace EMACClass
                 {
                     requete.Connection = connexionBDD;
 
-                    // Récupération du test
-                    requete.CommandText = "SELECT * FROM Test WHERE Id = " + this.idTest;
+                    // Récupération du test (consigne et nom)
+                    requete.CommandText = "SELECT * FROM Test WHERE Id = " + idTest;
                     OleDbDataReader reader = requete.ExecuteReader();
 
                     if (reader.HasRows)
                     {
                         reader.Read();
-                        this.nom = reader["Nom"].ToString();
-                        this.consigne = reader["Consigne"].ToString();
+                        nom = reader["Nom"].ToString();
+                        consigne = reader["Consigne"].ToString();
                     }
                 }
 
@@ -142,14 +150,14 @@ namespace EMACClass
                     requete2.Connection = connexionBDD;
 
                     // Récupération de la démonstration
-                    requete2.CommandText = "SELECT * FROM Demo WHERE Test = " + this.idTest;
+                    requete2.CommandText = "SELECT * FROM Demo WHERE Test = " + idTest;
                     OleDbDataReader reader2 = requete2.ExecuteReader();
 
                     if (reader2.HasRows)
                     {
                         while (reader2.Read())
                         {
-                            this.imagesDemo.Add(reader2["ImageDemo"].ToString());
+                            imagesDemo.Add(reader2["ImageDemo"].ToString());
                         }
                     }
                 }
@@ -159,7 +167,7 @@ namespace EMACClass
         }
 
         /// <summary>
-        /// Génère une liste de question en prennant l'id du test et le nombre de questions à récupérer.
+        /// Génère une liste de questions aléatoirement grâce aux questions de la base de données.
         /// </summary>
         protected override void GenererListeQuestions()
         {
@@ -174,16 +182,16 @@ namespace EMACClass
                     requete.Connection = connexionBDD;
 
                     // Récupération des questions du test avec l’image associée
-                    requete.CommandText = "SELECT * FROM Questions Q INNER JOIN Images I ON I.Question = Q.Id WHERE Test = " + this.idTest;
+                    requete.CommandText = "SELECT * FROM Questions Q INNER JOIN Images I ON I.Question = Q.Id WHERE Test = " + idTest;
                     OleDbDataReader reader = requete.ExecuteReader();
 
                     if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
-                            this.questions.Add(reader["Q.Question"].ToString());
-                            this.reponses.Add(reader["Reponse"].ToString());
-                            this.imagesQuestion.Add(reader["ImageQuestion"].ToString());
+                            questions.Add(reader["Q.Question"].ToString());
+                            reponses.Add(reader["Reponse"].ToString());
+                            imagesQuestion.Add(reader["ImageQuestion"].ToString());
                         }
                     }
                 }
@@ -195,26 +203,26 @@ namespace EMACClass
             List<string> newQuestions = new List<string>();
             List<string> newReponses = new List<string>();
             List<string> newImages = new List<string>();
-            int nombre = this.nbQuestions;
+            int nombre = nbQuestions;
             Random rnd = new Random();
 
             // Remplissage des nouvelles listes aléatoirement
             for (int i = 0; i < nombre; i++)
             {
-                int indice = rnd.Next(0, this.questions.Count);
-                newQuestions.Add(this.questions[indice]);
-                newReponses.Add(this.reponses[indice]);
-                newImages.Add(this.imagesQuestion[indice]);
+                int indice = rnd.Next(0, questions.Count);
+                newQuestions.Add(questions[indice]);
+                newReponses.Add(reponses[indice]);
+                newImages.Add(imagesQuestion[indice]);
 
-                this.questions.RemoveAt(indice);
-                this.reponses.RemoveAt(indice);
-                this.imagesQuestion.RemoveAt(indice);
+                questions.RemoveAt(indice);
+                reponses.RemoveAt(indice);
+                imagesQuestion.RemoveAt(indice);
             }
 
             // Modifications des listes de la classe
-            this.questions = newQuestions;
-            this.reponses = newReponses;
-            this.imagesQuestion = newImages;
+            questions = newQuestions;
+            reponses = newReponses;
+            imagesQuestion = newImages;
         }
 
         /// <summary>
@@ -225,22 +233,22 @@ namespace EMACClass
         {
             List<string> chiffres = new List<string>();
 
-            for (int i = 0; i < this.reponses.Count; i++)
+            for (int i = 0; i < reponses.Count; i++)
             {
                 string chaineLettres = "";
                 string chaineChiffres = "";
 
-                for (int j = 0; j < this.reponses[i].Length - 1; j += 2)
+                for (int j = 0; j < reponses[i].Length - 1; j += 2)
                 {
-                    chaineLettres += this.reponses[i][j];
-                    chaineChiffres += this.reponses[i][j + 1];
+                    chaineLettres += reponses[i][j];
+                    chaineChiffres += reponses[i][j + 1];
                 }
 
-                this.lettres.Add(chaineLettres);
+                lettres.Add(chaineLettres);
                 chiffres.Add(chaineChiffres);
             }
 
-            this.reponses = chiffres;
+            reponses = chiffres;
         }
     }
 }

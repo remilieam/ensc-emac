@@ -15,7 +15,7 @@ namespace EMACClass
         private string operation = "";
 
         /// <summary>
-        /// Constructeur pour les tests unitaires
+        /// Constructeur pour les tests unitaires.
         /// </summary>
         /// <param name="reponsesTest">Liste des réponses</param>
         public TestCalculMental(List<string> reponsesTest)
@@ -26,11 +26,12 @@ namespace EMACClass
         /// <summary>
         /// Construit un nouveau test “Attention et concentration”.
         /// Initialise le score à 0.
-        /// Prend en argument la difficulté du test (false = facile, true = difficile)
+        /// Prend en argument la difficulté du test (false = facile, true = difficile).
         /// </summary>
         /// <param name="difficulteTest">Difficulté du test</param>
         public TestCalculMental(bool difficulteTest)
         {
+            // Initialisation des attributs
             nom = "";
             consigne = "";
             imagesDemo = new List<string>();
@@ -41,29 +42,33 @@ namespace EMACClass
             score = 0;
             intervalle = (difficulte) ? 5 : 0;
 
+            // Appel à une méthode implémentant certains attributs avec la base de données
             RecupererDemonstration();
         }
 
         /// <summary>
-        /// Compare la réponse entrée par l’utilisateur à la réponse juste.
+        /// Compare la réponse entrée par l’utilisateur à la réponse juste et met à jour son score.
         /// </summary>
         /// <param name="reponse">Chaîne de caractères correspondant à la réponse de l’utilisateur</param>
-        /// <param name="numSerie">Numéro de la série à laquelle appartient la question</param>
-        /// <param name="numQuestion">Numéro de la question à vérifier</param>
-        /// <returns>Liste avec des erreurs ([réponse juste, réponse du joueur])</returns>
+        /// <param name="numQuestion">Numéro de la question à vérifier (0 à 10)</param>
+        /// <returns>Liste avec l’éventuel erreur du joueur ([réponse juste, réponse du joueur])</returns>
         public override List<string> VerifierReponse(string reponse, int numQuestion)
         {
             List<string> erreurs = new List<string>();
 
-            if (this.reponses[numQuestion].ToString() != reponse)
+            // Si la réponse du joueur ne correspond pas à la “vraie” réponse
+            if (reponses[numQuestion].ToString() != reponse)
             {
-                erreurs.Add(this.reponses[numQuestion].ToString());
+                // Implémentation de la liste contenant son erreur
+                erreurs.Add(reponses[numQuestion].ToString());
                 erreurs.Add(reponse.ToString());
             }
 
+            // Si la réponse du joueur correspond à la “vraie” réponse
             else
             {
-                this.score++;
+                // Incrémentation de son score
+                score++;
             }
 
             return erreurs;
@@ -76,6 +81,8 @@ namespace EMACClass
         /// <returns>Chaîne de caractères à afficher au joueur</returns>
         public override string AfficherErreur(List<string> erreur)
         {
+            // Cas où le joueur n’a pas eu le temps de répondre et/ou valider sa réponse
+            // Cas où le joueur valide sans avoir au préalable donner de réponse
             if (erreur[1] == "0" || erreur[1] == "")
             {
                 return "Vous n’avez pas entré de résultat.\r\nPour information, il fallait trouver " + erreur[0] + ".";
@@ -90,11 +97,11 @@ namespace EMACClass
         /// <returns>Résultat de l’utilisateur</returns>
         public override double CalculerResultat()
         {
-            return Math.Round(this.score * 100.0 / this.reponses.Count, 2); ;
+            return Math.Round(score * 100.0 / reponses.Count, 2); ;
         }
 
         /// <summary>
-        /// Récupère la consigne et la démonstration du test dont on entre l'id
+        /// Récupère le test (nom et consigne) et ses écrans de démonstration.
         /// </summary>
         protected override void RecupererDemonstration()
         {
@@ -108,15 +115,15 @@ namespace EMACClass
                 {
                     requete.Connection = connexionBDD;
 
-                    // Récupération du test
-                    requete.CommandText = "SELECT * FROM Test WHERE Id = " + this.idTest;
+                    // Récupération du test (consigne et nom)
+                    requete.CommandText = "SELECT * FROM Test WHERE Id = " + idTest;
                     OleDbDataReader reader = requete.ExecuteReader();
 
                     if (reader.HasRows)
                     {
                         reader.Read();
-                        this.nom = reader["Nom"].ToString();
-                        this.consigne = reader["Consigne"].ToString();
+                        nom = reader["Nom"].ToString();
+                        consigne = reader["Consigne"].ToString();
                     }
                 }
 
@@ -125,14 +132,14 @@ namespace EMACClass
                     requete2.Connection = connexionBDD;
 
                     // Récupération de la démonstration
-                    requete2.CommandText = "SELECT * FROM Demo WHERE Test = " + this.idTest;
+                    requete2.CommandText = "SELECT * FROM Demo WHERE Test = " + idTest;
                     OleDbDataReader reader2 = requete2.ExecuteReader();
 
                     if (reader2.HasRows)
                     {
                         while (reader2.Read())
                         {
-                            this.imagesDemo.Add(reader2["ImageDemo"].ToString());
+                            imagesDemo.Add(reader2["ImageDemo"].ToString());
                         }
                     }
                 }
@@ -142,7 +149,7 @@ namespace EMACClass
         }
 
         /// <summary>
-        /// Génère une liste de question en prennant l'id du test et le nombre de questions à récupérer.
+        /// Génère une liste de questions aléatoirement grâce aux questions de la base de données.
         /// </summary>
         protected override void GenererListeQuestions()
         {
@@ -157,15 +164,15 @@ namespace EMACClass
                     requete.Connection = connexionBDD;
 
                     // Récupération des questions du test
-                    requete.CommandText = "SELECT * FROM Questions WHERE Test = " + this.idTest + " AND Type = '" + this.operation + "'";
+                    requete.CommandText = "SELECT * FROM Questions WHERE Test = " + idTest + " AND Type = '" + operation + "'";
                     OleDbDataReader reader = requete.ExecuteReader();
 
                     if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
-                            this.questions.Add(reader["Question"].ToString());
-                            this.reponses.Add(reader["Reponse"].ToString());
+                            questions.Add(reader["Question"].ToString());
+                            reponses.Add(reader["Reponse"].ToString());
                         }
                     }
                 }
@@ -176,23 +183,23 @@ namespace EMACClass
             // Nouvelles istes contenant les questions et les réponses
             List<string> newQuestions = new List<string>();
             List<string> newReponses = new List<string>();
-            int nombre = this.nbQuestions;
+            int nombre = nbQuestions;
             Random rnd = new Random();
 
             // Remplissage des nouvelles listes aléatoirement
             for (int i = 0; i < nombre; i++)
             {
-                int indice = rnd.Next(0, this.questions.Count);
-                newQuestions.Add(this.questions[indice]);
-                newReponses.Add(this.reponses[indice]);
+                int indice = rnd.Next(0, questions.Count);
+                newQuestions.Add(questions[indice]);
+                newReponses.Add(reponses[indice]);
 
-                this.questions.RemoveAt(indice);
-                this.reponses.RemoveAt(indice);
+                questions.RemoveAt(indice);
+                reponses.RemoveAt(indice);
             }
 
             // Modifications des listes de la classe
-            this.questions = newQuestions;
-            this.reponses = newReponses;
+            questions = newQuestions;
+            reponses = newReponses;
         }
 
         /// <summary>
@@ -201,8 +208,8 @@ namespace EMACClass
         /// <param name="signe">Chaîne de caractères contenant l’opération choisi par l’utilisateur</param>
         public void GenererQuestions(string signe)
         {
-            this.operation = signe;
-            this.GenererListeQuestions();
+            operation = signe;
+            GenererListeQuestions();
         }
     }
 }
