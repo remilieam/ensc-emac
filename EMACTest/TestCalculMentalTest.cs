@@ -83,7 +83,7 @@ namespace EMACTest
             List<string> expected = new List<string> { "128", "124" };
             List<string> actual = target.VerifierReponse(reponse, numQuestion);
 
-            // Vérifiations
+            // Vérifications
             Assert.AreEqual(expected.Count, actual.Count);
             for (int i = 0; i < actual.Count; i++)
             {
@@ -108,7 +108,7 @@ namespace EMACTest
             string expected = "Vous avez calculé 124 et il fallait calculer 128.";
             string actual = target.AfficherErreur(erreur);
 
-            // Vérifiations
+            // Vérification
             Assert.AreEqual(expected, actual);
         }
 
@@ -131,7 +131,7 @@ namespace EMACTest
             double expected = 66.67;
             double actual = target.CalculerResultat();
 
-            // Vérifiations
+            // Vérification
             Assert.AreEqual(expected, actual);
         }
     }

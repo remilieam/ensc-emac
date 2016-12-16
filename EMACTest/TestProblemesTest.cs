@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 namespace EMACTest
 {
-    
-    
+
+
     /// <summary>
     ///Classe de test pour TestProblemesTest, destinée à contenir tous
     ///les tests unitaires TestProblemesTest
@@ -70,29 +70,27 @@ namespace EMACTest
         ///</summary>
         [TestMethod()]
         public void VerifierReponseTest()
-        {     // Création d’un test avec 1 comme réponse théorique à la première question
+        {
+            // Création d’un test avec 1 comme réponse théorique à la première question
             List<string> reponsesTest = new List<string> { "1" };
-         
             TestProblemes target = new TestProblemes(reponsesTest);
 
             // Paramètres
-            //le joueur répond 3 à la 1 ere question
+            // Le joueur répond 3 à la première question
             string reponse = "3";
             int numQuestion = 0;
 
             // Réel et attendu
             List<string> actual = target.VerifierReponse(reponse, numQuestion);
-            List<string> expected = new List<string> { "1","3" };
+            List<string> expected = new List<string> { "1", "3" };
 
-            // Vérifiations
+            // Vérifications
             Assert.AreEqual(expected.Count, actual.Count);
-             for (int i = 0; i < actual.Count; i++)
+            for (int i = 0; i < actual.Count; i++)
             {
                 Assert.AreEqual(expected[i], actual[i]);
             }
         }
-
-
 
         /// <summary>
         ///Test pour CalculerResultat
@@ -102,7 +100,6 @@ namespace EMACTest
         {
             // Création d’un test
             List<string> reponsesTest = new List<string> { "1", "3" };
-            
             TestProblemes target = new TestProblemes(reponsesTest);
 
             // Pré-requis
@@ -116,8 +113,5 @@ namespace EMACTest
             // Vérification
             Assert.AreEqual(expected, actual);
         }
-        }
-            
-        }
-    
-
+    }
+}

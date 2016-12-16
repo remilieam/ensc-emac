@@ -84,7 +84,7 @@ namespace EMACTest
             List<string> actual = target.VerifierReponse(reponse, numQuestion);
             List<string> expected = new List<string> { "AH", "31", "25" };
 
-            // Vérifiations
+            // Vérifications
             Assert.AreEqual(expected.Count, actual.Count);
             for (int i = 0; i < actual.Count; i++)
             {
